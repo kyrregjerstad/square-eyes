@@ -19,7 +19,6 @@
 }
 
 .navbar {
-  width: 100vw;
   height: 13vw;
   background-color: white;
   position: relative;
@@ -34,12 +33,10 @@
 
 .user-icon {
   width: 50px;
-  background-color: red;
 }
 
 .top {
   padding: 2vw;
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -92,7 +89,7 @@
 }
 
 .arrow-left img {
-  left: 1vw;
+  left: 2vw;
   position: absolute;
   z-index: 10;
   width: 5vw;
@@ -108,7 +105,7 @@
 }
 
 .arrow-right img {
-  right: 1vw;
+  right: 2vw;
   position: absolute;
   z-index: 10;
   width: 5vw;
