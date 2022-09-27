@@ -82,14 +82,9 @@
 
 /* Hero section */
 
-.heroes {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
 .arrow-left img {
   left: 2vw;
+  top: 10vw;
   position: absolute;
   z-index: 10;
   width: 5vw;
@@ -106,6 +101,7 @@
 
 .arrow-right img {
   right: 2vw;
+  top: 10vw;
   position: absolute;
   z-index: 10;
   width: 5vw;
@@ -118,6 +114,21 @@
 .arrow-right img:hover {
   opacity: 100%;
   cursor: pointer;
+}
+
+.heroes {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 50%;
+}
+
+.slide {
+  width: 100%;
+  position: absolute;
+  top: 0vw;
+  transition: all 0.5s;
 }
 
 .hero-1 {

@@ -7,15 +7,20 @@
     <title>Square Eyes</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-      </style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+    </style>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header>
       <div class="navbar">
         <div class="top">
           <div class="left">
-            <img src="/icons/icon_menu_hamburger.svg" alt="navigation menu">
+            <img
+              class="hamburger-menu"
+              src="/icons/icon_menu_hamburger.svg"
+              alt="navigation menu"
+            />
           </div>
           <div class="middle">
             <img
@@ -25,7 +30,11 @@
             />
           </div>
           <div class="right">
-            <img class="user-icon" src="/icons/icon_menu_user.svg" alt="user menu">
+            <img
+              class="user-icon"
+              src="/icons/icon_menu_user.svg"
+              alt="user menu"
+            />
           </div>
         </div>
       </div>
@@ -38,59 +47,164 @@
         <a class="home">LIBRARY</a>
       </div>
     </div>
-      <div class="main">
-        <div class="heroes">
-          <div class="arrow-left">
-            <img src="/icons/icon_arrow-left.svg" alt="">
-          </div>
-          <div class="arrow-right">
-            <img src="/icons/icon_arrow-right.svg" alt="">
-          </div>
+    <div class="main">
+      <div class="heroes">
+        <!-- Hero image 1, sweetheart -->
+        <div class="slide">
           <div class="hero-1">
             <div class="hero-text">
-            <h2 class="hero-heading">SWEETHEART</h2>
-            <p class="hero-description">Jenn has washed ashore a small tropical island and it doesn't take her long to realize she's completely alone. She must spend her days not only surviving the elements, but must also fend off the malevolent force that comes out each night.</p>
-            <button class="hero-button">Watch now</button>
-          </div>
+              <h2 class="hero-heading">SWEETHEART</h2>
+              <p class="hero-description">
+                Jenn has washed ashore a small tropical island and it doesn't
+                take her long to realize she's completely alone. She must spend
+                her days not only surviving the elements, but must also fend off
+                the malevolent force that comes out each night.
+              </p>
+              <button class="hero-button">Watch now</button>
+            </div>
             <img
               class="hero-img"
               src="/images/film_hero_sweetheart.webp"
               alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
             />
+          </div>
         </div>
+        <!-- Hero image 2, TheBatman -->
+        <div class="slide">
+          <div class="hero-2">
+            <div class="hero-text">
+              <h2 class="hero-heading">THE BATMAN</h2>
+              <p class="hero-description">
+                Jenn has washed ashore a small tropical island and it doesn't
+                take her long to realize she's completely alone. She must spend
+                her days not only surviving the elements, but must also fend off
+                the malevolent force that comes out each night.
+              </p>
+              <button class="hero-button">Watch now</button>
+            </div>
+            <img
+              class="hero-img"
+              src="/images/film_hero_batman.webp"
+              alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
+            />
+          </div>
         </div>
-        <div class="vignette-left"></div>
-        <div class="vignette-right"></div>
-        <div class="grid">
-          <div class="line-1">
-            <div class="tile">
-              <p class="movie-title">Hobbs & Shaw</p>
-              <p class="movie-description">US agent Luke Hobbs and British mercenary Deckard Shaw are forced to put their rivalry side and work together to stop a genetically enhanced supervillain.</p>
-              <button class="buy-now-button">Buy now</button>
-              <img class="tile-image" src="/images/film_cover_hobbs-and-shaw.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_godzilla.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_once_upon_a_time.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_scream.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_sweetheart.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_sweetheart.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_sweetheart.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_sweetheart.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_sweetheart.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_sweetheart.webp" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/images/film_cover_sweetheart.webp" alt=""></div>
+        <div class="slide">
+          <div class="hero-2">
+            <div class="hero-text">
+              <h2 class="hero-heading">THE BATMAN</h2>
+              <p class="hero-description">
+                Jenn has washed ashore a small tropical island and it doesn't
+                take her long to realize she's completely alone. She must spend
+                her days not only surviving the elements, but must also fend off
+                the malevolent force that comes out each night.
+              </p>
+              <button class="hero-button">Watch now</button>
+            </div>
+            <img
+              class="hero-img"
+              src="/images/film_hero_batman.webp"
+              alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
+            />
+          </div>
         </div>
+        <div class="arrow-left">
+          <img src="/icons/icon_arrow-left.svg" alt="" />
+        </div>
+        <div class="arrow-right">
+          <img src="/icons/icon_arrow-right.svg" alt="" />
+        </div>
+      </div>
+      <div class="vignette-left"></div>
+      <div class="vignette-right"></div>
+      <div class="grid">
+        <div class="line-1">
+          <div class="tile">
+            <p class="movie-title">Hobbs & Shaw</p>
+            <p class="movie-description">
+              US agent Luke Hobbs and British mercenary Deckard Shaw are forced
+              to put their rivalry side and work together to stop a genetically
+              enhanced supervillain.
+            </p>
+            <button class="buy-now-button">Buy now</button>
+            <img
+              class="tile-image"
+              src="/images/film_cover_hobbs-and-shaw.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_godzilla.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_once_upon_a_time.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_scream.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_sweetheart.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_sweetheart.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_sweetheart.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_sweetheart.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_sweetheart.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_sweetheart.webp"
+              alt=""
+            />
+          </div>
+          <div class="tile">
+            <img
+              class="tile-image"
+              src="/images/film_cover_sweetheart.webp"
+              alt=""
+            />
           </div>
         </div>
       </div>
+    </div>
   </body>
 </html>
