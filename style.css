@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+
+  --button-main-color: #d9d9d9;
+  --button-hover-color: #000000;
+  --button-radius: 40px;
+  --button-font-size: 2vw;
+
+  --hero-title-size: 5vw;
+  --hero-description-size: 1.3vw;
+  --hero-line-height: 29px;
+}
+
+.header {
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+.navbar {
+  width: 100vw;
+  height: 13vw;
+  background-color: white;
+  position: relative;
+  /* position: sticky;
+  top: 20px; */
+  z-index: 1000;
+}
+
+.header-logo {
+  height: 10vw;
+}
+
+.top {
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.bottom {
+  height: 4vw;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: white;
+}
+
+.pages {
+  font-size: 2vw;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+}
+
+.pages a {
+  cursor: pointer;
+}
+
+.films {
+  font-weight: bold;
+}
+
+.main {
+  background: linear-gradient(
+      237.41deg,
+      rgba(0, 0, 0, 0.5) 14.81%,
+      rgba(255, 255, 255, 0) 88.39%
+    ),
+    #232323;
+
+  height: 2000px;
+}
+
+/* Hero section */
+
+.hero {
+  position: relative;
+  z-index: 999;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  position: absolute;
+  top: 2vw;
+  left: 20vw;
+}
+
+.hero-heading {
+  color: white;
+  font-size: var(--hero-title-size);
+}
+
+.hero-description {
+  color: white;
+  position: absolute;
+  font-size: var(--hero-description-size);
+  text-align: justify;
+  width: 35vw;
+  top: 6vw;
+}
+
+.hero-button {
+  font-size: var(--button-font-size);
+  font-weight: bold;
+  position: absolute;
+  top: 15.5vw;
+  height: 4vw;
+  width: 17vw;
+  background-color: var(--button-main-color);
+  border-radius: var(--button-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #000000;
+  color: white;
+  transition: all;
+  transition-duration: 350ms;
+}
+
+/* /Hero section */
+
+/* Vignette */
+
+.vignette-left,
+.vignette-right {
+  background: linear-gradient(90deg, #0000007c 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 20vw;
+  z-index: 1;
+}
+
+.vignette-right {
+  background: linear-gradient(-90deg, #0000007c 0%, rgba(0, 0, 0, 0) 100%);
+  right: 0;
+}
+
+/* /vignette */
+
+/* Grid of videos */
+
+.line-1 {
+  display: flex;
+  align-items: center;
+  height: 20vw;
+  overflow-x: auto;
+}
+
+.line-1::-webkit-scrollbar {
+  display: none;
+}
+
+.tile {
+  position: relative;
+  height: 10vw;
+  margin: 0vw 1vw 0vw 1vw;
+}
+
+.tile-image {
+  object-fit: cover;
+  object-position: 100% 30%;
+  aspect-ratio: 1.618/1;
+  border-radius: 1vw;
+  height: 10vw;
+  transition: all;
+  transition-duration: 350ms;
+}
+
+.tile-image:hover {
+  height: 12vw;
+  transition: all;
+  transition-duration: 350ms;
+  cursor: pointer;
+  box-shadow: 2vw 1vw 2vw #00000075;
+  filter: brightness(50%);
+  z-index: 1;
+}
+
+.movie-title {
+  pointer-events: none;
+  color: white;
+  font-size: 1vw;
+  font-weight: bold;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  transition: all;
+  transition-duration: 350ms;
+  z-index: 2;
+}
+
+.tile:hover > .movie-title {
+  font-size: 1.2vw;
+  transition: all;
+  transition-duration: 350ms;
+  transition-delay: 50ms;
+  transform: translateY(-500%);
+}
+
+.movie-description {
+  color: white;
+  font-size: 0.8vw;
+  pointer-events: none;
+  position: absolute;
+  overflow-wrap: none;
+  top: 35%;
+  left: 5%;
+  width: 16vw;
+  opacity: 0;
+  transition: all;
+  transition-duration: 250ms;
+  z-index: 2;
+}
+
+.tile:hover > .movie-description {
+  visibility: unset;
+  transition: all;
+  transition-duration: 450ms;
+  transition-delay: 200ms;
+  opacity: 100;
+}
+
+.buy-now-button {
+  position: absolute;
+  background-color: white;
+  width: 10vw;
+  height: 2vw;
+  border-radius: 1vw;
+  border: none;
+  bottom: -15%;
+  left: 5%;
+  opacity: 0;
+  z-index: 1;
+  transition: all;
+  transition-duration: 50ms;
+}
+
+.tile:hover > .buy-now-button {
+  opacity: 100;
+  transition: all;
+  transition-duration: 450ms;
+  transition-delay: 200ms;
+  pointer-events: none;
+}
+
+/* find way of making tile stay active while hovering over buy now button */
