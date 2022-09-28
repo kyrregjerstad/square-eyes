@@ -35,6 +35,11 @@
   background-color: white;
 }
 
+.left {
+  position: sticky;
+  top: 0;
+}
+
 .left img {
   height: 2vw;
   padding: 0.5vw;
@@ -216,14 +221,31 @@
 
 /* Grid of videos */
 
-.line-1 {
+.grid {
   display: flex;
-  align-items: center;
-  height: 20vw;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
   overflow-x: auto;
 }
 
-.line-1::-webkit-scrollbar {
+.grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* using negative values for the margin to avoid overflow issue. 
+if overflow x and y are different, they override each other.
+use first margin to control grid vertical spacing. */
+
+.line {
+  display: flex;
+  align-items: center;
+  margin: -3vw -1vw -3vw -4vw;
+  padding: 5vw;
+  overflow-x: auto;
+}
+
+.line::-webkit-scrollbar {
   display: none;
 }
 
@@ -239,14 +261,12 @@
   aspect-ratio: 1.618/1;
   border-radius: 1vw;
   height: 10vw;
-  transition: all;
-  transition-duration: 350ms;
+  transition: 200ms all ease-in-out;
 }
 
 .tile-image:hover {
   height: 12vw;
-  transition: all;
-  transition-duration: 350ms;
+  transition: 200ms all ease-in-out;
   cursor: pointer;
   box-shadow: 2vw 1vw 2vw #00000075;
   filter: brightness(50%);
@@ -261,15 +281,13 @@
   position: absolute;
   bottom: 5%;
   left: 5%;
-  transition: all;
-  transition-duration: 350ms;
+  transition: 200ms all ease-in-out;
   z-index: 2;
 }
 
 .tile:hover > .movie-title {
   font-size: 1.2vw;
-  transition: all;
-  transition-duration: 350ms;
+  transition: 200ms all ease-in-out;
   transition-delay: 50ms;
   transform: translateY(-500%);
 }
@@ -284,15 +302,14 @@
   left: 5%;
   width: 16vw;
   opacity: 0;
-  transition: all;
-  transition-duration: 250ms;
+  transition: 200ms all ease-in-out;
   z-index: 2;
 }
 
 .tile:hover > .movie-description {
   visibility: unset;
   transition: all;
-  transition-duration: 450ms;
+  transition: 200ms all ease-in-out;
   transition-delay: 200ms;
   opacity: 100;
 }
@@ -314,8 +331,7 @@
 
 .tile:hover > .buy-now-button {
   opacity: 100;
-  transition: all;
-  transition-duration: 450ms;
+  transition: 200ms all ease-in-out;
   transition-delay: 200ms;
   pointer-events: none;
 }
