@@ -27,19 +27,18 @@
   z-index: 1000;
 }
 
-.header-logo {
-  height: 10vw;
-}
-
-.user-icon {
-  width: 50px;
-}
-
 .top {
   padding: 2vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: white;
+}
+
+.left img {
+  height: 2vw;
+  padding: 0.5vw;
+  transform: translateY(50%);
 }
 
 .bottom {
@@ -53,6 +52,14 @@
   background-color: white;
 }
 
+.header-logo {
+  height: 10vw;
+}
+
+.user-icon {
+  height: 5vw;
+  transform: translateY(50%);
+}
 .pages {
   font-size: 2vw;
   font-weight: 300;
