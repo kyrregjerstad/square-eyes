@@ -82,58 +82,62 @@
 
 /* Hero section */
 
-.arrow-left img {
-  left: 2vw;
-  top: 10vw;
+.arrow-left {
   position: absolute;
-  z-index: 10;
-  width: 5vw;
+  top: 50%;
+  left: 2vw;
   transform: translate(0%, -50%);
+  width: 5vw;
+  z-index: 10;
   opacity: 50%;
-  transition-property: opactiy;
-  transition: 350ms;
+  transition: 200ms opacity ease-in-out;
 }
 
-.arrow-left img:hover {
+.arrow-left:hover {
   opacity: 100%;
   cursor: pointer;
 }
 
-.arrow-right img {
-  right: 2vw;
-  top: 10vw;
+.arrow-right {
   position: absolute;
-  z-index: 10;
-  width: 5vw;
+  top: 50%;
+  right: 2vw;
   transform: translate(0%, -50%);
+  width: 5vw;
+  z-index: 10;
   opacity: 50%;
-  transition-property: opactiy;
-  transition: 350ms;
+  transition: 200ms opacity ease-in-out;
 }
 
-.arrow-right img:hover {
+.arrow-right:hover {
   opacity: 100%;
   cursor: pointer;
 }
 
 .heroes {
-  display: flex;
-  align-items: center;
   position: relative;
-  overflow: hidden;
-  height: 50%;
+  height: 23vw;
+}
+
+.heroes > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .slide {
-  width: 100%;
   position: absolute;
-  top: 0vw;
-  transition: all 0.5s;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  z-index: 4;
 }
 
-.hero-1 {
-  position: relative;
-  z-index: 2;
+.slide[data-active] {
+  opacity: 1;
+  transition-delay: 0ms;
+  z-index: 5;
 }
 
 .hero-img {

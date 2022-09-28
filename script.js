@@ -1,35 +1,18 @@
-const hamburgerMenu = document.querySelector(".hambuger-menu");
-const userIcon = document.querySelector(".user-icon");
-const heroLeftArrow = document.querySelector(".arrow-left");
-const heroRightArrow = document.querySelector(".arrow-right");
-const slides = document.querySelectorAll(".slide");
+const arrowButtons = document.querySelectorAll("[data-carousel-button]");
 
-//TODO: make hero section scroll when clicking on arrow
-let currentSlide = 0;
-let maxSlide = slides.length - 1;
+arrowButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
 
-heroRightArrow.addEventListener("click", (event) => {
-  if (currentSlide === maxSlide) {
-    currentSlide = 0;
-  } else {
-    currentSlide++;
-  }
-  console.log(currentSlide);
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
 
-  slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
-  });
-});
-
-heroLeftArrow.addEventListener("click", (event) => {
-  if (currentSlide === 0) {
-    currentSlide = maxSlide;
-  } else {
-    currentSlide--;
-  }
-  console.log(currentSlide);
-
-  slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
   });
 });

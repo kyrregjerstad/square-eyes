@@ -9,7 +9,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
     </style>
-    <script defer src="script.js"></script>
+    <script defer async src="script.js"></script>
   </head>
   <body>
     <header>
@@ -47,11 +47,12 @@
         <a class="home">LIBRARY</a>
       </div>
     </div>
+
     <div class="main">
-      <div class="heroes">
-        <!-- Hero image 1, sweetheart -->
-        <div class="slide">
-          <div class="hero-1">
+      <div class="heroes" data-carousel>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <!-- Hero image 1, sweetheart -->
             <div class="hero-text">
               <h2 class="hero-heading">SWEETHEART</h2>
               <p class="hero-description">
@@ -67,13 +68,11 @@
               src="/images/film_hero_sweetheart.webp"
               alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
             />
-          </div>
-        </div>
-        <!-- Hero image 2, TheBatman -->
-        <div class="slide">
-          <div class="hero-2">
+          </li>
+          <!-- Hero image 2, The batman -->
+          <li class="slide">
             <div class="hero-text">
-              <h2 class="hero-heading">THE BATMAN</h2>
+              <h2 class="hero-heading">SWEETHEART</h2>
               <p class="hero-description">
                 Jenn has washed ashore a small tropical island and it doesn't
                 take her long to realize she's completely alone. She must spend
@@ -87,12 +86,11 @@
               src="/images/film_hero_batman.webp"
               alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
             />
-          </div>
-        </div>
-        <div class="slide">
-          <div class="hero-2">
+          </li>
+          <li class="slide">
+            <!-- Hero image 1, sweetheart -->
             <div class="hero-text">
-              <h2 class="hero-heading">THE BATMAN</h2>
+              <h2 class="hero-heading">SWEETHEART</h2>
               <p class="hero-description">
                 Jenn has washed ashore a small tropical island and it doesn't
                 take her long to realize she's completely alone. She must spend
@@ -103,18 +101,25 @@
             </div>
             <img
               class="hero-img"
-              src="/images/film_hero_batman.webp"
+              src="/images/film_hero_sweetheart.webp"
               alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
             />
-          </div>
-        </div>
-        <div class="arrow-left">
-          <img src="/icons/icon_arrow-left.svg" alt="" />
-        </div>
-        <div class="arrow-right">
-          <img src="/icons/icon_arrow-right.svg" alt="" />
-        </div>
+          </li>
+        </ul>
+        <img
+          class="arrow-left"
+          src="/icons/icon_arrow-left.svg"
+          data-carousel-button="prev"
+          alt=""
+        />
+        <img
+          class="arrow-right"
+          src="/icons/icon_arrow-right.svg"
+          data-carousel-button="next"
+          alt=""
+        />
       </div>
+
       <div class="vignette-left"></div>
       <div class="vignette-right"></div>
       <div class="grid">
