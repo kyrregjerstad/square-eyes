@@ -12,6 +12,11 @@
   --hero-line-height: 29px;
 }
 
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
 .header {
   width: 100vw;
   z-index: 1000;
@@ -77,8 +82,9 @@
   cursor: pointer;
 }
 
-.films {
+.pages .active {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .main {
@@ -337,3 +343,94 @@ use first margin to control grid vertical spacing. */
 }
 
 /* find way of making tile stay active while hovering over buy now button */
+
+/* --------------------- About.html --------------------- */
+
+.about-background {
+  background-color: #e2e2e2;
+  height: 100vh;
+  width: 100vw;
+}
+
+.close-button {
+  width: 4vw;
+}
+
+.logo-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-logo {
+  width: 30vw;
+}
+
+.about-center-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.left-text ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  height: 50vh;
+}
+
+.contact-form input {
+  border-radius: 0.5em;
+  padding: 1vw;
+  margin: 0.5vw;
+  border: none;
+  width: 20vw;
+}
+
+.contact-form .line-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+.contact-form label {
+  margin: 0.5vw;
+}
+
+.contact-form .name {
+  width: 80%;
+}
+
+.contact-form .email {
+  width: 100%;
+}
+
+.contact-form .subject,
+.contact-form .category {
+  width: 100%;
+}
+
+.contact-form .message {
+  width: 100%;
+  height: 20vh;
+  border-radius: 1vw;
+}
+
+.contact-form .send {
+  width: 14vw;
+  height: 4vw;
+  border-radius: 5vw;
+  background-color: #000000;
+  color: white;
+  font-size: var(--button-font-size);
+  margin-top: 3vh;
+}
