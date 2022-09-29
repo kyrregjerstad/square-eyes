@@ -344,9 +344,9 @@ use first margin to control grid vertical spacing. */
 
 /* find way of making tile stay active while hovering over buy now button */
 
-/* --------------------- About.html --------------------- */
+/* --------------------- Contact.html --------------------- */
 
-.about-page {
+.contact-page {
   background-color: #e2e2e2;
   height: 100vh;
   width: 100vw;
@@ -363,15 +363,15 @@ use first margin to control grid vertical spacing. */
   align-items: center;
 }
 
-.about-logo {
+.contact-logo {
   width: 30vw;
 }
 
-.about-top {
+.contact-top {
   display: flex;
 }
 
-.about-center-items {
+.contact-center-items {
   display: flex;
   align-items: flex;
   justify-content: space-evenly;
@@ -435,6 +435,56 @@ use first margin to control grid vertical spacing. */
   color: white;
   font-size: var(--button-font-size);
   margin-top: 3vh;
+}
+
+.contact-page .social-links {
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------- About.html --------------------- */
+
+.about-page {
+  background-color: #e2e2e2;
+  height: 100vh;
+  width: 100vw;
+}
+
+.close-button {
+  width: 4vw;
+}
+
+.about-logo {
+  width: 30vw;
+}
+
+.about-top {
+  display: flex;
+}
+
+.about-page .center-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-page .center-content .info-text {
+  width: 500px;
+}
+
+.about-page .image-container {
+  display: flex;
+}
+
+.about-page .image-container .mockup-left {
+  height: 100%;
+  display: flex;
+}
+
+.about-page .image-container .mockup-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 25px;
 }
 
 .about-page .social-links {
