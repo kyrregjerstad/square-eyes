@@ -346,7 +346,7 @@ use first margin to control grid vertical spacing. */
 
 /* --------------------- About.html --------------------- */
 
-.about-background {
+.about-page {
   background-color: #e2e2e2;
   height: 100vh;
   width: 100vw;
@@ -367,10 +367,14 @@ use first margin to control grid vertical spacing. */
   width: 30vw;
 }
 
+.about-top {
+  display: flex;
+}
+
 .about-center-items {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex;
+  justify-content: space-evenly;
   width: 100vw;
 }
 
@@ -383,8 +387,6 @@ use first margin to control grid vertical spacing. */
 .contact-form {
   display: flex;
   align-items: center;
-  width: 60vw;
-  height: 50vh;
 }
 
 .contact-form input {
@@ -392,14 +394,11 @@ use first margin to control grid vertical spacing. */
   padding: 1vw;
   margin: 0.5vw;
   border: none;
-  width: 20vw;
 }
 
 .contact-form .line-1 {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 0;
 }
 
 .contact-form label {
@@ -407,11 +406,14 @@ use first margin to control grid vertical spacing. */
 }
 
 .contact-form .name {
-  width: 80%;
+  width: 90%;
+  margin-left: 0;
 }
 
 .contact-form .email {
   width: 100%;
+  margin-left: 1vw;
+  margin-right: 0;
 }
 
 .contact-form .subject,
@@ -433,4 +435,9 @@ use first margin to control grid vertical spacing. */
   color: white;
   font-size: var(--button-font-size);
   margin-top: 3vh;
+}
+
+.about-page .social-links {
+  display: flex;
+  justify-content: center;
 }
