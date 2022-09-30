@@ -2,14 +2,17 @@
   margin: 0;
   font-family: "Inter", sans-serif;
 
-  --button-main-color: #d9d9d9;
-  --button-hover-color: #000000;
   --button-radius: 40px;
   --button-font-size: 2vw;
 
   --hero-title-size: 5vw;
   --hero-description-size: 1.3vw;
   --hero-line-height: 29px;
+
+  /* --------- Colours --------------- */
+  --button-main-color: #d9d9d9;
+  --button-hover-color: #000000;
+  --default-grey-color: #e2e2e2;
 }
 
 a {
@@ -225,7 +228,7 @@ a {
 
 /* /vignette */
 
-/* Grid of videos */
+/* --------------------- Video grid ---------------------*/
 
 .grid {
   display: flex;
@@ -343,7 +346,7 @@ use first margin to control grid vertical spacing. */
 }
 
 /* find way of making tile stay active while hovering over buy now button */
-
+/* --------------------- Video grid ---------------------*/
 /* --------------------- Contact.html --------------------- */
 
 .contact-page {
@@ -353,7 +356,9 @@ use first margin to control grid vertical spacing. */
 }
 
 .close-button {
-  width: 4vw;
+  width: 2vw;
+  margin-left: 5vw;
+  margin-top: 5vw;
 }
 
 .logo-container {
@@ -363,25 +368,29 @@ use first margin to control grid vertical spacing. */
   align-items: center;
 }
 
-.contact-logo {
+.full-logo {
   width: 30vw;
 }
 
-.contact-top {
+.about-contact-top {
   display: flex;
 }
 
-.contact-center-items {
+.center-content {
+  margin-top: 80px;
   display: flex;
-  align-items: flex;
-  justify-content: space-evenly;
-  width: 100vw;
+  justify-content: center;
 }
 
-.left-text ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.left-text {
+  width: 600px;
+  line-height: 35px;
+  font-size: 24px;
+  text-align: justify;
+}
+
+.left-text h2 {
+  padding-bottom: 1.5em;
 }
 
 .contact-form {
@@ -437,42 +446,30 @@ use first margin to control grid vertical spacing. */
   margin-top: 3vh;
 }
 
-.contact-page .social-links {
+.social-links {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 1vh;
+  width: 100%;
 }
 
+.social-links img {
+  padding: 1em;
+}
+/* --------------------- Contact.html --------------------- */
 /* --------------------- About.html --------------------- */
 
 .about-page {
-  background-color: #e2e2e2;
+  background-color: var(--default-grey-color);
   height: 100vh;
   width: 100vw;
 }
 
-.close-button {
-  width: 4vw;
-}
-
-.about-logo {
-  width: 30vw;
-}
-
-.about-top {
-  display: flex;
-}
-
-.about-page .center-content {
-  display: flex;
-  justify-content: center;
-}
-
-.about-page .center-content .info-text {
-  width: 500px;
-}
-
 .about-page .image-container {
   display: flex;
+  align-self: center;
+  margin-left: 4em;
 }
 
 .about-page .image-container .mockup-left {
@@ -487,7 +484,4 @@ use first margin to control grid vertical spacing. */
   margin-left: 25px;
 }
 
-.about-page .social-links {
-  display: flex;
-  justify-content: center;
-}
+/* --------------------- About.html --------------------- */
