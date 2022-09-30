@@ -126,12 +126,12 @@ a {
   width: 5vw;
 
   z-index: 10;
-  opacity: 50%;
+  opacity: 25%;
   transition: 200ms opacity ease-in-out;
 }
 
 .arrow-left:hover {
-  opacity: 100%;
+  opacity: 60%;
   cursor: pointer;
 }
 
@@ -144,12 +144,12 @@ a {
   width: 5vw;
 
   z-index: 10;
-  opacity: 50%;
+  opacity: 25%;
   transition: 200ms opacity ease-in-out;
 }
 
 .arrow-right:hover {
-  opacity: 100%;
+  opacity: 60%;
   cursor: pointer;
 }
 
@@ -203,13 +203,12 @@ a {
 }
 
 .hero-text h4 {
-  font-size: 2vw;
+  font-size: 1.5vw;
   transform: translateY(-50%);
   font-weight: 400;
 }
 
 .hero-description {
-  position: absolute;
   width: 35vw;
   top: 10vw;
 
