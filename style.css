@@ -17,52 +17,63 @@
 
 a {
   color: #000000;
+
   text-decoration: none;
 }
 
 .header {
   width: 100vw;
-  z-index: 1000;
+
   background-color: white;
+
+  z-index: 1000;
 }
 
 .navbar {
-  height: 13vw;
-  background-color: white;
   position: relative;
-  /* position: sticky;
-  top: 20px; */
+
+  height: 13vw;
+
+  background-color: white;
+
   z-index: 1000;
 }
 
-.top {
-  padding: 2vw;
+.navbar .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 2vw;
+
   background-color: white;
 }
 
-.left {
+.navbar .left {
   position: sticky;
   top: 0;
 }
 
-.left img {
+.navbar .left img {
   height: 2vw;
   padding: 0.5vw;
   transform: translateY(50%);
 }
 
+/* make bottom class more specific */
+
 .bottom {
-  height: 4vw;
   position: sticky;
-  top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  top: 0px;
+
+  height: 4vw;
+
   background-color: white;
+
+  z-index: 1000;
 }
 
 .header-logo {
@@ -73,12 +84,15 @@ a {
   height: 5vw;
   transform: translateY(50%);
 }
+
 .pages {
-  font-size: 2vw;
-  font-weight: 300;
   display: flex;
   justify-content: space-between;
+
   width: 60vw;
+
+  font-size: 2vw;
+  font-weight: 300;
 }
 
 .pages a {
@@ -91,24 +105,26 @@ a {
 }
 
 .main {
+  height: 2000px;
+
   background: linear-gradient(
       237.41deg,
       rgba(0, 0, 0, 0.5) 14.81%,
       rgba(255, 255, 255, 0) 88.39%
     ),
     #232323;
-
-  height: 2000px;
 }
 
-/* Hero section */
+/* --------------------- Hero section ---------------------*/
 
 .arrow-left {
   position: absolute;
   top: 50%;
   left: 2vw;
   transform: translate(0%, -50%);
+
   width: 5vw;
+
   z-index: 10;
   opacity: 50%;
   transition: 200ms opacity ease-in-out;
@@ -124,7 +140,9 @@ a {
   top: 50%;
   right: 2vw;
   transform: translate(0%, -50%);
+
   width: 5vw;
+
   z-index: 10;
   opacity: 50%;
   transition: 200ms opacity ease-in-out;
@@ -143,16 +161,18 @@ a {
 .heroes > ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .slide {
   position: absolute;
   inset: 0;
+
+  z-index: 4;
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
-  z-index: 4;
 }
 
 .slide[data-active] {
@@ -167,9 +187,10 @@ a {
 
 .hero-text {
   display: flex;
+  flex-direction: column;
   position: absolute;
   top: 2vw;
-  left: 20vw;
+  left: 10vw;
 }
 
 .hero-heading {
@@ -177,64 +198,89 @@ a {
   font-size: var(--hero-title-size);
 }
 
+.hero-text h3 {
+  font-size: 2vw;
+}
+
+.hero-text h4 {
+  font-size: 2vw;
+  transform: translateY(-50%);
+  font-weight: 400;
+}
+
 .hero-description {
-  color: white;
   position: absolute;
+  width: 35vw;
+  top: 10vw;
+
+  color: white;
+
   font-size: var(--hero-description-size);
   text-align: justify;
-  width: 35vw;
-  top: 6vw;
 }
 
 .hero-button {
-  font-size: var(--button-font-size);
-  font-weight: bold;
   position: absolute;
   top: 15.5vw;
   height: 4vw;
   width: 17vw;
+
   background-color: var(--button-main-color);
+
+  font-size: var(--button-font-size);
+  font-weight: bold;
+
   border-radius: var(--button-radius);
   border: none;
+
   cursor: pointer;
 }
 
 .hero-button:hover {
   background-color: #000000;
   color: white;
+
+  border: solid;
+  border-width: 1px;
+  border-color: #83838376;
+
   transition: all;
   transition-duration: 350ms;
 }
 
-/* /Hero section */
-
-/* Vignette */
+/* --------------------- Hero section --------------------- */
+/* --------------------- Vignette --------------------- */
 
 .vignette-left,
 .vignette-right {
-  background: linear-gradient(90deg, #0000007c 0%, rgba(0, 0, 0, 0) 100%);
-  pointer-events: none;
   position: fixed;
   top: 0;
+
   height: 100%;
   width: 20vw;
+
+  background: linear-gradient(90deg, #0000007c 0%, rgba(0, 0, 0, 0) 100%);
+
+  pointer-events: none;
   z-index: 1;
 }
 
 .vignette-right {
-  background: linear-gradient(-90deg, #0000007c 0%, rgba(0, 0, 0, 0) 100%);
   right: 0;
+
+  background: linear-gradient(-90deg, #0000007c 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* /vignette */
-
+/* --------------------- vignette ---------------------*/
 /* --------------------- Video grid ---------------------*/
 
 .grid {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   height: 80%;
+
   overflow-x: auto;
 }
 
@@ -249,8 +295,10 @@ use first margin to control grid vertical spacing. */
 .line {
   display: flex;
   align-items: center;
+
   margin: -3vw -1vw -3vw -4vw;
   padding: 5vw;
+
   overflow-x: auto;
 }
 
@@ -260,6 +308,7 @@ use first margin to control grid vertical spacing. */
 
 .tile {
   position: relative;
+
   height: 10vw;
   margin: 0vw 1vw 0vw 1vw;
 }
@@ -269,90 +318,117 @@ use first margin to control grid vertical spacing. */
   object-position: 100% 30%;
   aspect-ratio: 1.618/1;
   border-radius: 1vw;
+
   height: 10vw;
+
   transition: 200ms all ease-in-out;
 }
 
 .tile-image:hover {
   height: 12vw;
-  transition: 200ms all ease-in-out;
-  cursor: pointer;
+
   box-shadow: 2vw 1vw 2vw #00000075;
   filter: brightness(50%);
+
+  transition: 200ms all ease-in-out;
   z-index: 1;
+  cursor: pointer;
 }
 
 .movie-title {
-  pointer-events: none;
-  color: white;
-  font-size: 1vw;
-  font-weight: bold;
   position: absolute;
+
   bottom: 5%;
   left: 5%;
+
+  font-size: 1vw;
+  font-weight: bold;
+
+  color: white;
+
   transition: 200ms all ease-in-out;
   z-index: 2;
+  pointer-events: none;
 }
 
 .tile:hover > .movie-title {
+  transform: translateY(-500%);
+
   font-size: 1.2vw;
+
   transition: 200ms all ease-in-out;
   transition-delay: 50ms;
-  transform: translateY(-500%);
 }
 
 .movie-description {
-  color: white;
-  font-size: 0.8vw;
-  pointer-events: none;
   position: absolute;
-  overflow-wrap: none;
+
   top: 35%;
   left: 5%;
   width: 16vw;
+
+  color: white;
   opacity: 0;
+
+  font-size: 0.8vw;
+
   transition: 200ms all ease-in-out;
+  pointer-events: none;
+  overflow-wrap: none;
   z-index: 2;
 }
 
 .tile:hover > .movie-description {
+  opacity: 100;
+
   visibility: unset;
+
   transition: all;
   transition: 200ms all ease-in-out;
   transition-delay: 200ms;
-  opacity: 100;
 }
 
 .buy-now-button {
   position: absolute;
-  background-color: white;
+
   width: 10vw;
   height: 2vw;
-  border-radius: 1vw;
-  border: none;
   bottom: -15%;
   left: 5%;
+
+  background-color: white;
   opacity: 0;
-  z-index: 1;
+
+  border-radius: 1vw;
+  border: none;
+
   transition: all;
   transition-duration: 50ms;
+  z-index: 1;
 }
 
 .tile:hover > .buy-now-button {
   opacity: 100;
+
   transition: 200ms all ease-in-out;
   transition-delay: 200ms;
+
   pointer-events: none;
 }
 
 /* find way of making tile stay active while hovering over buy now button */
 /* --------------------- Video grid ---------------------*/
+
+/* --------------------- index.html ---------------------*/
+/* --------------------- collections.html ---------------------*/
+
+/* --------------------- collections.html ---------------------*/
 /* --------------------- Contact.html --------------------- */
 
 .contact-page {
-  background-color: #e2e2e2;
   height: 100vh;
   width: 100vw;
+  background-color: #e2e2e2;
 }
 
 .close-button {
@@ -363,9 +439,10 @@ use first margin to control grid vertical spacing. */
 
 .logo-container {
   display: flex;
-  width: 100vw;
   justify-content: center;
   align-items: center;
+
+  width: 100vw;
 }
 
 .full-logo {
@@ -377,13 +454,15 @@ use first margin to control grid vertical spacing. */
 }
 
 .center-content {
-  margin-top: 80px;
   display: flex;
   justify-content: center;
+
+  margin-top: 80px;
 }
 
 .left-text {
   width: 600px;
+
   line-height: 35px;
   font-size: 24px;
   text-align: justify;
@@ -399,9 +478,10 @@ use first margin to control grid vertical spacing. */
 }
 
 .contact-form input {
-  border-radius: 0.5em;
   padding: 1vw;
   margin: 0.5vw;
+
+  border-radius: 0.5em;
   border: none;
 }
 
@@ -421,6 +501,7 @@ use first margin to control grid vertical spacing. */
 
 .contact-form .email {
   width: 100%;
+
   margin-left: 1vw;
   margin-right: 0;
 }
@@ -433,25 +514,30 @@ use first margin to control grid vertical spacing. */
 .contact-form .message {
   width: 100%;
   height: 20vh;
+
   border-radius: 1vw;
 }
 
 .contact-form .send {
   width: 14vw;
   height: 4vw;
-  border-radius: 5vw;
+  margin-top: 3vh;
+
   background-color: #000000;
   color: white;
+
+  border-radius: 5vw;
+
   font-size: var(--button-font-size);
-  margin-top: 3vh;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 1vh;
+
   width: 100%;
+  bottom: 1vh;
 }
 
 .social-links img {
@@ -461,26 +547,30 @@ use first margin to control grid vertical spacing. */
 /* --------------------- About.html --------------------- */
 
 .about-page {
-  background-color: var(--default-grey-color);
   height: 100vh;
   width: 100vw;
+
+  background-color: var(--default-grey-color);
 }
 
 .about-page .image-container {
   display: flex;
   align-self: center;
+
   margin-left: 4em;
 }
 
 .about-page .image-container .mockup-left {
-  height: 100%;
   display: flex;
+
+  height: 100%;
 }
 
 .about-page .image-container .mockup-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   margin-left: 25px;
 }
 
