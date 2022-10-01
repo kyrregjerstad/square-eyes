@@ -58,6 +58,8 @@ a {
   height: 2vw;
   padding: 0.5vw;
   transform: translateY(50%);
+
+  cursor: pointer;
 }
 
 /* make bottom class more specific */
@@ -417,6 +419,79 @@ use first margin to control grid vertical spacing. */
 
 /* find way of making tile stay active while hovering over buy now button */
 /* --------------------- Video grid ---------------------*/
+/* --------------------- sidebar ---------------------*/
+
+.background-blur {
+  position: absolute;
+  background-color: #00000054;
+
+  backdrop-filter: blur(1px);
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 1999;
+
+  transition: opacity 500ms;
+
+  opacity: 1;
+}
+
+.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.sidebar {
+  position: fixed;
+
+  width: 30vw;
+  top: 0;
+  bottom: 0;
+
+  background-color: white;
+
+  box-shadow: 2px 0px 10px #0000001f;
+
+  transition: transform 250ms;
+  z-index: 2000;
+}
+
+.sidebar .close-button {
+  margin-left: 3vw;
+  margin-top: 7.5vw;
+  width: 3vw;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+
+  margin: 3vw;
+  padding: 0;
+
+  font-size: 3vw;
+}
+
+.sidebar li {
+  padding-top: 1vw;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.sidebar-logo img {
+  width: 80%;
+}
+
+/* --------------------- sidebar ---------------------*/
 
 /* --------------------- index.html ---------------------*/
 /* --------------------- collections.html ---------------------*/
