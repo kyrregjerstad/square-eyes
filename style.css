@@ -441,6 +441,7 @@ use first margin to control grid vertical spacing. */
 
 .hidden {
   transform: translateX(-100%);
+  transition: transform 250ms;
   opacity: 0;
 }
 
@@ -648,4 +649,45 @@ use first margin to control grid vertical spacing. */
   margin-left: 25px;
 }
 
-/* --------------------- About.html --------------------- */
+/* --------------------- about.html --------------------- */
+/* --------------------- search.html --------------------- */
+
+.searchbar {
+  width: 100vw;
+  padding-bottom: 10vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 20vw;
+}
+
+.searchbar input {
+  width: 50%;
+  height: 6vw;
+  border-color: #848484;
+  border-radius: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+  font-size: 3vw;
+}
+
+.searchbar input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.searchbar input:focus {
+  outline: none;
+}
+
+.search-results {
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  background-color: red;
+}
+
+.search-result {
+  width: 25%;
+  background-color: blue;
+  margin-left: 2vw;
+}

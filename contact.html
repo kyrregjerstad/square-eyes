@@ -46,37 +46,51 @@
         </div>
         <div class="contact-form">
           <form action="">
-            <div class="line-1">
+            <fieldset>
+              <div class="line-1">
+                <label>
+                  Name: <br />
+                  <input
+                    class="name"
+                    type="text"
+                    placeholder="Kyrre Gjerstad"
+                  />
+                </label>
+                <label>
+                  Email: <br />
+                  <input
+                    class="email"
+                    type="email"
+                    placeholder="contact@kyrregjerstad.com"
+                  />
+                </label>
+              </div>
               <label>
-                Name: <br />
-                <input class="name" type="text" placeholder="Kyrre Gjerstad" />
-              </label>
-              <label>
-                Email: <br />
+                Subject: <br />
                 <input
-                  class="email"
-                  type="email"
-                  placeholder="contact@kyrregjerstad.com"
+                  class="subject"
+                  type="text"
+                  placeholder="I love pineapples"
                 />
               </label>
-            </div>
-            <label>
-              Subject: <br />
-              <input
-                class="subject"
-                type="text"
-                placeholder="I love pineapples"
-              />
-            </label>
-            <label>
-              Category: <br />
-              <input class="category" type="text" />
-            </label>
-            <label>
-              Message: <br />
-              <input class="message" type="text" />
-            </label>
-            <button class="send">Send</button>
+              <label>
+                Category: <br />
+                <input class="category" list="contact-category" type="text" />
+                <datalist id="contact-category">
+                  <option value="Technical Difficulties"></option>
+                  <option value="Payment Issues"></option>
+                  <option value="General Feedback"></option>
+                  <option value="Feature Request"></option>
+                  <option value="I am a film producer"></option>
+                  <option value="Other"></option>
+                </datalist>
+              </label>
+              <label>
+                Message: <br />
+                <input class="message" type="text" />
+              </label>
+              <button class="send">Send</button>
+            </fieldset>
           </form>
         </div>
       </div>
