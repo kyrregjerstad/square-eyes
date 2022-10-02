@@ -654,10 +654,10 @@ use first margin to control grid vertical spacing. */
 
 .searchbar {
   width: 100vw;
-  padding-bottom: 10vw;
+  padding-bottom: 5vw;
   display: flex;
   justify-content: center;
-  padding-top: 20vw;
+  padding-top: 5vw;
 }
 
 .searchbar input {
@@ -681,13 +681,6 @@ use first margin to control grid vertical spacing. */
 
 .search-results {
   display: flex;
-  width: 100vw;
-  height: 20vh;
-  background-color: red;
+  justify-content: center;
 }
-
-.search-result {
-  width: 25%;
-  background-color: blue;
-  margin-left: 2vw;
-}
+/* --------------------- search.html --------------------- */

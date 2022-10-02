@@ -10,6 +10,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
     </style>
     <script defer src="script.js" type="module"></script>
+    <script defer src="search.js" type="module"></script>
   </head>
   <body>
     <div class="sidebar hidden">
@@ -37,7 +38,9 @@
               src="images/icons/icon_menu_hamburger.svg"
               alt="navigation menu"
             />
-            <img src="images/icons/icon_menu_search.svg" alt="search icon" />
+            <a href="index.html">
+              <img src="images/icons/icon_menu_close.svg" alt="search icon" />
+            </a>
           </div>
           <div class="middle">
             <img
@@ -58,7 +61,7 @@
     </header>
     <div class="bottom">
       <div class="pages">
-        <a href="/index.html" class="films active">FILMS</a>
+        <a href="/index.html" class="films">FILMS</a>
         <a href="/browse.html" class="browse">BROWSE</a>
         <a href="/collections.html" class="collections">COLLECTIONS</a>
         <a href="/library.html" class="home">LIBRARY</a>
@@ -70,13 +73,15 @@
       <div class="vignette-right"></div>
 
       <div class="searchbar">
-        <input type="search" placeholder="Search" />
+        <input
+          id="search"
+          type="search"
+          placeholder="Search"
+          autocomplete="off"
+        />
       </div>
-      <div class="search-results">
-        <div class="search-result"></div>
-        <div class="search-result"></div>
-        <div class="search-result"></div>
-        <div class="search-result"></div>
+      <div class="grid">
+        <div class="search-results"></div>
       </div>
     </div>
   </body>
