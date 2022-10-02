@@ -74,12 +74,13 @@ a {
   height: 4vw;
 
   background-color: white;
+  box-shadow: 5px 5px 5px -5px #000000;
 
   z-index: 1000;
 }
 
 .header-logo {
-  height: 10vw;
+  width: 24vw;
 }
 
 .user-icon {
@@ -460,7 +461,7 @@ use first margin to control grid vertical spacing. */
   z-index: 2000;
 }
 
-.sidebar .close-button {
+.sidebar .close-button-arrow {
   margin-left: 3vw;
   margin-top: 7.5vw;
   width: 3vw;
@@ -501,8 +502,8 @@ use first margin to control grid vertical spacing. */
 /* --------------------- Contact.html --------------------- */
 
 .contact-page {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #e2e2e2;
 }
 
@@ -510,6 +511,8 @@ use first margin to control grid vertical spacing. */
   width: 2vw;
   margin-left: 5vw;
   margin-top: 5vw;
+
+  position: absolute;
 }
 
 .logo-container {
@@ -521,7 +524,9 @@ use first margin to control grid vertical spacing. */
 }
 
 .full-logo {
-  width: 30vw;
+  margin-top: 2vw;
+  width: 24vw;
+  transform: translateX(5%);
 }
 
 .about-contact-top {
@@ -548,47 +553,24 @@ use first margin to control grid vertical spacing. */
 }
 
 .contact-form {
-  display: flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 30%;
 }
 
 .contact-form input {
-  padding: 1vw;
-  margin: 0.5vw;
-
   border-radius: 0.5em;
   border: none;
-}
-
-.contact-form .line-1 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact-form label {
-  margin: 0.5vw;
-}
-
-.contact-form .name {
-  width: 90%;
-  margin-left: 0;
-}
-
-.contact-form .email {
-  width: 100%;
-
-  margin-left: 1vw;
-  margin-right: 0;
-}
-
-.contact-form .subject,
-.contact-form .category {
+  padding: 1vw 1vw 1vw 1vw;
+  margin-bottom: 1vw;
   width: 100%;
 }
 
 .contact-form .message {
   width: 100%;
   height: 20vh;
+  padding: 1vw 1vw 1vw 1vw;
+  border: none;
 
   border-radius: 1vw;
 }
@@ -609,10 +591,12 @@ use first margin to control grid vertical spacing. */
 .social-links {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: relative;
+
+  margin-top: 5vw;
 
   width: 100%;
-  bottom: 1vh;
+  bottom: 10px;
 }
 
 .social-links img {
@@ -622,7 +606,7 @@ use first margin to control grid vertical spacing. */
 /* --------------------- About.html --------------------- */
 
 .about-page {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 
   background-color: var(--default-grey-color);

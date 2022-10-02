@@ -2,7 +2,7 @@ import { carouselHandler } from "./carouselHandler.js";
 
 const navbar = document.querySelectorAll(".pages a");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
-const closeButton = document.querySelector(".close-button");
+const closeButton = document.querySelector(".close-button-arrow");
 const backgroundBlur = document.querySelector(".background-blur");
 const sideBar = document.querySelector(".sidebar");
 
@@ -17,17 +17,17 @@ navbar.forEach((item) => {
   });
 });
 
-hamburgerMenu.addEventListener("click", () => {
+hamburgerMenu?.addEventListener("click", () => {
   sideBar.classList.toggle("hidden");
   backgroundBlur.classList.toggle("hidden");
 });
 
-closeButton.addEventListener("click", () => {
+closeButton?.addEventListener("click", () => {
   sideBar.classList.toggle("hidden");
   backgroundBlur.classList.toggle("hidden");
 });
 
-backgroundBlur.addEventListener("click", () => {
+backgroundBlur?.addEventListener("click", () => {
   sideBar.classList.toggle("hidden");
   backgroundBlur.classList.toggle("hidden");
 });

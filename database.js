@@ -34,10 +34,10 @@ export const movies = [
     year: "2019",
     genre: "Action",
     director: "David Leitch",
-    actor: "Dwayne Johnson",
+    actor: "Dwayne Johnson, Jason Statham",
     cover: "./images/film/film_cover_hobbs-and-shaw.webp",
     description:
-      "Lawman Luke Hobbs and outcast Deckard Shaw (Jason Statham) form an unlikely alliance when a cyber-genetically enhanced villain threatens the future of humanity.",
+      "Lawman Luke Hobbs and outcast Deckard Shaw form an unlikely alliance when a cyber-genetically enhanced villain threatens the future of humanity.",
   },
   {
     title: "Once Upon A time in Hollywood",
