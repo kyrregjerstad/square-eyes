@@ -421,7 +421,7 @@ use first margin to control grid vertical spacing. */
   transition: 200ms all ease-in-out;
   transition-delay: 200ms;
 
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 /* find way of making tile stay active while hovering over buy now button */

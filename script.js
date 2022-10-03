@@ -42,3 +42,51 @@ qualitySelectorButtons.forEach((button) => {
     });
   });
 });
+
+import { movies } from "./database.js";
+
+const tiles = document.querySelectorAll(".tile");
+const movieTitles = document.querySelectorAll(".movie-title");
+
+// movieTitles.forEach((title) => {
+//   title.innerHTML = `${movies[index].title}`;
+//   index++;
+// });
+
+let index = 0;
+let maxLength = movies.length;
+console.log(movies.length);
+
+tiles.forEach((tile) => {
+  tile.innerHTML = `<p class="movie-title">${movies[index].title}</p>
+    <p class="movie-description">
+    ${movies[index].description}
+    </p>
+    <button class="buy-now-button" data-movieCode="${movies[index].code}">Buy now</button>
+    <img
+    class="tile-image"
+    src="${movies[index].cover}"
+    alt=""
+    />`;
+  index++;
+  if (index === maxLength) {
+    index = 0;
+  }
+});
+
+const buyNowButtons = document.querySelectorAll(".buy-now-button");
+
+let movieCode;
+buyNowButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    // console.log(event.target.getAttribute("data-movieCode"));
+    movieCode = event.target.getAttribute("data-movieCode");
+    window.location = "/checkout.html";
+  });
+});
+
+export let code = movieCode;
+
+window.addEventListener("click", () => {
+  console.log(movieCode);
+});
