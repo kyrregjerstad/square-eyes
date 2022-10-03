@@ -5,6 +5,9 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 const closeButton = document.querySelector(".close-button-arrow");
 const backgroundBlur = document.querySelector(".background-blur");
 const sideBar = document.querySelector(".sidebar");
+const qualitySelectorButtons = document.querySelectorAll(
+  ".quality-selector-button"
+);
 
 carouselHandler();
 
@@ -30,4 +33,12 @@ closeButton?.addEventListener("click", () => {
 backgroundBlur?.addEventListener("click", () => {
   sideBar.classList.toggle("hidden");
   backgroundBlur.classList.toggle("hidden");
+});
+
+qualitySelectorButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    qualitySelectorButtons.forEach((button) => {
+      button.classList.toggle("none");
+    });
+  });
 });
