@@ -1,16 +1,17 @@
 import { movies } from "./database.js";
-import { code } from "./script.js";
+
+let movieCode = sessionStorage.getItem("movieCode");
 
 const checkoutContainer = document.querySelector(".checkout-container");
 
 checkoutContainer.innerHTML = `
   <div class="left-checkout">
-    <img src="${movies[code].cover}" alt="" />
+    <img src="${movies[movieCode].cover}" alt="" />
   </div>
   <div class="right-checkout">
     <div class="checkout-top">
-      <h1>${movies[code].title}</h1>
-      <h2>${movies[code].year}</h2>
+      <h1>${movies[movieCode].title}</h1>
+      <h2>${movies[movieCode].year}</h2>
       <div class="quality">
         <img
           class="quality-selector-button"
@@ -40,7 +41,7 @@ checkoutContainer.innerHTML = `
     </div>
     <div class="checkout-middle">
       <p class="checkout-description">
-        ${movies[code].description}
+        ${movies[movieCode].description}
       </p>
     </div>
     <div class="checkout-bottom">
