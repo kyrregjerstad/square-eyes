@@ -165,6 +165,7 @@ h1 {
 .heroes {
   position: relative;
   height: 23vw;
+  margin-bottom: 2vw;
 }
 
 .heroes > ul {
@@ -303,11 +304,13 @@ use first margin to control grid vertical spacing. */
 .line {
   display: flex;
   align-items: center;
+  flex-basis: 12vw;
 
-  margin: -3vw -1vw -3vw -4vw;
+  margin: -1vw -1vw -3vw -4vw;
   padding: 5vw;
 
-  overflow-x: auto;
+  /* overflow-x: auto; */
+  overflow-y: hidden;
 }
 
 .line::-webkit-scrollbar {
@@ -317,8 +320,20 @@ use first margin to control grid vertical spacing. */
 .tile {
   position: relative;
 
-  height: 10vw;
+  height: 12vw;
   margin: 0vw 1vw 0vw 1vw;
+
+  display: flex;
+
+  border-radius: 1vw;
+
+  transition: 200ms all ease-in-out;
+}
+
+.tile:hover {
+  transition: 200ms all ease-in-out;
+  height: 16vw;
+  box-shadow: 2vw 1vw 2vw #00000075;
 }
 
 .tile-image {
@@ -327,29 +342,25 @@ use first margin to control grid vertical spacing. */
   aspect-ratio: 1.618/1;
   border-radius: 1vw;
 
-  height: 10vw;
-
   transition: 200ms all ease-in-out;
 }
 
-.tile-image:hover {
-  height: 12vw;
-
-  box-shadow: 2vw 1vw 2vw #00000075;
-  filter: brightness(50%);
+.tile:hover > .tile-image {
+  filter: brightness(40%);
 
   transition: 200ms all ease-in-out;
   z-index: 1;
-  cursor: pointer;
 }
 
 .movie-title {
   position: absolute;
 
+  width: 90%;
+
   bottom: 5%;
   left: 5%;
 
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-weight: bold;
 
   color: white;
@@ -360,25 +371,26 @@ use first margin to control grid vertical spacing. */
 }
 
 .tile:hover > .movie-title {
-  transform: translateY(-500%);
+  top: 5%;
+  /* bottom: unset; */
 
-  font-size: 1.2vw;
+  font-size: 1.6vw;
 
+  transition-delay: 5000ms;
   transition: 200ms all ease-in-out;
-  transition-delay: 50ms;
 }
 
 .movie-description {
   position: absolute;
 
-  top: 35%;
+  top: 30%;
   left: 5%;
-  width: 16vw;
+  width: 90%;
 
   color: white;
   opacity: 0;
 
-  font-size: 0.8vw;
+  font-size: 1.2vw;
 
   transition: 200ms all ease-in-out;
   pointer-events: none;
@@ -399,27 +411,29 @@ use first margin to control grid vertical spacing. */
 .buy-now-button {
   position: absolute;
 
-  width: 10vw;
-  height: 2vw;
-  bottom: -15%;
+  width: 60%;
+  height: 20%;
+  bottom: 5%;
   left: 5%;
 
   background-color: white;
   opacity: 0;
 
-  border-radius: 1vw;
+  border-radius: 5vw;
   border: none;
 
   transition: all;
   transition-duration: 50ms;
-  z-index: 1;
+  z-index: 5;
+
+  cursor: pointer;
 }
 
 .tile:hover > .buy-now-button {
   opacity: 100;
 
   transition: 200ms all ease-in-out;
-  transition-delay: 200ms;
+  transition-delay: 150ms;
 
   /* pointer-events: none; */
 }
