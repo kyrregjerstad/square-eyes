@@ -10,7 +10,7 @@ export const tileBuilder = () => {
     <p class="movie-description">
     ${movies[index].description}
     </p>
-    <button class="buy-now-button" data-movieCode="${movies[index].code}">Buy now</button>
+    <button class="buy-now-button" data-token="${movies[index].code}">Buy now</button>
     <img
     class="tile-image"
     src="${movies[index].cover}"
@@ -25,12 +25,12 @@ export const tileBuilder = () => {
 
 export const checkoutTransfer = () => {
   const buyNowButtons = document.querySelectorAll(".buy-now-button");
-  let movieCode;
+  let token;
   buyNowButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
       console.log("click");
-      movieCode = event.target.getAttribute("data-movieCode");
-      sessionStorage.setItem("movieCode", movieCode);
+      token = event.target.getAttribute("data-token");
+      sessionStorage.setItem("token", token);
       window.location = "/checkout.html";
     });
   });
