@@ -6,18 +6,18 @@ export const tileBuilder = () => {
   let index = 0;
   let maxLength = movies.length;
   tiles.forEach((tile) => {
-    tile.innerHTML = `<p class="movie-title">${movies[index].title}</p>
+    tile.innerHTML = `
+    <p class="movie-title">${movies[index].title}</p>
     <p class="movie-description">
     ${movies[index].description.substring(0, 90) + `...`}
     </p>
     <button class="buy-now-button" data-token="${
-      movies[index].code
+      movies[index].token
     }">Buy now</button>
-    <img
-    class="tile-image"
+    <img class="tile-image"
     src="${movies[index].cover}"
-    alt=""
-    />`;
+    alt=""/>
+    `;
     index++;
     if (index === maxLength) {
       index = 0;
