@@ -2,19 +2,19 @@
   margin: 0;
   font-family: "Inter", sans-serif;
 
-  --button-radius: 40px;
+  --button-radius: 5vw;
   --button-font-size: 2vw;
 
   /* --------- Font size --------------- */
 
-  --hero-description-size: 1.3vw;
+  --hero-description-size: clamp(12px, 1.3vw, 36px);
   --hero-line-height: 29px;
 
   --font-Xlarge: 5vw;
   --font-large: 3vw;
-  --font-medium: 2vw;
-  --font-small: 1.5vw;
-  --font-xsmall: 1vw;
+  --font-medium: clamp(14px, 2vw, 36px);
+  --font-small: clamp(14px, 1.5vw, 30px);
+  --font-xsmall: clamp (14px, 1vw, 28px);
 
   /* --------- Colours --------------- */
   --button-main-color: #d9d9d9;
@@ -44,91 +44,90 @@ h1 {
   font-size: var(--font-Xlarge);
 }
 
-.header {
-  width: 100vw;
-
-  background-color: white;
-
-  z-index: 1000;
-}
-
-.navbar {
+header {
   position: relative;
-
-  height: 13vw;
-
   background-color: white;
+  z-index: 2000;
 
-  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  width: 100%;
+
+  box-shadow: 5px 5px 5px -5px #000000;
 }
 
-.navbar .top {
+header .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 2vw;
+  padding-top: clamp(8px, 1vw, 20px);
+  padding-bottom: clamp(8px, 1vw, 20px);
 
-  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+
+  z-index: 1000;
 }
 
-.navbar .left {
-  position: sticky;
-  top: 0;
-}
-
-.navbar .left img {
+header .navbar .left img {
   height: 2vw;
+  max-height: 50px;
   padding: 0.5vw;
   transform: translateY(50%);
 
   cursor: pointer;
 }
 
-/* make bottom class more specific */
+header .header-logo {
+  width: 24vw;
+  max-width: 350px;
+}
 
-.bottom {
+header .user-icon {
+  height: 5vw;
+  max-height: 80px;
+  transform: translateY(50%);
+}
+
+header .bottom {
   position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 0;
 
-  height: 4vw;
-
-  background-color: white;
-  box-shadow: 5px 5px 5px -5px #000000;
-
-  z-index: 1000;
+  height: clamp(16px, 4vw, 50px);
 }
 
-.header-logo {
-  width: 24vw;
-}
-
-.user-icon {
-  height: 5vw;
-  transform: translateY(50%);
-}
-
-.pages {
+header .pages {
   display: flex;
   justify-content: space-between;
 
   width: 60vw;
+  max-width: 1180px;
 
   font-size: var(--font-medium);
   font-weight: 300;
 }
 
-.pages a {
+header .pages a {
   cursor: pointer;
 }
 
-.pages .active {
+header .pages .active {
   font-weight: bold;
   text-decoration: underline;
 }
+
+/* @media (min-width: 1200px) {
+  .navbar {
+    width: 1200px;
+  }
+} */
 
 main {
   height: 2000px;
@@ -166,6 +165,8 @@ main {
 .heroes {
   position: relative;
   height: 23vw;
+  min-height: 160px;
+
   margin-bottom: 2vw;
 }
 
@@ -193,7 +194,10 @@ main {
 }
 
 .hero-img {
+  object-fit: cover;
+  object-position: 15% 50%;
   width: 100%;
+  min-height: 160px;
 }
 
 .hero-text {
@@ -202,6 +206,7 @@ main {
   position: absolute;
   top: 2vw;
   left: 10vw;
+  height: clamp(150px, 100%, 3000px);
 }
 
 .hero-heading {
@@ -220,7 +225,7 @@ main {
 }
 
 .hero-description {
-  width: 35vw;
+  width: clamp(355px, 35vw, 1000px);
   top: 10vw;
 
   color: white;
@@ -231,13 +236,15 @@ main {
 
 .hero-button {
   position: absolute;
-  top: 15.5vw;
-  height: 4vw;
-  width: 17vw;
+  bottom: 5%;
+  height: clamp(30px, 4vw, 100px);
+  width: clamp(133px, 17vw, 423px);
+
+  transform: translateY(-50%);
 
   background-color: var(--button-main-color);
 
-  font-size: var(--button-font-size);
+  font-size: var(--font-medium);
   font-weight: bold;
 
   border-radius: var(--button-radius);
@@ -304,10 +311,14 @@ use first margin to control grid vertical spacing. */
 .line {
   display: flex;
   align-items: center;
-  flex-basis: 12vw;
+  flex-basis: clamp(16px, 12vw, 250px);
 
-  margin: -1vw -1vw -3vw -4vw;
-  padding: 5vw;
+  margin-top: -1vw;
+  margin-right: -1vw;
+  margin-bottom: -3vw;
+  margin-left: -4vw;
+
+  padding: clamp(40px, 5vw, 250px);
 
   overflow-y: hidden;
 }
@@ -319,8 +330,11 @@ use first margin to control grid vertical spacing. */
 .tile {
   position: relative;
 
-  height: 12vw;
-  margin: 0vw 1vw 0vw 1vw;
+  height: clamp(80px, 12vw, 250px);
+  margin-top: 0;
+  margin-right: 1vw;
+  margin-bottom: 0;
+  margin-left: 1vw;
 
   display: flex;
 
