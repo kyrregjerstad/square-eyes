@@ -7,14 +7,31 @@
 
   /* --------- Font size --------------- */
 
-  --hero-title-size: 5vw;
   --hero-description-size: 1.3vw;
   --hero-line-height: 29px;
+
+  --font-Xlarge: 5vw;
+  --font-large: 3vw;
+  --font-medium: 2vw;
+  --font-small: 1.5vw;
+  --font-xsmall: 1vw;
 
   /* --------- Colours --------------- */
   --button-main-color: #d9d9d9;
   --button-hover-color: #000000;
   --default-grey-color: #e2e2e2;
+
+  --default-gradient: linear-gradient(
+      237.41deg,
+      rgba(0, 0, 0, 0.5) 14.81%,
+      rgba(255, 255, 255, 0) 88.39%
+    ),
+    #232323;
+
+  /* --------- Transition --------------- */
+  --default-transition-opacity: 200ms opacity ease-in-out;
+  --default-button-transition: 350ms all ease-in-out;
+  --default-tile-transition: 200ms all ease-in-out;
 }
 
 a {
@@ -24,7 +41,7 @@ a {
 }
 
 h1 {
-  font-size: 4vw;
+  font-size: var(--font-Xlarge);
 }
 
 .header {
@@ -75,7 +92,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0px;
+  top: 0;
 
   height: 4vw;
 
@@ -100,7 +117,7 @@ h1 {
 
   width: 60vw;
 
-  font-size: 2vw;
+  font-size: var(--font-medium);
   font-weight: 300;
 }
 
@@ -113,20 +130,16 @@ h1 {
   text-decoration: underline;
 }
 
-.main {
+main {
   height: 2000px;
 
-  background: linear-gradient(
-      237.41deg,
-      rgba(0, 0, 0, 0.5) 14.81%,
-      rgba(255, 255, 255, 0) 88.39%
-    ),
-    #232323;
+  background: var(--default-gradient);
 }
 
 /* --------------------- Hero section ---------------------*/
 
-.arrow-left {
+.arrow-left,
+.arrow-right {
   position: absolute;
   top: 50%;
   left: 2vw;
@@ -136,27 +149,15 @@ h1 {
 
   z-index: 10;
   opacity: 25%;
-  transition: 200ms opacity ease-in-out;
-}
-
-.arrow-left:hover {
-  opacity: 60%;
-  cursor: pointer;
+  transition: var(--default-transition-opacity);
 }
 
 .arrow-right {
-  position: absolute;
-  top: 50%;
+  left: unset;
   right: 2vw;
-  transform: translate(0%, -50%);
-
-  width: 5vw;
-
-  z-index: 10;
-  opacity: 25%;
-  transition: 200ms opacity ease-in-out;
 }
 
+.arrow-left:hover,
 .arrow-right:hover {
   opacity: 60%;
   cursor: pointer;
@@ -181,7 +182,7 @@ h1 {
 
   z-index: 4;
   opacity: 0;
-  transition: 200ms opacity ease-in-out;
+  transition: var(--default-transition-opacity);
   transition-delay: 200ms;
 }
 
@@ -205,15 +206,15 @@ h1 {
 
 .hero-heading {
   color: white;
-  font-size: var(--hero-title-size);
+  font-size: var(--font-Xlarge);
 }
 
 .hero-text h3 {
-  font-size: 2vw;
+  font-size: var(--font-medium);
 }
 
 .hero-text h4 {
-  font-size: 1.5vw;
+  font-size: var(--font-small);
   transform: translateY(-50%);
   font-weight: 400;
 }
@@ -253,8 +254,7 @@ h1 {
   border-width: 1px;
   border-color: #83838376;
 
-  transition: all;
-  transition-duration: 350ms;
+  transition: var(--default-button-transition);
 }
 
 /* --------------------- Hero section --------------------- */
@@ -309,7 +309,6 @@ use first margin to control grid vertical spacing. */
   margin: -1vw -1vw -3vw -4vw;
   padding: 5vw;
 
-  /* overflow-x: auto; */
   overflow-y: hidden;
 }
 
@@ -327,11 +326,11 @@ use first margin to control grid vertical spacing. */
 
   border-radius: 1vw;
 
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
 }
 
 .tile:hover {
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
   height: 16vw;
   box-shadow: 2vw 1vw 2vw #00000075;
 }
@@ -347,14 +346,14 @@ use first margin to control grid vertical spacing. */
   z-index: 3;
   padding-left: 5%;
   padding-right: 5%;
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
+
+  pointer-events: none;
 }
 
 .tile:hover .tile-text {
   height: 95%;
   width: 90%;
-
-  /* flex-direction: column; */
 }
 
 .movie-title {
@@ -364,33 +363,32 @@ use first margin to control grid vertical spacing. */
 
   bottom: 0;
 
-  font-size: 1.5vw;
+  font-size: var(--font-small);
   font-weight: bold;
 
   color: white;
 
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
+
   pointer-events: none;
 
   transform: translateY(-100%);
 }
 
 .tile:hover .movie-title {
-  /* top: 0; */
-  /* bottom: unset; */
-
   transform: translateY(0%);
 
   font-size: 1.6vw;
 
   transition-delay: 500ms;
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
 }
 
 .movie-year-genre {
   display: flex;
   opacity: 0;
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
+
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -402,14 +400,14 @@ use first margin to control grid vertical spacing. */
 .movie-year {
   position: relative;
 
-  font-size: 1vw;
+  font-size: var(--font-xsmall);
 
   color: white;
 }
 
 .movie-dot {
   color: white;
-  font-size: 1vw;
+  font-size: var(--font-xsmall);
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -417,14 +415,12 @@ use first margin to control grid vertical spacing. */
 .movie-genre {
   position: relative;
 
-  font-size: 1vw;
+  font-size: var(--font-xsmall);
 
   color: white;
 }
 
 .movie-description {
-  /* position: absolute; */
-
   width: 90%;
 
   color: white;
@@ -432,19 +428,16 @@ use first margin to control grid vertical spacing. */
 
   font-size: 1.2vw;
 
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
+
   pointer-events: none;
   overflow-wrap: none;
   z-index: 3;
 }
 
 .tile:hover .movie-description {
-  opacity: 100;
+  opacity: 1;
 
-  visibility: unset;
-
-  transition: all;
-  transition: 200ms all ease-in-out;
   transition-delay: 200ms;
 }
 
@@ -463,20 +456,16 @@ use first margin to control grid vertical spacing. */
   border-radius: 5vw;
   border: none;
 
-  transition: all;
-  transition-duration: 50ms;
+  transition: var(--default-transition-opacity);
   z-index: 5;
 
   cursor: pointer;
 }
 
 .tile:hover > .buy-now-button {
-  opacity: 100;
+  opacity: 1;
 
-  transition: 200ms all ease-in-out;
   transition-delay: 150ms;
-
-  /* pointer-events: none; */
 }
 
 .tile-fade {
@@ -498,17 +487,13 @@ use first margin to control grid vertical spacing. */
   aspect-ratio: 1.618/1;
   border-radius: 1vw;
 
-  transition: 200ms all ease-in-out;
+  transition: var(--default-tile-transition);
 }
 
 .tile:hover > .tile-image {
   filter: brightness(40%);
-
-  transition: 200ms all ease-in-out;
-  z-index: 1;
 }
 
-/* find way of making tile stay active while hovering over buy now button */
 /* --------------------- Video grid ---------------------*/
 /* --------------------- sidebar ---------------------*/
 
@@ -564,7 +549,7 @@ use first margin to control grid vertical spacing. */
   margin: 3vw;
   padding: 0;
 
-  font-size: 3vw;
+  font-size: var(--font-large);
 }
 
 .sidebar li {
@@ -742,7 +727,7 @@ use first margin to control grid vertical spacing. */
   padding-left: 3vw;
   padding-right: 3vw;
 
-  font-size: 3vw;
+  font-size: var(--font-large);
 }
 
 .searchbar input::-webkit-search-cancel-button {
@@ -821,7 +806,7 @@ use first margin to control grid vertical spacing. */
 }
 
 .checkout-middle .checkout-description {
-  font-size: 1.5vw;
+  font-size: var(--font-small);
   line-height: 1.5;
 }
 
@@ -831,7 +816,7 @@ use first margin to control grid vertical spacing. */
   justify-content: flex-end;
   height: 100%;
 
-  font-size: 1.5vw;
+  font-size: var(--font-small);
   line-height: 1.5;
 }
 

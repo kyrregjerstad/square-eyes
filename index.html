@@ -12,7 +12,7 @@
     <script defer src="/scripts/script.js" type="module"></script>
   </head>
   <body>
-    <div class="sidebar hidden">
+    <section class="sidebar hidden">
       <img
         class="close-button-arrow"
         src="/images/icons/icon_menu_arrow-back.svg"
@@ -26,7 +26,7 @@
       <div class="sidebar-logo">
         <img src="/images/logo/SquareEyes_Logo.webp" alt="" />
       </div>
-    </div>
+    </section>
     <div class="background-blur hidden"></div>
 
       <header>
@@ -60,21 +60,20 @@
         </div>
       </header>
       <div class="bottom">
-        <div class="pages">
+        <nav class="pages">
           <a href="/index.html" class="films active">FILMS</a>
           <a href="/browse.html" class="browse">BROWSE</a>
           <a href="/collections.html" class="collections">COLLECTIONS</a>
           <a href="/library.html" class="home">LIBRARY</a>
-        </div>
+        </nav>
       </div>
 
-    <div class="main">
-      <div class="heroes" data-carousel>
+      <main>
+      <section class="heroes" data-carousel>
         <ul data-slides>
           <li class="slide" data-active>
-            <!-- Hero image 1, sweetheart -->
             <div class="hero-text">
-              <h2 class="hero-heading">SWEETHEART</h2>
+              <h1 class="hero-heading">SWEETHEART</h1>
               <p class="hero-description">
                 Jenn has washed ashore a small tropical island and it doesn't
                 take her long to realize she's completely alone. She must spend
@@ -89,10 +88,9 @@
               alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
             />
           </li>
-          <!-- Hero image 2, The batman -->
           <li class="slide">
             <div class="hero-text">
-              <h2 class="hero-heading">GODZILLA</h2>
+              <h1 class="hero-heading">GODZILLA</h1>
               <p class="hero-description">
                 The crypto-zoological agency Monarch faces off against the
                 mighty Godzilla, who collides with Mothra, Rodan, and his
@@ -107,9 +105,8 @@
             />
           </li>
           <li class="slide">
-            <!-- Hero image 3, The Batman -->
             <div class="hero-text">
-              <h2 class="hero-heading">THE BATMAN</h2>
+              <h1 class="hero-heading">THE BATMAN</h1>
               <p class="hero-description">
                 When a sadistic serial killer begins murdering several key
                 political figures in Gotham City, Batman is forced to
@@ -138,11 +135,11 @@
           data-carousel-button="next"
           alt=""
         />
-      </div>
+      </section>
 
       <div class="vignette-left"></div>
       <div class="vignette-right"></div>
-      <div class="grid">
+      <section class="grid">
         <div class="line">
           <!-- <div class="tile">
             <p class="movie-title"></p>
@@ -201,6 +198,6 @@
           <div class="tile"></div>
           <div class="tile"></div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
