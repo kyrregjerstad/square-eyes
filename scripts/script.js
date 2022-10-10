@@ -10,6 +10,21 @@ const qualitySelectorButtons = document.querySelectorAll(
   ".quality-selector-button"
 );
 
+// class Navbar extends HTMLElement {
+//   constructor() {
+//     super();
+//     this.attachShadow({ mode: "open" });
+//   }
+
+//   connectedCallback() {
+//     const template = document.querySelector("#navbar-template");
+
+//     this.shadowRoot.appendChild(template.content.cloneNode(true));
+//   }
+// }
+
+// window.customElements.define("navbar-template", Navbar);
+
 carouselHandler();
 tileBuilder();
 checkoutTransfer();
