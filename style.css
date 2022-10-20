@@ -2,7 +2,8 @@
 *::before,
 *::after {
   margin: 0;
-  /* box-sizing: border-box; */
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Inter", sans-serif;
 
   /* --------- Font size --------------- */
@@ -13,8 +14,8 @@
   --font-Xlarge: clamp(30px, 5vw, 250px);
   --font-large: clamp(20px, 3vw, 80px);
   --font-medium: clamp(14px, 2vw, 36px);
-  --font-small: clamp(14px, 1.5vw, 30px);
-  --font-xsmall: clamp (14px, 1vw, 28px);
+  --font-small: clamp(12px, 1.5vw, 30px);
+  --font-xsmall: clamp(12px, 1vw, 28px);
 
   /* --------- Colours --------------- */
   --default-black: #000000;
@@ -78,6 +79,8 @@ header .navbar-top {
   justify-content: space-between;
   align-items: center;
 
+  /* background-color: rebeccapurple; */
+
   padding-top: clamp(8px, 1vw, 20px);
   padding-bottom: clamp(8px, 1vw, 20px);
 
@@ -88,10 +91,11 @@ header .navbar-top {
 }
 
 header .navbar-top .left img {
-  height: 2vw;
-  max-height: 50px;
-  padding: 0.5vw;
+  height: 2.5vw;
+  max-height: 80px;
   transform: translateY(50%);
+
+  /* background-color: red; */
 
   cursor: pointer;
 }
@@ -104,7 +108,7 @@ header .header-logo {
 header .user-icon {
   height: 5vw;
   max-height: 80px;
-  transform: translateY(50%);
+  transform: translateY(20%);
 }
 
 .navbar-bottom {
@@ -316,23 +320,13 @@ main {
   display: none;
 }
 
-/* using negative values for the margin to avoid overflow issue. 
-if overflow x and y are different, they override each other.
-use first margin to control grid vertical spacing. */
-
 .line {
+  position: relative;
   display: flex;
   align-items: center;
-  flex-basis: clamp(16px, 12vw, 250px);
-
-  /* margin-top: -1vw;
-  margin-right: -1vw;
-  margin-bottom: -3vw;
-  margin-left: -4vw; */
-
-  margin: -1vw -1vw -3vw -4vw;
-
-  padding: clamp(40px, 5vw, 250px);
+  height: clamp(200px, 24vw, 500px);
+  margin-bottom: clamp(-400px, -8vw, -65px);
+  gap: 1vw;
 
   overflow-y: hidden;
 }
@@ -345,12 +339,6 @@ use first margin to control grid vertical spacing. */
   position: relative;
 
   height: clamp(100px, 12vw, 250px);
-  /* margin-top: 0;
-  margin-right: clamp(10px, 1vw, 25px);
-  margin-bottom: 0;
-  margin-left: clamp(10px, 1vw, 25px); */
-
-  margin: 0 clamp(10px, 1vw, 25px) 0 clamp(10px, 1vw, 25px);
 
   display: flex;
 
@@ -366,7 +354,6 @@ use first margin to control grid vertical spacing. */
   transition: var(--default-tile-transition);
   height: clamp(150px, 16vw, 550px);
   box-shadow: 2vw 1vw 2vw #00000075;
-  /* box-shadow: var(--default-box-shadow); */
 }
 
 .tile-text {
@@ -452,18 +439,19 @@ use first margin to control grid vertical spacing. */
 }
 
 .movie-description {
-  width: 90%;
+  width: 120%;
 
   color: var(--default-white);
   opacity: 0;
 
-  font-size: var(--font-xsmall);
+  font-size: var(--font-small);
 
   transition: var(--default-tile-transition);
 
   pointer-events: none;
   overflow-wrap: none;
   z-index: 3;
+  overflow-y: hidden;
 }
 
 .tile:hover .movie-description {
@@ -480,6 +468,7 @@ use first margin to control grid vertical spacing. */
   bottom: 5%;
   left: 5%;
 
+  font-size: var(--font-small);
   font-weight: bold;
   background-color: var(--default-white);
   opacity: 0;
