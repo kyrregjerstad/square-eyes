@@ -1,5 +1,6 @@
 import { carouselHandler } from "./carouselHandler.js";
 import { tileBuilder, checkoutTransfer } from "./populate_grid.js";
+import { headerTemplate } from "./web-components.js";
 
 const navbar = document.querySelectorAll(".pages a");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
@@ -24,7 +25,7 @@ const qualitySelectorButtons = document.querySelectorAll(
 // }
 
 // window.customElements.define("navbar-template", Navbar);
-
+headerTemplate();
 carouselHandler();
 tileBuilder();
 checkoutTransfer();

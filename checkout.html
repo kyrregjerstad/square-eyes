@@ -9,8 +9,11 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
     </style>
+
+    <script defer src="/scripts/script.js" type="module"></script>
     <script defer src="/scripts/checkout.js" type="module"></script>
   </head>
+
   <body>
     <div class="sidebar hidden">
       <img
@@ -28,97 +31,11 @@
       </div>
     </div>
     <div class="background-blur hidden"></div>
-    <header>
-      <div class="navbar">
-        <div class="top">
-          <div class="left">
-            <img
-              class="hamburger-menu"
-              src="images/icons/icon_menu_hamburger.svg"
-              alt="navigation menu"
-            />
-            <a href="/search.html">
-              <img src="images/icons/icon_menu_search.svg" alt="search icon"
-            /></a>
-          </div>
-          <div class="middle">
-            <img
-              class="header-logo"
-              src="/images/logo/SquareEyes_Logo_no_text.webp"
-              alt=""
-            />
-          </div>
-          <div class="right">
-            <img
-              class="user-icon"
-              src="images/icons/icon_menu_user.svg"
-              alt="user menu"
-            />
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="bottom">
-      <div class="pages">
-        <a href="/index.html" class="films">FILMS</a>
-        <a href="/browse.html" class="browse">BROWSE</a>
-        <a href="/collections.html" class="collections">COLLECTIONS</a>
-        <a href="/library.html" class="home">LIBRARY</a>
-      </div>
-    </div>
+    <template-header></template-header>
     <main>
       <div class="checkout">
-        <section class="checkout-container">
-          <!-- <div class="left-checkout">
-            <img src="/images/film/film_cover_hobbs-and-shaw.webp" alt="" />
-          </div>
-          <div class="right-checkout">
-            <div class="checkout-top">
-              <h1>Hobbs & Shaw</h1>
-              <h2>2019</h2>
-              <div class="quality">
-                <img
-                  class="quality-selector-button"
-                  id="HD-on"
-                  src="/images/icons/icon_quality_hd-on.svg"
-                  alt=""
-                />
-                <img
-                  class="quality-selector-button none"
-                  id="HD-off"
-                  src="/images/icons/icon_quality_hd-off.svg"
-                  alt=""
-                />
-                <img
-                  class="quality-selector-button"
-                  id="4K-off"
-                  src="/images/icons/icon_quality_4k-off.svg"
-                  alt=""
-                />
-                <img
-                  class="quality-selector-button none"
-                  id="4K-on"
-                  src="/images/icons/icon_quality_4k-on.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="checkout-middle">
-              <p class="checkout-description">
-                US agent Luke Hobbs and British mercenary Deckard Shaw are
-                forced to put their rivalry side and work together to stop a
-                genetically enhanced supervillain.
-              </p>
-            </div> -->
-            <!-- <div class="checkout-bottom">
-              <a href="#">Manage Payments</a>
-              <p>Default payment method: PayPal</p>
-              <p>Total: $3.99</p>
-              <button class="buy-now">Buy and Watch Now</button>
-            </div> -->
-          </section>
-        </div>
-      </main>
-    </div>
+        <section class="checkout-container"></section>
+      </div>
+    </main>
   </body>
 </html>
