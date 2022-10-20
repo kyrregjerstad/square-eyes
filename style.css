@@ -1,25 +1,27 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
+  /* box-sizing: border-box; */
   font-family: "Inter", sans-serif;
-
-  --button-radius: 5vw;
-  --button-font-size: 2vw;
 
   /* --------- Font size --------------- */
 
   --hero-description-size: clamp(12px, 1.3vw, 36px);
   --hero-line-height: 29px;
 
-  --font-Xlarge: 5vw;
-  --font-large: 3vw;
+  --font-Xlarge: clamp(30px, 5vw, 250px);
+  --font-large: clamp(20px, 3vw, 80px);
   --font-medium: clamp(14px, 2vw, 36px);
   --font-small: clamp(14px, 1.5vw, 30px);
   --font-xsmall: clamp (14px, 1vw, 28px);
 
   /* --------- Colours --------------- */
+  --default-black: #000000;
+  --default-white: #ffffff;
   --button-main-color: #d9d9d9;
-  --button-hover-color: #000000;
   --default-grey-color: #e2e2e2;
+  --default-border-color: #57575722;
 
   --default-gradient: linear-gradient(
       237.41deg,
@@ -32,10 +34,17 @@
   --default-transition-opacity: 200ms opacity ease-in-out;
   --default-button-transition: 350ms all ease-in-out;
   --default-tile-transition: 200ms all ease-in-out;
+  --default-transition-delay: 200ms;
+
+  /* --------- Borders --------------- */
+  --default-border-radius: 1vw;
+  --button-radius: 5vw;
+
+  --default-box-shadow: 5px 5px 5px -5px var(--default-black);
 }
 
 a {
-  color: #000000;
+  color: var(--default-black);
 
   text-decoration: none;
 }
@@ -44,9 +53,13 @@ h1 {
   font-size: var(--font-Xlarge);
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   position: relative;
-  background-color: white;
+  background-color: var(--default-white);
   z-index: 2000;
 
   display: flex;
@@ -56,10 +69,11 @@ header {
 
   width: 100%;
 
-  box-shadow: 5px 5px 5px -5px #000000;
+  /* box-shadow: 5px 5px 5px -5px var(--default-black); */
+  box-shadow: var(--default-box-shadow);
 }
 
-header .navbar {
+header .navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +87,7 @@ header .navbar {
   z-index: 1000;
 }
 
-header .navbar .left img {
+header .navbar-top .left img {
   height: 2vw;
   max-height: 50px;
   padding: 0.5vw;
@@ -93,7 +107,7 @@ header .user-icon {
   transform: translateY(50%);
 }
 
-header .bottom {
+.navbar-bottom {
   position: sticky;
   display: flex;
   justify-content: center;
@@ -101,9 +115,14 @@ header .bottom {
   top: 0;
 
   height: clamp(16px, 4vw, 50px);
+  width: 100%;
+
+  background-color: var(--default-white);
+
+  z-index: 2000;
 }
 
-header .pages {
+.pages {
   display: flex;
   justify-content: space-between;
 
@@ -170,13 +189,6 @@ main {
   margin-bottom: 2vw;
 }
 
-.heroes > ul {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
 .slide {
   position: absolute;
   inset: 0;
@@ -184,7 +196,7 @@ main {
   z-index: 4;
   opacity: 0;
   transition: var(--default-transition-opacity);
-  transition-delay: 200ms;
+  transition-delay: var(--default-transition-delay);
 }
 
 .slide[data-active] {
@@ -210,7 +222,7 @@ main {
 }
 
 .hero-heading {
-  color: white;
+  color: var(--default-white);
   font-size: var(--font-Xlarge);
 }
 
@@ -228,7 +240,7 @@ main {
   width: clamp(355px, 35vw, 1000px);
   top: 10vw;
 
-  color: white;
+  color: var(--default-white);
 
   font-size: var(--hero-description-size);
   text-align: justify;
@@ -254,8 +266,8 @@ main {
 }
 
 .hero-button:hover {
-  background-color: #000000;
-  color: white;
+  background-color: var(--default-black);
+  color: var(--default-white);
 
   border: solid;
   border-width: 1px;
@@ -313,10 +325,12 @@ use first margin to control grid vertical spacing. */
   align-items: center;
   flex-basis: clamp(16px, 12vw, 250px);
 
-  margin-top: -1vw;
+  /* margin-top: -1vw;
   margin-right: -1vw;
   margin-bottom: -3vw;
-  margin-left: -4vw;
+  margin-left: -4vw; */
+
+  margin: -1vw -1vw -3vw -4vw;
 
   padding: clamp(40px, 5vw, 250px);
 
@@ -330,23 +344,29 @@ use first margin to control grid vertical spacing. */
 .tile {
   position: relative;
 
-  height: clamp(80px, 12vw, 250px);
-  margin-top: 0;
-  margin-right: 1vw;
+  height: clamp(100px, 12vw, 250px);
+  /* margin-top: 0;
+  margin-right: clamp(10px, 1vw, 25px);
   margin-bottom: 0;
-  margin-left: 1vw;
+  margin-left: clamp(10px, 1vw, 25px); */
+
+  margin: 0 clamp(10px, 1vw, 25px) 0 clamp(10px, 1vw, 25px);
 
   display: flex;
 
-  border-radius: 1vw;
+  border-radius: var(--default-border-radius);
+
+  border: solid;
+  border-color: var(--default-border-color);
 
   transition: var(--default-tile-transition);
 }
 
 .tile:hover {
   transition: var(--default-tile-transition);
-  height: 16vw;
+  height: clamp(150px, 16vw, 550px);
   box-shadow: 2vw 1vw 2vw #00000075;
+  /* box-shadow: var(--default-box-shadow); */
 }
 
 .tile-text {
@@ -358,8 +378,7 @@ use first margin to control grid vertical spacing. */
   height: 5%;
   width: 100%;
   z-index: 3;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 0 5% 0 5%;
   transition: var(--default-tile-transition);
 
   pointer-events: none;
@@ -380,7 +399,7 @@ use first margin to control grid vertical spacing. */
   font-size: var(--font-small);
   font-weight: bold;
 
-  color: white;
+  color: var(--default-white);
 
   transition: var(--default-tile-transition);
 
@@ -392,8 +411,6 @@ use first margin to control grid vertical spacing. */
 .tile:hover .movie-title {
   transform: translateY(0%);
 
-  font-size: 1.6vw;
-
   transition-delay: 500ms;
   transition: var(--default-tile-transition);
 }
@@ -403,8 +420,9 @@ use first margin to control grid vertical spacing. */
   opacity: 0;
   transition: var(--default-tile-transition);
 
-  margin-top: 2%;
-  margin-bottom: 2%;
+  /* margin-top: 2%;
+  margin-bottom: 2%; */
+  margin: 2% 0 2% 0;
 }
 
 .tile:hover .movie-year-genre {
@@ -416,14 +434,13 @@ use first margin to control grid vertical spacing. */
 
   font-size: var(--font-xsmall);
 
-  color: white;
+  color: var(--default-white);
 }
 
 .movie-dot {
-  color: white;
+  color: var(--default-white);
   font-size: var(--font-xsmall);
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 0 2% 0 2%;
 }
 
 .movie-genre {
@@ -431,16 +448,16 @@ use first margin to control grid vertical spacing. */
 
   font-size: var(--font-xsmall);
 
-  color: white;
+  color: var(--default-white);
 }
 
 .movie-description {
   width: 90%;
 
-  color: white;
+  color: var(--default-white);
   opacity: 0;
 
-  font-size: 1.2vw;
+  font-size: var(--font-xsmall);
 
   transition: var(--default-tile-transition);
 
@@ -452,7 +469,7 @@ use first margin to control grid vertical spacing. */
 .tile:hover .movie-description {
   opacity: 1;
 
-  transition-delay: 200ms;
+  transition-delay: var(--default-transition-delay);
 }
 
 .buy-now-button {
@@ -464,7 +481,7 @@ use first margin to control grid vertical spacing. */
   left: 5%;
 
   font-weight: bold;
-  background-color: white;
+  background-color: var(--default-white);
   opacity: 0;
 
   border-radius: 5vw;
@@ -490,7 +507,7 @@ use first margin to control grid vertical spacing. */
 
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.766));
 
-  border-radius: 1vw;
+  border-radius: var(--default-border-radius);
 
   z-index: 2;
 }
@@ -499,7 +516,7 @@ use first margin to control grid vertical spacing. */
   object-fit: cover;
   object-position: 100% 30%;
   aspect-ratio: 1.618/1;
-  border-radius: 1vw;
+  border-radius: var(--default-border-radius);
 
   transition: var(--default-tile-transition);
 }
@@ -542,7 +559,7 @@ use first margin to control grid vertical spacing. */
   top: 0;
   bottom: 0;
 
-  background-color: white;
+  background-color: var(--default-white);
 
   box-shadow: 2px 0px 10px #0000001f;
 
@@ -558,8 +575,6 @@ use first margin to control grid vertical spacing. */
 }
 
 .sidebar ul {
-  list-style: none;
-
   margin: 3vw;
   padding: 0;
 
@@ -661,7 +676,7 @@ use first margin to control grid vertical spacing. */
   padding: 1vw 1vw 1vw 1vw;
   border: none;
 
-  border-radius: 1vw;
+  border-radius: var(--default-border-radius);
 }
 
 .contact-form .send {
@@ -669,12 +684,12 @@ use first margin to control grid vertical spacing. */
   height: 4vw;
   margin-top: 3vh;
 
-  background-color: #000000;
-  color: white;
+  background-color: var(--default-black);
+  color: var(--default-white);
 
   border-radius: 5vw;
 
-  font-size: var(--button-font-size);
+  font-size: var(--font-medium);
 }
 
 .social-links {
@@ -727,10 +742,10 @@ use first margin to control grid vertical spacing. */
 
 .searchbar {
   width: 100vw;
+  padding-top: 5vw;
   padding-bottom: 5vw;
   display: flex;
   justify-content: center;
-  padding-top: 5vw;
 }
 
 .searchbar input {
@@ -772,11 +787,11 @@ use first margin to control grid vertical spacing. */
   width: 80%;
   height: 80%;
 
-  background-color: white;
+  background-color: var(--default-white);
 
   border-radius: 2vw;
 
-  box-shadow: 10px 10px 30px #000000;
+  box-shadow: var(--default-box-shadow);
 }
 
 .none {
@@ -837,9 +852,9 @@ use first margin to control grid vertical spacing. */
 .right-checkout button {
   width: 100%;
   height: 8vw;
-  color: white;
-  background-color: #000000;
+  color: var(--default-white);
+  background-color: var(--default-black);
   border-radius: 10vw;
   border: none;
-  font-size: var(--button-font-size);
+  font-size: var(--font-medium);
 }
