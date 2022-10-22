@@ -13,37 +13,25 @@
     <script defer src="/scripts/search.js" type="module"></script>
   </head>
   <body>
-    <div class="sidebar hidden">
-      <img
-        class="close-button"
-        src="/images/icons/icon_menu_arrow-back.svg"
-        alt=""
-      />
-      <ul>
-        <li><a href="#">Setting</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/about.html">About</a></li>
-      </ul>
-      <div class="sidebar-logo">
-        <img src="/images/logo/SquareEyes_Logo.webp" alt="" />
-      </div>
-    </div>
-    <div class="background-blur hidden"></div>
-    <template-header></template-header>
+    <template-header id="search"></template-header>
+    <template-sidebar class="shadow-sidebar"></template-sidebar>
     <main>
       <div class="vignette-left"></div>
       <div class="vignette-right"></div>
 
       <section class="searchbar">
         <input
-          id="search"
+          id="search-input"
           type="search"
           placeholder="Search"
           autocomplete="off"
         />
       </section>
       <section class="grid">
-        <div class="search-results"></div>
+        <div class="line">
+          <!-- <div class="search-results"></div> -->
+          <!-- <div class="tile"></div> -->
+        </div>
       </section>
     </main>
   </body>

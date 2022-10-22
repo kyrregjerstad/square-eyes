@@ -1,7 +1,7 @@
 import { movies } from "./database.js";
 
-const results = document.querySelector(".search-results");
-const search = document.querySelector("#search");
+const results = document.querySelector(".line");
+const search = document.querySelector("#search-input");
 
 const render = (query = "") => {
   const cleanedUpQuery = query.trim().toLowerCase();
@@ -36,7 +36,7 @@ const render = (query = "") => {
     results.innerHTML = "";
   }
 };
-
 search.addEventListener("keyup", () => {
   render(search.value);
+  console.log("filtered");
 });

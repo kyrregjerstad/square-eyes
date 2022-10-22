@@ -1,5 +1,6 @@
-export const headerTemplate = () => {
+export const templateHeader = () => {
   const template = document.createElement("template");
+
   template.innerHTML = `
   <link rel="stylesheet" href="style.css" />
   <header>
@@ -7,6 +8,7 @@ export const headerTemplate = () => {
         <div class="left">
           <img
             class="hamburger-menu"
+  })
             src="images/icons/icon_menu_hamburger.svg"
             alt="navigation menu"
           />
@@ -34,11 +36,10 @@ export const headerTemplate = () => {
         <a href="/index.html" class="films">FILMS</a>
         <a href="/browse.html" class="browse">BROWSE</a>
         <a href="/collections.html" class="collections">COLLECTIONS</a>
-        <a href="/library.html" class="home">LIBRARY</a>
+        <a href="/library.html" class="library">LIBRARY</a>
       </nav>
     </div>
   </header>`;
-
   class Header extends HTMLElement {
     constructor() {
       super();
@@ -48,13 +49,40 @@ export const headerTemplate = () => {
 
     connectedCallback() {
       const navbar = this.shadowRoot.querySelectorAll(".pages a");
+      const hamburgerMenu = this.shadowRoot.querySelector(".hamburger-menu");
+      const page = this.getAttribute("id");
+
       navbar.forEach((item) => {
-        item.addEventListener("click", (event) => {
-          navbar.forEach((item) => {
-            item.classList.remove("active");
-          });
-          event.currentTarget.classList.add("active");
-        });
+        const isActivePage = item.classList.contains(page);
+
+        if (isActivePage) {
+          item.classList.add("active");
+        }
+      });
+
+      const shadowSidebar = document.querySelector(".shadow-sidebar");
+
+      const sidebar = shadowSidebar.shadowRoot.querySelector(".sidebar");
+      const backgroundBlur =
+        shadowSidebar.shadowRoot.querySelector(".background-blur");
+
+      const closeButton = shadowSidebar.shadowRoot.querySelector(
+        ".close-button-arrow"
+      );
+
+      hamburgerMenu?.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+        backgroundBlur.classList.toggle("hidden");
+      });
+
+      closeButton?.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+        backgroundBlur.classList.toggle("hidden");
+      });
+
+      backgroundBlur?.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+        backgroundBlur.classList.toggle("hidden");
       });
     }
   }
