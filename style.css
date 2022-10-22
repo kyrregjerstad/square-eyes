@@ -353,7 +353,6 @@ main {
 .tile:hover {
   transition: var(--default-tile-transition);
   height: clamp(150px, 16vw, 550px);
-  width: 30%;
 
   box-shadow: 2vw 1vw 2vw #00000075;
 }
