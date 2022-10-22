@@ -5,7 +5,7 @@ export const templateHeader = () => {
   <link rel="stylesheet" href="style.css" />
   <header>
     <div class="navbar-top">
-        <div class="left">
+        <div class="navbar-left">
           <img
             class="hamburger-menu"
   })
@@ -23,7 +23,7 @@ export const templateHeader = () => {
             alt=""
           />
         </div>
-        <div class="right">
+        <div class="navbar-right">
           <img
             class="user-icon"
             src="images/icons/icon_menu_user.svg"
@@ -32,12 +32,29 @@ export const templateHeader = () => {
         </div>
     </div>
     <div class="navbar-bottom">
+    <div class="navbar-left-bottom hidden">
+          <img
+            class="hamburger-menu"
+  })
+            src="images/icons/icon_menu_hamburger.svg"
+            alt="navigation menu"
+          />
+          <a href="/search.html">
+            <img src="images/icons/icon_menu_search.svg" alt="search icon"
+          /></a>
+        </div>
       <nav class="pages">
         <a href="/index.html" class="films">FILMS</a>
         <a href="/browse.html" class="browse">BROWSE</a>
         <a href="/collections.html" class="collections">COLLECTIONS</a>
         <a href="/library.html" class="library">LIBRARY</a>
       </nav>
+      <div class="navbar-right-bottom hidden">
+          <img
+            src="images/icons/icon_menu_user.svg"
+            alt="user menu"
+          />
+        </div>
     </div>
   </header>`;
   class Header extends HTMLElement {
@@ -48,11 +65,40 @@ export const templateHeader = () => {
     }
 
     connectedCallback() {
-      const navbar = this.shadowRoot.querySelectorAll(".pages a");
-      const hamburgerMenu = this.shadowRoot.querySelector(".hamburger-menu");
+      const navbarBottom = this.shadowRoot.querySelector(".navbar-bottom");
+      const navbarIconsLeft = this.shadowRoot.querySelector(
+        ".navbar-left-bottom"
+      );
+      const navbarIconsRight = this.shadowRoot.querySelector(
+        ".navbar-right-bottom"
+      );
+      const mainContent = document.querySelector("main");
+
+      const sticky = navbarBottom.offsetTop * 1.58;
+
+      const stickyNavbar = () => {
+        if (window.pageYOffset >= sticky) {
+          navbarBottom.classList.add("sticky");
+          mainContent.classList.add("sticky-padding");
+          navbarIconsLeft.classList.remove("hidden");
+          navbarIconsRight.classList.remove("hidden");
+        } else {
+          navbarBottom.classList.remove("sticky");
+          mainContent.classList.remove("sticky-padding");
+          navbarIconsLeft.classList.add("hidden");
+          navbarIconsRight.classList.add("hidden");
+        }
+      };
+
+      window.onscroll = () => {
+        stickyNavbar();
+      };
+
+      const navbarPages = this.shadowRoot.querySelectorAll(".pages a");
+      const hamburgerMenu = this.shadowRoot.querySelectorAll(".hamburger-menu");
       const page = this.getAttribute("id");
 
-      navbar.forEach((item) => {
+      navbarPages.forEach((item) => {
         const isActivePage = item.classList.contains(page);
 
         if (isActivePage) {
@@ -61,7 +107,6 @@ export const templateHeader = () => {
       });
 
       const shadowSidebar = document.querySelector(".shadow-sidebar");
-
       const sidebar = shadowSidebar.shadowRoot.querySelector(".sidebar");
       const backgroundBlur =
         shadowSidebar.shadowRoot.querySelector(".background-blur");
@@ -70,9 +115,11 @@ export const templateHeader = () => {
         ".close-button-arrow"
       );
 
-      hamburgerMenu?.addEventListener("click", () => {
-        sidebar.classList.toggle("hidden");
-        backgroundBlur.classList.toggle("hidden");
+      hamburgerMenu?.forEach((item) => {
+        item.addEventListener("click", () => {
+          sidebar.classList.toggle("hidden");
+          backgroundBlur.classList.toggle("hidden");
+        });
       });
 
       closeButton?.addEventListener("click", () => {

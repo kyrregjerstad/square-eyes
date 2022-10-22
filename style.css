@@ -42,6 +42,7 @@
   --button-radius: 5vw;
 
   --default-box-shadow: 5px 5px 5px -5px var(--default-black);
+  --default-box-shadow-down: 0px 5px 5px -5px var(--default-black);
 }
 
 a {
@@ -71,7 +72,6 @@ header {
   width: 100%;
 
   /* box-shadow: 5px 5px 5px -5px var(--default-black); */
-  box-shadow: var(--default-box-shadow);
 }
 
 header .navbar-top {
@@ -90,14 +90,38 @@ header .navbar-top {
   z-index: 1000;
 }
 
-header .navbar-top .left img {
+.navbar-left {
+  margin-right: 2vw;
+}
+
+.navbar-left img {
   height: 2.5vw;
   max-height: 80px;
-  transform: translateY(50%);
-
-  /* background-color: red; */
+  /* transform: translateY(50%); */
 
   cursor: pointer;
+}
+
+.navbar-left-bottom {
+  margin-left: 1%;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-left-bottom img {
+  height: 2.5vw;
+  max-height: 80px;
+  /* transform: translateY(50%); */
+
+  cursor: pointer;
+}
+
+.navbar-right-bottom img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin-right: 0.5%;
 }
 
 header .header-logo {
@@ -122,8 +146,18 @@ header .user-icon {
   width: 100%;
 
   background-color: var(--default-white);
+  box-shadow: var(--default-box-shadow-down);
 
   z-index: 2000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.sticky-padding {
+  padding-top: 3vw;
 }
 
 .pages {
