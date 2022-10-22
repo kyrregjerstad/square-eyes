@@ -34,3 +34,17 @@ qualitySelectorButtons.forEach((button) => {
     });
   });
 });
+
+const root = document.documentElement;
+
+const resizedWindow = () => {
+  root.style.setProperty("--default-tile-transition", 200 + "ms");
+};
+
+let disableAnimation;
+window.onresize = function () {
+  root.style.setProperty("--default-tile-transition", 0 + "ms");
+
+  clearTimeout(disableAnimation);
+  disableAnimation = setTimeout(resizedWindow, 100);
+};

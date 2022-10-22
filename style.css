@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+}
 
+:root {
   /* --------- Font size --------------- */
 
   --hero-description-size: clamp(12px, 1.3vw, 36px);
