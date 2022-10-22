@@ -42,7 +42,7 @@ const resizedWindow = () => {
 };
 
 let disableAnimation;
-window.onresize = function () {
+window.onresize = () => {
   root.style.setProperty("--default-tile-transition", 0 + "ms");
 
   clearTimeout(disableAnimation);
