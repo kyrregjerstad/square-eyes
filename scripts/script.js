@@ -36,14 +36,15 @@ qualitySelectorButtons.forEach((button) => {
 
 const root = document.documentElement;
 
-const resizedWindow = () => {
+const defaultAnimation = () => {
   root.style.setProperty("--default-tile-transition", 200 + "ms");
 };
 
 let disableAnimation;
+
 window.onresize = () => {
   root.style.setProperty("--default-tile-transition", 0 + "ms");
 
   clearTimeout(disableAnimation);
-  disableAnimation = setTimeout(resizedWindow, 100);
+  disableAnimation = setTimeout(defaultAnimation, 100);
 };

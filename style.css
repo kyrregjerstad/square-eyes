@@ -16,7 +16,7 @@
   --font-Xlarge: clamp(30px, 5vw, 250px);
   --font-large: clamp(20px, 3vw, 80px);
   --font-medium: clamp(14px, 2vw, 36px);
-  --font-small: clamp(12px, 1.5vw, 30px);
+  --font-small: clamp(12px, 1.4vw, 30px);
   --font-xsmall: clamp(12px, 1vw, 28px);
 
   /* --------- Colours --------------- */
@@ -93,8 +93,7 @@ header .navbar-top {
 }
 
 .navbar-left img {
-  height: 2.5vw;
-  max-height: 80px;
+  height: clamp(15px, 2.5vw, 50px);
   /* transform: translateY(50%); */
 
   cursor: pointer;
@@ -107,9 +106,7 @@ header .navbar-top {
 }
 
 .navbar-left-bottom img {
-  height: 2.5vw;
-  max-height: 80px;
-  /* transform: translateY(50%); */
+  height: clamp(8px, 2vw, 25px);
 
   cursor: pointer;
 }
@@ -118,7 +115,7 @@ header .navbar-top {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  height: clamp(8px, 4vw, 50px);
   margin-right: 0.5%;
 }
 
@@ -128,9 +125,9 @@ header .header-logo {
 }
 
 header .user-icon {
-  height: 5vw;
-  max-height: 80px;
-  transform: translateY(20%);
+  height: clamp(15px, 4vw, 80px);
+  /* max-height: 80px; */
+  /* transform: translateY(20%) */
 }
 
 .navbar-bottom {
@@ -185,9 +182,18 @@ header .pages .active {
 } */
 
 main {
-  height: 2000px;
+  height: 200vh;
+}
 
+main::before {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--default-gradient);
+  z-index: -1;
 }
 
 /* --------------------- Hero section ---------------------*/
@@ -345,7 +351,9 @@ main {
   width: 100%;
   height: 80%;
 
-  overflow-x: auto;
+  /* overflow-x: auto; */
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .grid::-webkit-scrollbar {
@@ -358,10 +366,13 @@ main {
   align-items: center;
   gap: 1vw;
 
-  height: clamp(200px, 24vw, 500px);
+  height: clamp(200px, 24vw, 800px);
   margin-bottom: clamp(-400px, -8vw, -65px);
 
   overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .line::-webkit-scrollbar {
@@ -372,6 +383,7 @@ main {
   position: relative;
 
   height: clamp(100px, 12vw, 250px);
+  width: clamp(162px, 19.44vw, 405px);
 
   display: flex;
 
@@ -386,6 +398,7 @@ main {
 .tile:hover {
   transition: var(--default-tile-transition);
   height: clamp(150px, 16vw, 550px);
+  width: clamp(243px, 26vw, 891px);
 
   box-shadow: 2vw 1vw 2vw #00000075;
 }
@@ -536,7 +549,7 @@ main {
 .tile-image {
   object-fit: cover;
   object-position: 100% 30%;
-  aspect-ratio: 1.618/1;
+  aspect-ratio: 1.62/1;
   border-radius: var(--default-border-radius);
 
   transition: var(--default-tile-transition);
@@ -625,11 +638,15 @@ main {
 
 /* --------------------- collections.html ---------------------*/
 /* --------------------- Contact.html --------------------- */
-
-.contact-page {
-  height: 100%;
-  width: 100%;
-  background-color: #e2e2e2;
+.contact-page::before {
+  content: "";
+  background-color: var(--default-grey-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .close-button {
@@ -646,6 +663,12 @@ main {
   align-items: center;
 
   width: 100vw;
+  max-height: 150px;
+}
+
+.logo-container img {
+  height: 100%;
+  object-fit: contain;
 }
 
 .full-logo {
@@ -662,38 +685,37 @@ main {
   display: flex;
   justify-content: center;
 
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .left-text {
-  width: 600px;
+  width: clamp(250px, 30%, 750px);
 
-  line-height: 35px;
-  font-size: 24px;
-  text-align: justify;
+  line-height: 150%;
+  font-size: clamp(14px, 2vw, 40px);
+  /* text-align: justify; */
+  padding-right: 25px;
 }
 
 .left-text h2 {
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 
 .contact-form {
-  margin: 0;
-  padding: 0;
-  width: 30%;
+  width: clamp(250px, 30%, 750px);
 }
 
 .contact-form input {
   border-radius: 0.5em;
   border: none;
-  padding: 1vw 1vw 1vw 1vw;
+  height: clamp(30px, 4vw, 80px);
   margin-bottom: 1vw;
   width: 100%;
 }
 
 .contact-form .message {
   width: 100%;
-  height: 20vh;
+  height: clamp(140px, 20vw, 400px);
   padding: 1vw 1vw 1vw 1vw;
   border: none;
 
@@ -701,8 +723,8 @@ main {
 }
 
 .contact-form .send {
-  width: 14vw;
-  height: 4vw;
+  width: clamp(115px, 14vw, 350px);
+  height: clamp(32px, 4vw, 77px);
   margin-top: 3vh;
 
   background-color: var(--default-black);
@@ -731,10 +753,12 @@ main {
 /* --------------------- About.html --------------------- */
 
 .about-page {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
+}
 
-  background-color: var(--default-grey-color);
+.about-page .left-text {
+  font-size: clamp(14px, 2vw, 20px);
 }
 
 .about-page .image-container {
@@ -745,9 +769,9 @@ main {
 }
 
 .about-page .image-container .mockup-left {
-  display: flex;
+  /* display: flex; */
 
-  height: 100%;
+  /* height: 100%; */
 }
 
 .about-page .image-container .mockup-right {
@@ -762,7 +786,7 @@ main {
 /* --------------------- search.html --------------------- */
 
 .searchbar {
-  width: 100vw;
+  width: 99vw;
   padding-top: 5vw;
   padding-bottom: 5vw;
   display: flex;
