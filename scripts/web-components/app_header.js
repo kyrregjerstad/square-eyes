@@ -61,10 +61,11 @@ export const templateHeader = () => {
     constructor() {
       super();
       this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
+      this.shadowRoot.appendChild(template.content.cloneNode(true));
+
       const navbarBottom = this.shadowRoot.querySelector(".navbar-bottom");
       const navbarIconsLeft = this.shadowRoot.querySelector(
         ".navbar-left-bottom"

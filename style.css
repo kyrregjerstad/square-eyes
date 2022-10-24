@@ -72,16 +72,12 @@ header {
   align-items: center;
 
   width: 100%;
-
-  /* box-shadow: 5px 5px 5px -5px var(--default-black); */
 }
 
 header .navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* background-color: rebeccapurple; */
 
   padding-top: clamp(8px, 1vw, 20px);
   padding-bottom: clamp(8px, 1vw, 20px);
@@ -360,9 +356,10 @@ main {
   position: relative;
   display: flex;
   align-items: center;
+  gap: 1vw;
+
   height: clamp(200px, 24vw, 500px);
   margin-bottom: clamp(-400px, -8vw, -65px);
-  gap: 1vw;
 
   overflow-y: hidden;
 }
@@ -444,8 +441,6 @@ main {
   opacity: 0;
   transition: var(--default-tile-transition);
 
-  /* margin-top: 2%;
-  margin-bottom: 2%; */
   margin: 2% 0 2% 0;
 }
 

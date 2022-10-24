@@ -8,7 +8,6 @@ const navbar = document.querySelectorAll(".pages a");
 const qualitySelectorButtons = document.querySelectorAll(
   ".quality-selector-button"
 );
-
 templateSidebar();
 templateHeader();
 // templateMovieTile();

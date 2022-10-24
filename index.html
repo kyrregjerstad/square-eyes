@@ -9,161 +9,139 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
     </style>
-    <script defer src="/scripts/script.js" type="module"></script>
+    <script src="/scripts/script.js" type="module"></script>
   </head>
   <body>
-
     <template-header id="films"></template-header>
     <template-sidebar class="shadow-sidebar"></template-sidebar>
 
-
     <main>
+      <section class="heroes" data-carousel>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <div class="hero-text">
+              <h1 class="hero-heading">SWEETHEART</h1>
+              <p class="hero-description">
+                Jenn has washed ashore a small tropical island and it doesn't
+                take her long to realize she's completely alone. She must spend
+                her days not only surviving the elements, but must also fend off
+                the malevolent force that comes out each night.
+              </p>
+              <button class="hero-button">Watch now</button>
+            </div>
+            <img
+              class="hero-img"
+              src="/images/hero/film_hero_sweetheart.webp"
+              alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
+            />
+          </li>
+          <li class="slide">
+            <div class="hero-text">
+              <h1 class="hero-heading">GODZILLA</h1>
+              <p class="hero-description">
+                The crypto-zoological agency Monarch faces off against the
+                mighty Godzilla, who collides with Mothra, Rodan, and his
+                ultimate nemesis, the three-headed King Ghidorah.
+              </p>
+              <button class="hero-button">Watch now</button>
+            </div>
+            <img
+              class="hero-img"
+              src="/images/hero/film_hero_godzilla.webp"
+              alt="cover of the movie Godzilla, godzilla shooting a ray of light into the sky"
+            />
+          </li>
+          <li class="slide">
+            <div class="hero-text">
+              <h1 class="hero-heading">THE BATMAN</h1>
+              <p class="hero-description">
+                When a sadistic serial killer begins murdering several key
+                political figures in Gotham City, Batman is forced to
+                investigate the city's hidden corruption and question his own
+                family's involvement in it all. Are they really who he thought
+                they were?
+              </p>
+              <button class="hero-button">Watch now</button>
+            </div>
+            <img
+              class="hero-img"
+              src="/images/hero/film_hero_batman.webp"
+              alt="cover of the movie The Batman, with Batman, Catwoman, The Riddler and Oz"
+            />
+          </li>
+        </ul>
+        <img
+          class="arrow-left"
+          src="images/icons/icon_arrow-left.svg"
+          data-carousel-button="prev"
+          alt=""
+        />
+        <img
+          class="arrow-right"
+          src="images/icons/icon_arrow-right.svg"
+          data-carousel-button="next"
+          alt=""
+        />
+      </section>
 
-    <section class="heroes" data-carousel>
-      <ul data-slides>
-        <li class="slide" data-active>
-          <div class="hero-text">
-            <h1 class="hero-heading">SWEETHEART</h1>
-            <p class="hero-description">
-              Jenn has washed ashore a small tropical island and it doesn't
-              take her long to realize she's completely alone. She must spend
-              her days not only surviving the elements, but must also fend off
-              the malevolent force that comes out each night.
-            </p>
-            <button class="hero-button">Watch now</button>
-          </div>
-          <img
-            class="hero-img"
-            src="/images/hero/film_hero_sweetheart.webp"
-            alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
-          />
-        </li>
-        <li class="slide">
-          <div class="hero-text">
-            <h1 class="hero-heading">GODZILLA</h1>
-            <p class="hero-description">
-              The crypto-zoological agency Monarch faces off against the
-              mighty Godzilla, who collides with Mothra, Rodan, and his
-              ultimate nemesis, the three-headed King Ghidorah.
-            </p>
-            <button class="hero-button">Watch now</button>
-          </div>
-          <img
-            class="hero-img"
-            src="/images/hero/film_hero_godzilla.webp"
-            alt="cover of the movie Godzilla, godzilla shooting a ray of light into the sky"
-          />
-        </li>
-        <li class="slide">
-          <div class="hero-text">
-            <h1 class="hero-heading">THE BATMAN</h1>
-            <p class="hero-description">
-              When a sadistic serial killer begins murdering several key
-              political figures in Gotham City, Batman is forced to
-              investigate the city's hidden corruption and question his own
-              family's involvement in it all. Are they really who he thought
-              they were?
-            </p>
-            <button class="hero-button">Watch now</button>
-          </div>
-          <img
-            class="hero-img"
-            src="/images/hero/film_hero_batman.webp"
-            alt="cover of the movie The Batman, with Batman, Catwoman, The Riddler and Oz"
-          />
-        </li>
-      </ul>
-      <img
-        class="arrow-left"
-        src="images/icons/icon_arrow-left.svg"
-        data-carousel-button="prev"
-        alt=""
-      />
-      <img
-        class="arrow-right"
-        src="images/icons/icon_arrow-right.svg"
-        data-carousel-button="next"
-        alt=""
-      />
-    </section>
-
-    <div class="vignette-left"></div>
-    <div class="vignette-right"></div>
-    <section class="grid">
-      <div class="line">
-        <!-- <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
-        <template-movie-tile class="tile"></template-movie-tile>
+      <div class="vignette-left"></div>
+      <div class="vignette-right"></div>
+      <section class="grid">
+        <div class="line">
+          <!-- <template-movie-tile class="tile"></template-movie-tile>
         <template-movie-tile class="tile"></template-movie-tile> -->
-
-        <!-- <div class="tile">
-          <p class="movie-title"></p>
-          <p class="movie-description"></p>
-          <button class="buy-now-button">Buy now</button>
-          <img class="tile-image" src=""/>
-        </div> -->
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-      </div>
-      <div class="line">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-      </div>
-      <div class="line">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-      </div>
-      <div class="line">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-      </div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="line">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="line">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="line">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
