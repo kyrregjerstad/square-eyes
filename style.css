@@ -1121,7 +1121,6 @@ main::before {
 
   .tile {
     height: 100%;
-    width: unset;
   }
 
   .tile:hover {
@@ -1131,13 +1130,21 @@ main::before {
   }
 
   .tile-image {
-    object-fit: cover;
+    /* position: absolute; */
+    /* object-fit: cover; */
+    position: relative;
     border-radius: var(--default-border-radius);
     aspect-ratio: unset;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    /* max-width: 250px; */
   }
 
   .movie-title {
     text-align: center;
     font-size: var(--font-medium);
+  }
+
+  .active-tile-clone {
   }
 }

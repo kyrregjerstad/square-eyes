@@ -42,17 +42,22 @@ const defaultAnimation = () => {
 
 let disableAnimation;
 
+let screenWidth = window.innerWidth;
+
 window.onresize = () => {
   root.style.setProperty("--default-tile-transition", 0 + "ms");
 
   clearTimeout(disableAnimation);
   disableAnimation = setTimeout(defaultAnimation, 100);
+
+  screenWidth = window.innerWidth;
+  console.log(screenWidth);
 };
 
 // move to mobile only script?
 
-const tile = document.querySelector(".mobile-banner");
-const title = document.querySelector(".hero-title");
+const mobileBanner = document.querySelector(".mobile-banner");
+const heroTitle = document.querySelector(".hero-title");
 const button = document.querySelector(".buy-now");
 const description = document.querySelector(".mobile-hero-description");
 const backgroundImage = document.querySelector(".background-image");
@@ -60,8 +65,8 @@ const frame = document.querySelector(".frame");
 // const mobileBackgroundBlur = document.querySelector(".mobile-background-blur");
 
 button.addEventListener("click", () => {
-  tile.classList.toggle("mobile-banner-active");
-  title.classList.toggle("hero-title-active");
+  mobileBanner.classList.toggle("mobile-banner-active");
+  heroTitle.classList.toggle("hero-title-active");
   description.classList.toggle("hero-description-active");
   button.classList.toggle("buy-now-active");
   frame.classList.toggle("frame-active");
@@ -80,3 +85,130 @@ on X click => remove data atribute to minimize
 on buy now click => play animation
 
  */
+
+// const tiles = document.querySelectorAll(".tile");
+// const lines = document.querySelectorAll(".line");
+// const grid = document.querySelector(".grid");
+
+// tiles.forEach((tile) => {
+//   tile.addEventListener("click", (event) => {
+//     if (screenWidth <= 640) {
+//       console.log("clicked");
+//       tiles.forEach((tile) => {
+//         // tile.classList.remove("mobile-selected");
+//         tile.removeAttribute("id");
+//       });
+//       // event.currentTarget.classList.add("mobile-selected");
+//       grid.style.overflow = "auto";
+//       lines.forEach((line) => {
+//         line.style.overflowY = "unset";
+//         // line.style.overflowY = "hidden";
+//       });
+//       tile.setAttribute("id", "mobile-selected");
+//       const selectedTileMobile = document.querySelector("#mobile-selected");
+//       selectedTileMobile.style.position = "fixed";
+
+//       console.log(event.currentTarget);
+//     }
+//   });
+// });
+
+const mobileTiles = document.querySelectorAll(".tile");
+const main = document.querySelector("main");
+
+const toggleExpansion = (element, to, duration = 150) => {
+  return new Promise((resolve) => {
+    element.animate(
+      [
+        {
+          top: to.top,
+          left: to.left,
+          width: to.width,
+          height: to.height,
+        },
+      ],
+      { duration, fill: "forwards", ease: "ease-in" }
+    );
+    setTimeout(resolve, duration);
+  });
+};
+
+const fadeContent = (element, opacity, duration = 300) => {
+  return new Promise((resolve) => {
+    [...element.children].forEach((child) => {
+      requestAnimationFrame(() => {
+        child.style.transition = `opacity ${duration}ms linear`;
+        child.style.opacity = opacity;
+      });
+    });
+    setTimeout(resolve, duration);
+  });
+};
+
+const onTileClick = async (event) => {
+  const tile = event.currentTarget;
+
+  const tileClone = tile.cloneNode(true);
+
+  const { top, left, width, height } = tile.getBoundingClientRect();
+
+  tileClone.style.position = "fixed";
+  tileClone.style.zIndex = "3000";
+
+  tileClone.style.top = top + "px";
+  tileClone.style.left = left + "px";
+  tileClone.style.width = width + "px";
+  tileClone.style.height = height + "px";
+
+  tile.style.opacity = "0";
+
+  main.appendChild(tileClone);
+
+  const closeButton = document.createElement("button");
+
+  closeButton.style = `
+    position: fixed;
+    z-index: 10000;
+    top: 35px;
+    left: 35px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #e25656;
+  `;
+
+  closeButton.addEventListener("click", async () => {
+    closeButton.remove();
+
+    // tileClone.style.removeProperty("display");
+    // tileClone.style.removeProperty("padding");
+
+    fadeContent(tileClone, "0");
+
+    await toggleExpansion(
+      tileClone,
+      {
+        top: `${top}px`,
+        left: `${left}px`,
+        width: `${width}px`,
+        height: `${height}px`,
+      },
+      100
+    );
+    tile.style.removeProperty("opacity");
+    tileClone.remove();
+  });
+
+  await toggleExpansion(tileClone, {
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "90vh",
+  });
+
+  tileClone.appendChild(closeButton);
+};
+
+mobileTiles.forEach((tile) => {
+  tile.addEventListener("click", onTileClick);
+});
