@@ -12,10 +12,25 @@
     <script src="/scripts/script.js" type="module"></script>
   </head>
   <body>
-    <template-header id="films"></template-header>
+    <template-header
+      class="template-header-desktop"
+      id="films"
+    ></template-header>
     <template-sidebar class="shadow-sidebar"></template-sidebar>
+    <div class="mobile-header">
+      <div class="hamburger-menu">
+        <img src="/images/icons/icon_menu_hamburger.svg" alt="" />
+      </div>
+      <div class="mobile-logo">
+        <img src="/images/logo/SquareEyes_Logo_no_text.webp" alt="" />
+      </div>
+      <div class="mobile-search">
+        <img src="/images/icons/icon_menu_search.svg" alt="" />
+      </div>
+    </div>
 
     <main>
+      <!-- <div class="mobile-background-blur"></div> -->
       <section class="heroes" data-carousel>
         <ul data-slides>
           <li class="slide" data-active>
@@ -83,6 +98,27 @@
           alt=""
         />
       </section>
+      <section class="mobile-banner">
+        <div class="hero-title">GODZILLA</div>
+        <div class="mobile-hero-description">
+          <p>
+            A legendary monster named King Ghidorah awakens Rodan, as well as
+            other titans, to destroy the world. To defeat them, the
+            crypto-zoological organisation Monarch must rely on the almighty
+            Godzilla.
+          </p>
+        </div>
+        <div class="button">
+          <button class="buy-now">Buy Now</button>
+        </div>
+        <div class="frame">
+          <img
+            class="background-image"
+            src="/images/hero/mobile_film_hero_godzilla.webp"
+            alt=""
+          />
+        </div>
+      </section>
 
       <div class="vignette-left"></div>
       <div class="vignette-right"></div>
@@ -143,5 +179,19 @@
         </div>
       </section>
     </main>
+    <footer class="mobile-navbar">
+      <div class="mobile-nav-icon">
+        <img src="/images/icons/icon_mobile_nav_films-active.svg" alt="" />
+      </div>
+      <div class="mobile-nav-icon">
+        <img src="/images/icons/icon_mobile_nav_browse.svg" alt="" />
+      </div>
+      <div class="mobile-nav-icon">
+        <img src="/images/icons/icon_mobile_nav_collection.svg" alt="" />
+      </div>
+      <div class="mobile-nav-icon">
+        <img src="/images/icons/icon_mobile_nav_library.svg" alt="" />
+      </div>
+    </footer>
   </body>
 </html>

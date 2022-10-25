@@ -36,7 +36,7 @@
   /* --------- Transition --------------- */
   --default-transition-opacity: 200ms opacity ease-in-out;
   --default-button-transition: 350ms all ease-in-out;
-  --default-tile-transition: 200ms all ease-in-out;
+  --default-tile-transition: 250ms all ease-in-out;
   --default-transition-delay: 200ms;
 
   /* --------- Borders --------------- */
@@ -913,4 +913,231 @@ main::before {
   border-radius: 10vw;
   border: none;
   font-size: var(--font-medium);
+}
+
+/* ------------------- Mobile ------------------- */
+
+.mobile-header,
+.mobile-banner {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-top: 90px;
+  }
+
+  .heroes {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 90px;
+    background-color: var(--default-grey-color);
+
+    padding-inline: 10px;
+
+    z-index: 2000;
+  }
+
+  .mobile-logo img {
+    height: 50px;
+  }
+
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    height: 120px;
+    bottom: 0;
+    z-index: 2000;
+  }
+
+  .mobile-nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #121212;
+    width: 25%;
+    height: 100%;
+  }
+
+  .template-header-desktop {
+    display: none;
+  }
+
+  /* ----------hero------- */
+
+  .mobile-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: var(--default-tile-transition);
+    z-index: 5;
+
+    width: clamp(210px, 100%, 800px);
+    height: clamp(160px, 21vh, 500px);
+  }
+
+  .mobile-banner-active {
+    z-index: 3000;
+    transform: translateY(-10%);
+    height: 90vh;
+  }
+
+  .hero-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    position: absolute;
+    left: 2%;
+    top: 1vw;
+    color: white;
+  }
+
+  .hero-title-active {
+    font-size: 17vw;
+    left: 5%;
+
+    z-index: 3001;
+  }
+
+  .mobile-hero-description {
+    font-size: 0.8em;
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    width: 95%;
+    color: white;
+  }
+
+  .hero-description-active {
+    font-size: 1.2em;
+    top: 15%;
+    left: 5%;
+    line-height: 152%;
+
+    width: 90%;
+
+    z-index: 3001;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buy-now {
+    font-size: 1em;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border: none;
+    background-color: white;
+    position: absolute;
+    bottom: 8%;
+    left: 2%;
+    color: black;
+    border-radius: 10vw;
+    font-weight: bold;
+  }
+
+  .buy-now-active {
+    bottom: 5%;
+    width: 90%;
+    left: 5%;
+    border-radius: 10vw;
+    font-size: 2em;
+    color: white;
+    background-color: black;
+
+    z-index: 3001;
+  }
+
+  .frame {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .frame-active {
+    width: 95%;
+    border-radius: 4vw;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--default-tile-transition);
+  }
+
+  .background-image-active {
+    width: unset;
+    transform: translateX(-25%);
+    filter: blur(2px) brightness(60%);
+  }
+  /* 
+  .mobile-background-blur {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: #00000043;
+    backdrop-filter: blur(1px);
+
+    opacity: 0;
+
+
+
+    z-index: 2999;
+  }
+
+  .mobile-background-blur-active {
+    opacity: 1;
+  } */
+
+  /* ----------/hero------- */
+  /* ----------grid------- */
+
+  .line {
+    gap: 2%;
+
+    height: 200px;
+    margin-block: 10px;
+  }
+
+  .tile {
+    height: 100%;
+    width: unset;
+  }
+
+  .tile:hover {
+    transition: unset;
+    height: 100%;
+    width: unset;
+  }
+
+  .tile-image {
+    object-fit: cover;
+    border-radius: var(--default-border-radius);
+    aspect-ratio: unset;
+  }
+
+  .movie-title {
+    text-align: center;
+    font-size: var(--font-medium);
+  }
 }
