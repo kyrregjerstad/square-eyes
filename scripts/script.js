@@ -114,6 +114,7 @@ on buy now click => play animation
 // });
 
 const mobileTiles = document.querySelectorAll(".tile");
+const tileImage = document.querySelectorAll(".tile-image");
 const main = document.querySelector("main");
 
 const toggleExpansion = (element, to, duration = 150) => {
@@ -147,6 +148,7 @@ const fadeContent = (element, opacity, duration = 300) => {
 
 const onTileClick = async (event) => {
   const tile = event.currentTarget;
+  tile.setAttribute("id", "tile-selected");
 
   const tileClone = tile.cloneNode(true);
 
@@ -164,26 +166,35 @@ const onTileClick = async (event) => {
 
   main.appendChild(tileClone);
 
-  const closeButton = document.createElement("button");
+  // const closeButton = document.createElement("img");
+  const closeButton = new Image(35, 35);
+
+  closeButton.src = "/images/icons/icon_menu_arrow-back_white.svg";
 
   closeButton.style = `
     position: fixed;
     z-index: 10000;
     top: 35px;
     left: 35px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #e25656;
   `;
+
+  main.appendChild(closeButton);
+
+  const dimBackground = document.createElement("div");
+
+  dimBackground.setAttribute("id", "dimBackground");
+
+  main.insertBefore(dimBackground, tileClone);
 
   closeButton.addEventListener("click", async () => {
     closeButton.remove();
+    dimBackground.remove();
 
     // tileClone.style.removeProperty("display");
     // tileClone.style.removeProperty("padding");
 
     fadeContent(tileClone, "0");
+    tile.removeAttribute("id", "tile-selected");
 
     await toggleExpansion(
       tileClone,
@@ -203,7 +214,7 @@ const onTileClick = async (event) => {
     top: 0,
     left: 0,
     width: "100vw",
-    height: "90vh",
+    height: "95vh",
   });
 
   tileClone.appendChild(closeButton);

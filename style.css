@@ -268,6 +268,8 @@ main::before {
   font-size: var(--font-Xlarge);
 }
 
+/* TODO set H sizes as vars */
+
 .hero-text h3 {
   font-size: var(--font-medium);
 }
@@ -395,14 +397,6 @@ main::before {
   transition: var(--default-tile-transition);
 }
 
-.tile:hover {
-  transition: var(--default-tile-transition);
-  height: clamp(150px, 16vw, 550px);
-  width: clamp(243px, 26vw, 891px);
-
-  box-shadow: 2vw 1vw 2vw #00000075;
-}
-
 .tile-text {
   position: absolute;
   display: flex;
@@ -416,11 +410,6 @@ main::before {
   transition: var(--default-tile-transition);
 
   pointer-events: none;
-}
-
-.tile:hover .tile-text {
-  height: 95%;
-  width: 90%;
 }
 
 .movie-title {
@@ -442,23 +431,12 @@ main::before {
   transform: translateY(-100%);
 }
 
-.tile:hover .movie-title {
-  transform: translateY(0%);
-
-  transition-delay: 500ms;
-  transition: var(--default-tile-transition);
-}
-
 .movie-year-genre {
   display: flex;
   opacity: 0;
   transition: var(--default-tile-transition);
 
   margin: 2% 0 2% 0;
-}
-
-.tile:hover .movie-year-genre {
-  opacity: 1;
 }
 
 .movie-year {
@@ -499,12 +477,6 @@ main::before {
   overflow-y: hidden;
 }
 
-.tile:hover .movie-description {
-  opacity: 1;
-
-  transition-delay: var(--default-transition-delay);
-}
-
 .buy-now-button {
   position: absolute;
 
@@ -525,12 +497,6 @@ main::before {
   z-index: 5;
 
   cursor: pointer;
-}
-
-.tile:hover > .buy-now-button {
-  opacity: 1;
-
-  transition-delay: 150ms;
 }
 
 .tile-fade {
@@ -555,8 +521,39 @@ main::before {
   transition: var(--default-tile-transition);
 }
 
-.tile:hover > .tile-image {
-  filter: brightness(40%);
+@media (min-width: 641px) {
+  .tile:hover {
+    transition: var(--default-tile-transition);
+    height: clamp(150px, 16vw, 550px);
+    width: clamp(243px, 26vw, 891px);
+
+    box-shadow: 2vw 1vw 2vw #00000075;
+  }
+
+  .tile:hover .tile-text {
+    height: 95%;
+    width: 90%;
+  }
+  .tile:hover .movie-title {
+    transform: translateY(0%);
+    transition-delay: 500ms;
+    transition: var(--default-tile-transition);
+  }
+  .tile:hover .movie-year-genre {
+    opacity: 1;
+  }
+  .tile:hover .movie-description {
+    opacity: 1;
+    transition-delay: var(--default-transition-delay);
+  }
+  .tile:hover > .buy-now-button {
+    opacity: 1;
+    transition-delay: 150ms;
+  }
+
+  .tile:hover > .tile-image {
+    filter: brightness(40%);
+  }
 }
 
 /* --------------------- Video grid ---------------------*/
@@ -1123,16 +1120,17 @@ main::before {
     height: 100%;
   }
 
-  .tile:hover {
+  /* .tile:hover {
     transition: unset;
     height: 100%;
     width: unset;
-  }
+  } */
 
   .tile-image {
     /* position: absolute; */
-    /* object-fit: cover; */
+    object-fit: contain;
     position: relative;
+    object-position: unset;
     border-radius: var(--default-border-radius);
     aspect-ratio: unset;
     /* width: 100%; */
@@ -1145,6 +1143,68 @@ main::before {
     font-size: var(--font-medium);
   }
 
-  .active-tile-clone {
+  #tile-selected {
+    /* backdrop-filter: blur(5px); */
+
+    /* background-color: #000000; */
+
+    z-index: 5000;
+
+    width: 100%;
   }
+
+  #tile-selected .tile-text {
+    height: 90%;
+    width: 80%;
+    margin-left: 1em;
+  }
+
+  #tile-selected .movie-title {
+    font-size: 1.5em;
+    text-align: left;
+
+    transform: translateY(0%);
+  }
+
+  #tile-selected .movie-year-genre,
+  #tile-selected .movie-description,
+  #tile-selected .buy-now-button {
+    opacity: 1;
+    font-size: 1.5em;
+  }
+
+  #tile-selected .buy-now-button {
+    width: 90%;
+    font-size: 2em;
+    height: unset;
+    padding: 1em;
+
+    border-radius: 2em;
+  }
+
+  #tile-selected > .tile-image {
+    width: 200%;
+    transform: translateX(-10%);
+    filter: blur(3px) brightness(50%);
+  }
+
+  #dimBackground {
+    position: fixed;
+    z-index: 2001;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.688);
+
+    backdrop-filter: blur(2px);
+  }
+
+  /* .tile:hover {
+    transition: var(--default-tile-transition);
+    height: clamp(150px, 16vw, 550px);
+    width: clamp(243px, 26vw, 891px);
+
+    box-shadow: 2vw 1vw 2vw #00000075;
+  } */
 }
