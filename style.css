@@ -1143,6 +1143,10 @@ main::before {
     font-size: var(--font-medium);
   }
 
+  .buy-now-button {
+    opacity: 0;
+  }
+
   #tile-selected {
     /* backdrop-filter: blur(5px); */
 
@@ -1167,8 +1171,7 @@ main::before {
   }
 
   #tile-selected .movie-year-genre,
-  #tile-selected .movie-description,
-  #tile-selected .buy-now-button {
+  #tile-selected .movie-description {
     opacity: 1;
     font-size: 1.5em;
   }
@@ -1180,6 +1183,8 @@ main::before {
     padding: 1em;
 
     border-radius: 2em;
+    transition: all 500ms;
+    opacity: 1;
   }
 
   #tile-selected > .tile-image {
