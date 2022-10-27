@@ -936,7 +936,7 @@ main::before {
     left: 0;
     right: 0;
     top: 0;
-    height: 90px;
+    height: 45px;
     background-color: var(--default-grey-color);
 
     padding-inline: 10px;
@@ -945,7 +945,7 @@ main::before {
   }
 
   .mobile-logo img {
-    height: 50px;
+    height: 40px;
   }
 
   .mobile-navbar {
