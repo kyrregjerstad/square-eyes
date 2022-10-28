@@ -1,4 +1,4 @@
-export const templateHeader = () => {
+export const navbarDesktop = () => {
   const template = document.createElement("template");
 
   template.innerHTML = `
@@ -57,7 +57,7 @@ export const templateHeader = () => {
         </div>
     </div>
   </header>`;
-  class Header extends HTMLElement {
+  class NavbarDesktop extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: "open" });
@@ -135,5 +135,5 @@ export const templateHeader = () => {
     }
   }
 
-  window.customElements.define("template-header", Header);
+  window.customElements.define("template-navbar-desktop", NavbarDesktop);
 };

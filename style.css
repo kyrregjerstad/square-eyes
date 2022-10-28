@@ -45,6 +45,9 @@
 
   --default-box-shadow: 5px 5px 5px -5px var(--default-black);
   --default-box-shadow-down: 0px 5px 5px -5px var(--default-black);
+
+  /* --------- Other --------------- */
+  --navbar-mobile-height: 45px;
 }
 
 a {
@@ -915,13 +918,22 @@ main::before {
 /* ------------------- Mobile ------------------- */
 
 .mobile-header,
-.mobile-banner {
+.mobile-banner,
+.mobile-navbar {
   display: none;
 }
 
 @media (max-width: 640px) {
+  template-navbar-desktop {
+    display: none;
+  }
+
   body {
-    padding-top: 90px;
+    padding-top: 25px;
+  }
+
+  .sticky-padding {
+    padding-top: 0;
   }
 
   .heroes {
@@ -936,7 +948,7 @@ main::before {
     left: 0;
     right: 0;
     top: 0;
-    height: 45px;
+    height: var(--navbar-mobile-height);
     background-color: var(--default-grey-color);
 
     padding-inline: 10px;
@@ -945,7 +957,7 @@ main::before {
   }
 
   .mobile-logo img {
-    height: 40px;
+    height: var(--navbar-mobile-height);
   }
 
   .mobile-navbar {
@@ -968,10 +980,6 @@ main::before {
     background-color: #121212;
     width: 25%;
     height: 100%;
-  }
-
-  .template-header-desktop {
-    display: none;
   }
 
   /* ----------hero------- */

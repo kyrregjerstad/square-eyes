@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Square Eyes</title>
+    <title>Square Eyes | Films</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
@@ -12,23 +12,23 @@
     <script src="/scripts/script.js" type="module"></script>
   </head>
   <body>
-    <template-header
+    <template-navbar-desktop
       class="template-header-desktop"
       id="films"
-    ></template-header>
+    ></template-navbar-desktop>
+    <template-navbar-mobile></template-navbar-mobile>
     <template-sidebar class="shadow-sidebar"></template-sidebar>
     <div class="mobile-header">
       <div class="hamburger-menu">
         <img src="/images/icons/icon_menu_hamburger.svg" alt="" />
       </div>
       <div class="mobile-logo">
-        <img src="/images/logo/SquareEyes_Logo_no_text.webp" alt="" />
+        <img src="/images/logo/SquareEyes_logo_glasses.webp" alt="" />
       </div>
       <div class="mobile-search">
         <img src="/images/icons/icon_menu_search.svg" alt="" />
       </div>
     </div>
-
     <main>
       <!-- <div class="mobile-background-blur"></div> -->
       <section class="heroes" data-carousel>
@@ -179,27 +179,5 @@
         </div>
       </section>
     </main>
-    <footer class="mobile-navbar">
-      <div class="mobile-nav-icon">
-        <a href="index.html">
-          <img src="/images/icons/icon_mobile_nav_films-active.svg" alt=""
-        /></a>
-      </div>
-      <div class="mobile-nav-icon">
-        <a href="browse.html">
-          <img src="/images/icons/icon_mobile_nav_browse.svg" alt=""
-        /></a>
-      </div>
-      <div class="mobile-nav-icon">
-        <a href="collections.html"
-          ><img src="/images/icons/icon_mobile_nav_collection.svg" alt=""
-        /></a>
-      </div>
-      <div class="mobile-nav-icon">
-        <a href="library.html"
-          ><img src="/images/icons/icon_mobile_nav_library.svg" alt=""
-        /></a>
-      </div>
-    </footer>
   </body>
 </html>
