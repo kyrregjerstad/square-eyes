@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -984,6 +985,22 @@ main::before {
     height: 100%;
   }
 
+  /* ----------sidebar------- */
+
+  .sidebar {
+    width: 80vw;
+  }
+
+  .sidebar .close-button-arrow {
+    width: 10vw;
+  }
+
+  .sidebar ul {
+    margin: 3vw;
+    padding: 0;
+
+    font-size: var(--font-Xlarge);
+  }
   /* ----------hero------- */
 
   .mobile-banner {

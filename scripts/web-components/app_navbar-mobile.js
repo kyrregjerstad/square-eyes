@@ -11,7 +11,9 @@ export const navbarMobile = () => {
           <img src="/images/logo/SquareEyes_logo_glasses.webp" alt="Square Eyes logo in the version of a pair of glasses" />
         </div>
         <div class="mobile-search">
+          <a href="/search.html">
           <img src="/images/icons/icon_menu_search.svg" alt="magnifying glass search icon" />
+          </a>
         </div>
       </div>
   <nav class="mobile-navbar pages">
@@ -57,7 +59,20 @@ export const navbarMobile = () => {
         }
       });
 
-      console.log(navbarPages);
+      const shadowSidebar = document.querySelector(".shadow-sidebar");
+      const hamburgerMenu = this.shadowRoot.querySelector(".hamburger-menu");
+      const sidebar = shadowSidebar.shadowRoot.querySelector(".sidebar");
+      const backgroundBlur =
+        shadowSidebar.shadowRoot.querySelector(".background-blur");
+
+      hamburgerMenu?.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+        backgroundBlur.classList.toggle("hidden");
+      });
+
+      // closeButton?.addEventListener("click", () => {
+      //   sidebar.classList.toggle("hidden");
+      // });
     }
   }
   window.customElements.define("template-navbar-mobile", NavbarMobile);
