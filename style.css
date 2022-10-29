@@ -929,7 +929,7 @@ main::before {
   }
 
   body {
-    padding-top: 25px;
+    padding-top: var(--navbar-mobile-height);
   }
 
   .sticky-padding {

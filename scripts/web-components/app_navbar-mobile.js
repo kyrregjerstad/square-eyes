@@ -14,7 +14,7 @@ export const navbarMobile = () => {
           <img src="/images/icons/icon_menu_search.svg" alt="" />
         </div>
       </div>
-  <nav class="mobile-navbar">
+  <nav class="mobile-navbar pages">
     <div class="mobile-nav-icon">
       <a href="index.html">
         <img src="/images/icons/icon_mobile_nav_films-active.svg" alt="" />
@@ -45,7 +45,20 @@ export const navbarMobile = () => {
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
-    connectedCallback() {}
+    connectedCallback() {
+      const navbarPages = this.shadowRoot.querySelectorAll(".pages a");
+      const page = this.getAttribute("id");
+
+      navbarPages.forEach((item) => {
+        const isActivePage = item.classList.contains(page);
+
+        if (isActivePage) {
+          item.classList.add("active");
+        }
+      });
+
+      console.log(navbarPages);
+    }
   }
   window.customElements.define("template-navbar-mobile", NavbarMobile);
 };
