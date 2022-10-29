@@ -949,7 +949,7 @@ main::before {
     right: 0;
     top: 0;
     height: var(--navbar-mobile-height);
-    background-color: var(--default-grey-color);
+    background-color: var(--default-white);
 
     padding-inline: 10px;
 
@@ -957,6 +957,7 @@ main::before {
   }
 
   .mobile-logo img {
+    padding-top: 12px;
     height: var(--navbar-mobile-height);
   }
 
