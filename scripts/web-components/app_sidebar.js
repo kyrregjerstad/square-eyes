@@ -10,7 +10,7 @@ export const templateSidebar = () => {
     <img 
       class="close-button-arrow"
       src="/images/icons/icon_menu_arrow-back.svg"
-      alt=""
+      alt="menu arrow pointing back"
     />
     <ul>
       <li><a href="#">Setting</a></li>
@@ -18,7 +18,7 @@ export const templateSidebar = () => {
       <li><a href="/about.html">About</a></li>
     </ul>
     <div class="sidebar-logo">
-      <img src="/images/logo/SquareEyes_Logo.webp" alt="" />
+      <img src="/images/logo/SquareEyes_Logo.webp" alt="The Square Eyes logo" />
     </div>
   </section>`;
 

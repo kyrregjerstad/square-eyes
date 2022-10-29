@@ -6,7 +6,7 @@ const checkoutContainer = document.querySelector(".checkout-container");
 
 checkoutContainer.innerHTML = `
   <div class="left-checkout">
-    <img src="${movies[token].cover}" alt="" />
+    <img src="${movies[token].cover}" alt="movie cover" />
   </div>
   <div class="right-checkout">
     <div class="checkout-top">
@@ -17,25 +17,25 @@ checkoutContainer.innerHTML = `
           class="quality-selector-button"
           id="HD-on"
           src="/images/icons/icon_quality_hd-on.svg"
-          alt=""
+          alt="HD Quality on"
         />
         <img
           class="quality-selector-button none"
           id="HD-off"
           src="/images/icons/icon_quality_hd-off.svg"
-          alt=""
+          alt=" HD Quality off"
         />
         <img
           class="quality-selector-button"
           id="4K-off"
           src="/images/icons/icon_quality_4k-off.svg"
-          alt=""
+          alt="4k Quality off"
         />
         <img
           class="quality-selector-button none"
           id="4K-on"
           src="/images/icons/icon_quality_4k-on.svg"
-          alt=""
+          alt="4K quality on"
         />
       </div>
     </div>

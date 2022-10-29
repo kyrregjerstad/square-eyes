@@ -22,7 +22,7 @@ export const tileBuilder = () => {
       movies[index].token
     }">Buy Now</button>
     <div class="tile-fade"></div>
-    <img class="tile-image" src="${movies[index].cover}" alt=""/>
+    <img class="tile-image" src="${movies[index].cover}" alt="movie cover"/>
     `;
     index++;
     if (index === maxLength) {

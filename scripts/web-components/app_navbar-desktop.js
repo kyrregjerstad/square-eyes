@@ -19,7 +19,7 @@ export const navbarDesktop = () => {
           <img
             class="header-logo"
             src="/images/logo/SquareEyes_Logo_no_text.webp"
-            alt=""
+            alt="Square Eyes logo"
           />
         </div>
         <div class="navbar-right">

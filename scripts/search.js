@@ -32,7 +32,7 @@ const render = (query = "") => {
     </div>
     <button class="buy-now-button" data-token="${item.token}">Buy Now</button>
     <div class="tile-fade"></div>
-    <img class="tile-image" src="${item.cover}" alt=""/>
+    <img class="tile-image" src="${item.cover}" alt="movie cover"/>
     </div>`
     );
   });
