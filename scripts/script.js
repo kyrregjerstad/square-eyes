@@ -21,29 +21,10 @@ carouselHandler();
 tileBuilder();
 checkoutTransfer();
 
-qualitySelectorButtons.forEach((button) => {
+qualitySelectorButtons?.forEach((button) => {
   button.addEventListener("click", () => {
     qualitySelectorButtons.forEach((button) => {
       button.classList.toggle("none");
     });
   });
 });
-
-const root = document.documentElement;
-
-const defaultAnimation = () => {
-  root.style.setProperty("--default-tile-transition", 200 + "ms");
-};
-
-let screenWidth = window.innerWidth;
-
-let disableAnimation;
-
-window.onresize = () => {
-  root.style.setProperty("--default-tile-transition", 0 + "ms");
-
-  clearTimeout(disableAnimation);
-  disableAnimation = setTimeout(defaultAnimation, 100);
-
-  screenWidth = window.innerWidth;
-};

@@ -1,8 +1,7 @@
 export const navbarDesktop = () => {
   const template = document.createElement("template");
 
-  template.innerHTML = `
-  <link rel="stylesheet" href="style.css" />
+  template.innerHTML = `<link rel="stylesheet" href="style.css" />
   <header>
     <div class="navbar-top">
         <div class="navbar-left">
@@ -57,6 +56,7 @@ export const navbarDesktop = () => {
         </div>
     </div>
   </header>`;
+
   class NavbarDesktop extends HTMLElement {
     constructor() {
       super();
@@ -75,7 +75,7 @@ export const navbarDesktop = () => {
       );
       const mainContent = document.querySelector("main");
 
-      const sticky = navbarBottom.offsetTop * 1.58;
+      const sticky = navbarBottom?.offsetTop * 1.58;
 
       const stickyNavbar = () => {
         if (window.pageYOffset >= sticky) {
@@ -136,4 +136,22 @@ export const navbarDesktop = () => {
   }
 
   window.customElements.define("template-navbar-desktop", NavbarDesktop);
+};
+
+export const navbarMobile = () => {
+  const template = document.createElement("template");
+
+  template.innerHTML = `
+`;
+
+  class NavbarMobile extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: "open" });
+      this.shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
+    connectedCallback() {}
+  }
+  window.customElements.define("template-navbar-mobile", NavbarMobile);
 };

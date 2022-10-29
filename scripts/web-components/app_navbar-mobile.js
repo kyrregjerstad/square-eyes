@@ -3,6 +3,17 @@ export const navbarMobile = () => {
 
   template.innerHTML = `
   <link rel="stylesheet" href="style.css" />
+  <div class="mobile-header">
+        <div class="hamburger-menu">
+          <img src="/images/icons/icon_menu_hamburger.svg" alt="" />
+        </div>
+        <div class="mobile-logo">
+          <img src="/images/logo/SquareEyes_logo_glasses.webp" alt="" />
+        </div>
+        <div class="mobile-search">
+          <img src="/images/icons/icon_menu_search.svg" alt="" />
+        </div>
+      </div>
   <nav class="mobile-navbar">
     <div class="mobile-nav-icon">
       <a href="index.html">
