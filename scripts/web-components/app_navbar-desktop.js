@@ -136,21 +136,3 @@ export const navbarDesktop = () => {
 
   window.customElements.define("template-navbar-desktop", NavbarDesktop);
 };
-
-export const navbarMobile = () => {
-  const template = document.createElement("template");
-
-  template.innerHTML = `
-`;
-
-  class NavbarMobile extends HTMLElement {
-    constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
-    }
-
-    connectedCallback() {}
-  }
-  window.customElements.define("template-navbar-mobile", NavbarMobile);
-};
