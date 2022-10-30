@@ -4,18 +4,17 @@ export const navbarMobile = () => {
   template.innerHTML = `
   <link rel="stylesheet" href="style.css" />
   <div class="mobile-header">
-        <div class="hamburger-menu">
-          <img src="/images/icons/icon_menu_hamburger.svg" alt="hamburger menu" />
-        </div>
-        <div class="mobile-logo">
-          <img src="/images/logo/SquareEyes_logo_glasses.webp" alt="Square Eyes logo in the version of a pair of glasses" />
-        </div>
-        <div class="mobile-search">
-          <a href="/search.html">
-          <img src="/images/icons/icon_menu_search.svg" alt="magnifying glass search icon" />
-          </a>
-        </div>
-      </div>
+    <div class="hamburger-menu">
+      <img src="/images/icons/icon_menu_hamburger.svg" alt="hamburger menu" />
+    </div>
+    <div class="mobile-logo">
+      <img src="/images/logo/SquareEyes_logo_glasses.webp" alt="Square Eyes logo in the version of a pair of glasses" />
+    </div>
+    <div class="mobile-search">
+      <img src="/images/icons/icon_menu_search.svg" alt="magnifying glass search icon" />
+    </div>
+    <input type="search" class="mobile-searchbar" />
+  </div>
   <nav class="mobile-navbar pages">
     <div class="mobile-nav-icon">
       <a href="index.html">
@@ -37,7 +36,7 @@ export const navbarMobile = () => {
         <img src="/images/icons/icon_mobile_nav_library.svg" alt="library navigation" />
       </a>
     </div>
-  </nav>;
+  </nav>
 `;
 
   class NavbarMobile extends HTMLElement {

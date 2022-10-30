@@ -953,9 +953,9 @@ main::before {
     height: var(--navbar-mobile-height);
     background-color: var(--default-white);
 
-    padding-inline: 10px;
-
     z-index: 2000;
+
+    padding-inline: 15px;
   }
 
   .mobile-logo img {
@@ -969,7 +969,7 @@ main::before {
     align-items: center;
     position: fixed;
     width: 100%;
-    background-color: white;
+    /* background-color: white; */
     height: 120px;
     bottom: 0;
     z-index: 2000;
@@ -979,10 +979,34 @@ main::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
+    /* color: #000000; */
     background-color: #121212;
     width: 25%;
     height: 100%;
+  }
+
+  .mobile-searchbar {
+    position: absolute;
+    width: 5%;
+    height: var(--navbar-mobile-height);
+    z-index: 3000;
+    top: 0;
+    right: 2.5%;
+    transition: width 200ms;
+
+    color: var(--default-white);
+    padding: 1em;
+
+    background-color: var(--default-black);
+    border-radius: 2em;
+
+    outline: 0;
+    opacity: 0;
+  }
+
+  .mobile-searchbar:focus {
+    width: 95%;
+    opacity: 1;
   }
 
   /* ----------sidebar------- */
