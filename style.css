@@ -987,26 +987,30 @@ main::before {
 
   .mobile-searchbar {
     position: absolute;
-    width: 5%;
+    width: 10%;
     height: var(--navbar-mobile-height);
     z-index: 3000;
     top: 0;
-    right: 2.5%;
+    right: 0;
     transition: width 200ms;
 
     color: var(--default-white);
     padding: 1em;
 
     background-color: var(--default-black);
-    border-radius: 2em;
+    /* border-radius: 2em; */
 
     outline: 0;
     opacity: 0;
+
+    cursor: pointer;
   }
 
   .mobile-searchbar:focus {
-    width: 95%;
+    width: 100%;
     opacity: 1;
+
+    cursor: auto;
   }
 
   /* ----------sidebar------- */
