@@ -374,7 +374,7 @@ main::before {
   gap: 1vw;
 
   height: clamp(200px, 24vw, 800px);
-  margin-bottom: clamp(-400px, -8vw, -65px);
+  margin-bottom: clamp(-50px, -2vw, -60px);
 
   overflow-y: hidden;
 
@@ -384,6 +384,16 @@ main::before {
 
 .row::-webkit-scrollbar {
   display: none;
+}
+
+.movie-row-text {
+  font-size: var(--font-medium);
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 3vw;
+  left: 0.5em;
+  z-index: 1;
 }
 
 .tile {
@@ -533,6 +543,8 @@ main::before {
     width: clamp(243px, 26vw, 891px);
 
     box-shadow: 2vw 1vw 2vw #00000075;
+
+    z-index: 5;
   }
 
   .tile:hover .tile-text {
@@ -1053,7 +1065,7 @@ main::before {
     z-index: 5;
 
     width: clamp(210px, 100%, 800px);
-    height: clamp(160px, 21vh, 500px);
+    height: clamp(160px, 19vh, 500px);
   }
 
   .mobile-banner-active {
@@ -1182,11 +1194,16 @@ main::before {
     gap: 2%;
 
     height: 200px;
-    margin-block: 10px;
+    margin-block: 15px;
+    padding-top: 30px;
   }
 
   .tile {
     height: 100%;
+  }
+
+  .movie-row-text {
+    top: 5px;
   }
 
   /* .tile:hover {
