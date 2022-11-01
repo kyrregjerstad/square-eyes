@@ -1,6 +1,6 @@
 import { movies } from "./database.js";
 
-const results = document.querySelector(".line");
+const results = document.querySelector("#search-results");
 const search = document.querySelector("#search-input");
 
 const render = (query = "") => {
