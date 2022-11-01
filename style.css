@@ -651,8 +651,18 @@ main::before {
   z-index: -1;
 }
 
+.contact-page,
+.about-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .close-button {
-  width: 2vw;
+  width: clamp(30px, 2vw, 150px);
   margin-left: 5vw;
   margin-top: 5vw;
 
@@ -675,19 +685,23 @@ main::before {
 
 .full-logo {
   margin-top: 2vw;
-  width: 24vw;
+  width: clamp(250px, 24vw, 500px);
   transform: translateX(5%);
 }
 
 .about-contact-top {
+  position: absolute;
   display: flex;
+  top: 0;
 }
 
 .center-content {
   display: flex;
   justify-content: center;
+  /* align-items: center; */
+  /* height: 100%; */
 
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .left-text {
@@ -740,12 +754,12 @@ main::before {
 .social-links {
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
 
-  margin-top: 5vw;
+  /* margin-top: 5vw; */
 
   width: 100%;
-  bottom: 10px;
+  bottom: 50px;
 }
 
 .social-links img {
@@ -754,10 +768,10 @@ main::before {
 /* --------------------- Contact.html --------------------- */
 /* --------------------- About.html --------------------- */
 
-.about-page {
+/* .about-page {
   height: 100vh;
   width: 100vw;
-}
+} */
 
 .about-page .left-text {
   font-size: clamp(14px, 2vw, 20px);
@@ -767,7 +781,7 @@ main::before {
   display: flex;
   align-self: center;
 
-  margin-left: 4em;
+  /* margin-left: 4em; */
 }
 
 .about-page .image-container .mockup-left {
@@ -1267,4 +1281,8 @@ main::before {
 
     box-shadow: 2vw 1vw 2vw #00000075;
   } */
+
+  .about-page .image-container {
+    display: none;
+  }
 }
