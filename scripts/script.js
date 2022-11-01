@@ -4,6 +4,7 @@ import { navbarDesktop } from "./web-components/app_navbar-desktop.js";
 import { navbarMobile } from "./web-components/app_navbar-mobile.js";
 import { templateSidebar } from "./web-components/app_sidebar.js";
 import { mobileTileHandler } from "./mobile-tile-animation.js";
+import { isMobile } from "./helpers.js";
 // import { templateMovieTile } from "./web-components/app_movie-tile.js";
 
 const qualitySelectorButtons = document.querySelectorAll(

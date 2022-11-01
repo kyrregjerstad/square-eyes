@@ -1,3 +1,5 @@
+import { isMobile } from "./helpers.js";
+
 const mobileTiles = document.querySelectorAll(".tile");
 const main = document.querySelector("main");
 
@@ -20,74 +22,78 @@ export const mobileTileHandler = () => {
   };
 
   const onTileClick = async (event) => {
-    const tile = event.currentTarget;
+    if (isMobile) {
+      const tile = event.currentTarget;
 
-    const tileClone = tile.cloneNode(true);
+      const tileClone = tile.cloneNode(true);
 
-    tileClone.setAttribute("id", "tile-selected");
+      tileClone.setAttribute("id", "tile-selected");
 
-    const { top, left, width, height } = tile.getBoundingClientRect();
+      const { top, left, width, height } = tile.getBoundingClientRect();
 
-    tileClone.style.position = "fixed";
-    tileClone.style.zIndex = "3000";
+      tileClone.style.position = "fixed";
+      tileClone.style.zIndex = "3000";
 
-    tileClone.style.top = top + "px";
-    tileClone.style.left = left + "px";
-    tileClone.style.width = width + "px";
-    tileClone.style.height = height + "px";
+      tileClone.style.top = top + "px";
+      tileClone.style.left = left + "px";
+      tileClone.style.width = width + "px";
+      tileClone.style.height = height + "px";
 
-    tile.style.opacity = "0";
+      tile.style.opacity = "0";
 
-    main.appendChild(tileClone);
+      main.appendChild(tileClone);
 
-    const closeButton = new Image(35, 35);
+      const closeButton = new Image(35, 35);
 
-    closeButton.src = "/images/icons/icon_menu_arrow-back_white.svg";
+      closeButton.src = "/images/icons/icon_menu_arrow-back_white.svg";
 
-    closeButton.style = `
-    position: fixed;
-    z-index: 10000;
-    top: 35px;
-    left: 35px;
-  `;
+      closeButton.style = `
+      position: fixed;
+      z-index: 10000;
+      top: 35px;
+      left: 35px;
+      `;
 
-    document.body.appendChild(closeButton);
+      document.body.appendChild(closeButton);
 
-    const dimBackground = document.createElement("div");
+      const dimBackground = document.createElement("div");
 
-    dimBackground.setAttribute("id", "dimBackground");
+      dimBackground.setAttribute("id", "dimBackground");
 
-    document.body.appendChild(dimBackground);
+      document.body.appendChild(dimBackground);
 
-    closeButton.addEventListener("click", async () => {
-      closeButton.remove();
-      dimBackground.remove();
+      closeButton.addEventListener("click", async () => {
+        closeButton.remove();
+        dimBackground.remove();
 
-      tileClone.removeAttribute("id", "tile-selected");
+        tileClone.removeAttribute("id", "tile-selected");
 
-      await toggleExpansion(
-        tileClone,
-        {
-          top: `${top}px`,
-          left: `${left}px`,
-          width: `${width}px`,
-          height: `${height}px`,
-        },
-        100
-      );
-      tile.style.removeProperty("opacity");
+        await toggleExpansion(
+          tileClone,
+          {
+            top: `${top}px`,
+            left: `${left}px`,
+            width: `${width}px`,
+            height: `${height}px`,
+          },
+          100
+        );
+        tile.style.removeProperty("opacity");
 
-      tileClone.remove();
-    });
+        tileClone.remove();
+      });
 
-    await toggleExpansion(tileClone, {
-      top: 0,
-      left: 0,
-      width: "100vw",
-      height: "95vh",
-    });
+      await toggleExpansion(tileClone, {
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "95vh",
+      });
 
-    tileClone.appendChild(closeButton);
+      tileClone.appendChild(closeButton);
+    } else {
+      return;
+    }
   };
 
   mobileTiles.forEach((tile) => {
@@ -109,3 +115,5 @@ button?.addEventListener("click", () => {
   frame.classList.toggle("frame-active");
   backgroundImage.classList.toggle("background-image-active");
 });
+
+removeEventListener;
