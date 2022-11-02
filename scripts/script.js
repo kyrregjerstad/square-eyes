@@ -12,7 +12,7 @@ const qualitySelectorButtons = document.querySelectorAll(
 );
 templateSidebar();
 navbarDesktop();
-navbarMobile();
+// navbarMobile();
 mobileTileHandler();
 
 // templateMovieTile();
