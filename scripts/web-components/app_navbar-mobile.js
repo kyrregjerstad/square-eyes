@@ -1,7 +1,9 @@
 export const navbarMobile = () => {
   const template = document.createElement("template");
 
-  template.innerHTML = `
+  template.innerHTML =
+    /* html */
+    `
   <link rel="stylesheet" href="style.css" />
   <div class="mobile-header">
     <div class="hamburger-menu">

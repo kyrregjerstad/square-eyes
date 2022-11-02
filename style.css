@@ -23,6 +23,7 @@
 
   /* --------- Colours --------------- */
   --default-black: #000000;
+  --default-dark-grey: #121212;
   --default-white: #ffffff;
   --button-main-color: #d9d9d9;
   --default-grey-color: #e2e2e2;
@@ -838,10 +839,6 @@ main::before {
 }
 
 @media (max-width: 640px) {
-  template-navbar-desktop {
-    display: none;
-  }
-
   body {
     padding-top: var(--navbar-mobile-height);
   }
@@ -852,77 +849,6 @@ main::before {
 
   .heroes {
     display: none;
-  }
-
-  .mobile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: var(--navbar-mobile-height);
-    background-color: var(--default-white);
-
-    z-index: 2000;
-
-    padding-inline: 15px;
-  }
-
-  .mobile-logo img {
-    padding-top: 12px;
-    height: var(--navbar-mobile-height);
-  }
-
-  .mobile-navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    /* background-color: white; */
-    height: 120px;
-    bottom: 0;
-    z-index: 2000;
-  }
-
-  .mobile-nav-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* color: #000000; */
-    background-color: #121212;
-    width: 25%;
-    height: 100%;
-  }
-
-  .mobile-searchbar {
-    position: absolute;
-    width: 10%;
-    height: var(--navbar-mobile-height);
-    z-index: 3000;
-    top: 0;
-    right: 0;
-    transition: width 200ms;
-
-    color: var(--default-white);
-    padding: 1em;
-
-    background-color: var(--default-black);
-    /* border-radius: 2em; */
-
-    outline: 0;
-    opacity: 0;
-
-    cursor: pointer;
-  }
-
-  .mobile-searchbar:focus {
-    width: 100%;
-    opacity: 1;
-
-    cursor: auto;
   }
 
   /* ----------sidebar------- */

@@ -1,6 +1,6 @@
 import { carouselHandler } from "./carouselHandler.js";
 import { tileBuilder, checkoutTransfer } from "./populate_grid.js";
-import { navbarDesktop } from "./web-components/app_navbar-desktop.js";
+import { navigation } from "./web-components/app_navigation.js";
 import { navbarMobile } from "./web-components/app_navbar-mobile.js";
 import { templateSidebar } from "./web-components/app_sidebar.js";
 import { mobileTileHandler } from "./mobile-tile-animation.js";
@@ -11,8 +11,7 @@ const qualitySelectorButtons = document.querySelectorAll(
   ".quality-selector-button"
 );
 templateSidebar();
-navbarDesktop();
-// navbarMobile();
+navigation();
 mobileTileHandler();
 
 // templateMovieTile();

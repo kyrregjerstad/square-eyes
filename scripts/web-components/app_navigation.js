@@ -1,4 +1,4 @@
-export const navbarDesktop = () => {
+export const navigation = () => {
   const template = document.createElement("template");
 
   let style =
@@ -18,12 +18,12 @@ export const navbarDesktop = () => {
 
     header {
       position: relative;
-      background-color: var(--default-white);
-      z-index: 2000;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      background-color: var(--default-white);
+      z-index: 2000;
     }
     
     .navbar-top {
@@ -56,9 +56,9 @@ export const navbarDesktop = () => {
     }
     
     .navbar-left-bottom {
-      margin-left: 1%;
       position: absolute;
       left: 0;
+      margin-left: 1%;
     }
     
     .navbar-left-bottom img {
@@ -109,13 +109,89 @@ export const navbarDesktop = () => {
       font-weight: bold;
       text-decoration: underline;
     }
+
+    .mobile {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: unset;
+      }
+
+      .mobile-header {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding-inline: 15px;
+        height: var(--navbar-mobile-height);
+        background-color: var(--default-white, white);
+        z-index: 2000;
+      }
+    
+      .mobile-logo img {
+        padding-top: 12px;
+        height: var(--navbar-mobile-height);
+      }
+    
+      .mobile-navbar {
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        z-index: 2000;
+      }
+    
+      .mobile-nav-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 100%;
+        background-color: var(--default-dark-grey, #121212);
+      }
+    
+      .mobile-searchbar {
+        position: absolute;
+        width: 10%;
+        height: var(--navbar-mobile-height);
+        top: 0;
+        right: 0;
+        padding: 1em;
+        outline: 0;
+        opacity: 0;
+        background-color: var(--default-black);
+        color: var(--default-white);
+        cursor: pointer;
+        z-index: 3000;
+        transition: width 200ms;
+      }
+    
+      .mobile-searchbar:focus {
+        width: 100%;
+        opacity: 1;
+        cursor: auto;
+      }
+    }
     </style>
     `;
 
   template.innerHTML =
     /* HTML */
-    ` ${style}
-      <header>
+    `
+      ${style}
+      <header class="desktop">
         <div class="navbar-top">
           <div class="navbar-left">
             <img
@@ -163,9 +239,68 @@ export const navbarDesktop = () => {
             <img src="images/icons/icon_menu_user.svg" alt="user menu" />
           </div>
         </div>
-      </header>`;
+      </header>
 
-  class NavbarDesktop extends HTMLElement {
+      <div class="mobile">
+        <div class="mobile-header">
+          <div class="hamburger-menu">
+            <img
+              src="/images/icons/icon_menu_hamburger.svg"
+              alt="hamburger menu"
+            />
+          </div>
+          <div class="mobile-logo">
+            <img
+              src="/images/logo/SquareEyes_logo_glasses.webp"
+              alt="Square Eyes logo in the version of a pair of glasses"
+            />
+          </div>
+          <div class="mobile-search">
+            <img
+              src="/images/icons/icon_menu_search.svg"
+              alt="magnifying glass search icon"
+            />
+          </div>
+          <input type="search" class="mobile-searchbar" />
+        </div>
+        <nav class="mobile-navbar">
+          <div class="mobile-nav-icon pages">
+            <a href="index.html" class="films">
+              <img
+                src="/images/icons/icon_mobile_nav_films-active.svg"
+                alt="flims navigation"
+              />
+            </a>
+          </div>
+          <div class="mobile-nav-icon pages">
+            <a href="browse.html" class="browse">
+              <img
+                src="/images/icons/icon_mobile_nav_browse.svg"
+                alt="browse navigation"
+              />
+            </a>
+          </div>
+          <div class="mobile-nav-icon pages">
+            <a href="collections.html" class="collections">
+              <img
+                src="/images/icons/icon_mobile_nav_collection.svg"
+                alt="collections navigation"
+              />
+            </a>
+          </div>
+          <div class="mobile-nav-icon pages">
+            <a href="library.html" class="library">
+              <img
+                src="/images/icons/icon_mobile_nav_library.svg"
+                alt="library navigation"
+              />
+            </a>
+          </div>
+        </nav>
+      </div>
+    `;
+
+  class Navigation extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: "open" });
@@ -242,5 +377,5 @@ export const navbarDesktop = () => {
     }
   }
 
-  window.customElements.define("template-navbar-desktop", NavbarDesktop);
+  window.customElements.define("template-navigation", Navigation);
 };
