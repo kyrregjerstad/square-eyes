@@ -1,3 +1,5 @@
+import { mobileBreakpoint } from "../helpers.js";
+
 export const navigation = () => {
   const template = document.createElement("template");
 
@@ -114,7 +116,7 @@ export const navigation = () => {
       display: none;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: ${mobileBreakpoint}) {
       .desktop {
         display: none;
       }

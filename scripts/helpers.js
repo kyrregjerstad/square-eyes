@@ -1,6 +1,10 @@
 const root = document.documentElement;
 let screenWidth = window.innerWidth;
 
+export const mobileBreakpoint = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--mobile-breakpoint");
+
 export let isMobile;
 export const mobileChecker = () => {
   screenWidth < 640 ? (isMobile = true) : (isMobile = false);

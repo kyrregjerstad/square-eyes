@@ -51,6 +51,7 @@
 
   /* --------- Other --------------- */
   --navbar-mobile-height: 45px;
+  --mobile-breakpoint: 640px;
 }
 
 a {
