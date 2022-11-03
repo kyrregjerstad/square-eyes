@@ -210,6 +210,8 @@ export const navigation = () => {
               class="header-logo"
               src="/images/logo/SquareEyes_Logo_no_text.webp"
               alt="Square Eyes logo"
+              width="18vw"
+              height="120vw"
             />
           </div>
           <div class="navbar-right">
