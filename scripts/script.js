@@ -3,7 +3,6 @@ import { tileBuilder, checkoutTransfer } from "./populate_grid.js";
 import { navigation } from "./web-components/app_navigation.js";
 import { navbarMobile } from "./web-components/app_navbar-mobile.js";
 import { templateSidebar } from "./web-components/app_sidebar.js";
-import { mobileTileHandler } from "./mobile-tile-animation.js";
 import { isMobile } from "./helpers.js";
 import { templateMovieTile } from "./web-components/app_movie-tile.js";
 
