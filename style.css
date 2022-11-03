@@ -259,7 +259,10 @@ main::before {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /*   
+ ? to make row expand in both directions
+justify-content: center;
+ */
   gap: 1vw;
 
   height: clamp(200px, 24vw, 800px);
