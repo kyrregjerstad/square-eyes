@@ -284,11 +284,15 @@ main::before {
   z-index: 1;
 }
 
+template-movie-tile {
+  height: 100%;
+}
+
 .tile {
   position: relative;
 
   height: clamp(100px, 12vw, 250px);
-  width: clamp(162px, 19.44vw, 405px);
+  /* width: clamp(162px, 19.44vw, 405px); */
 
   display: flex;
 
@@ -1009,6 +1013,10 @@ main::before {
     height: 200px;
     margin-block: 15px;
     padding-top: 30px;
+  }
+
+  template-movie-tile {
+    width: 50%;
   }
 
   .tile {

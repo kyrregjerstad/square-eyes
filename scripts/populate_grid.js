@@ -6,14 +6,16 @@ export const tileBuilder = () => {
   const tiles = document.querySelectorAll(".tile");
 
   tiles.forEach((tile) => {
-    tile.innerHTML = `
+    tile.innerHTML =
+      /* html */
+      `
     <div class="tile-text">
       <p class="movie-title">${movies[index].title}</p>
-    <div class="movie-year-genre">
-      <p class="movie-year">${movies[index].year}</p>
-      <p class="movie-dot"> • </p>
-      <p class="movie-genre">${movies[index].genre}</p>
-    </div>
+      <div class="movie-year-genre">
+        <p class="movie-year">${movies[index].year}</p>
+        <p class="movie-dot"> • </p>
+        <p class="movie-genre">${movies[index].genre}</p>
+      </div>
       <p class="movie-description">
       ${movies[index].description.substring(0, 90) + `...`}
       </p>

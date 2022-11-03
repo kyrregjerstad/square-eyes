@@ -12,13 +12,13 @@ const qualitySelectorButtons = document.querySelectorAll(
 );
 templateSidebar();
 navigation();
-mobileTileHandler();
+// mobileTileHandler();
 
 templateMovieTile();
 
 carouselHandler();
 
-tileBuilder();
+// tileBuilder();
 checkoutTransfer();
 
 qualitySelectorButtons?.forEach((button) => {
