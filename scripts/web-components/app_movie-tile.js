@@ -44,7 +44,7 @@ export const templateMovieTile = () => {
           data-token="${movies[index].token}">Buy Now</button>
           <div class="tile-fade"></div>
           <img loading="lazy" class="tile-image" src="${
-            movies[index].cover
+            movies[index].minified
           }" alt="movie cover"/>
           `
         );

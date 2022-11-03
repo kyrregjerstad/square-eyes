@@ -6,6 +6,7 @@ export const movies = [
     director: "Greg Tiernan",
     actor: "Oscar Isaac",
     cover: "./images/film/film_cover_adams-family.webp",
+    minified: "./images/film/minified/film_cover_adams-family_300w.webp",
     description:
       "The eccentrically macabre family moves to a bland suburb where Wednesday Addams' friendship with the daughter of a hostile and conformist local reality show host exacerbates conflict between the families.",
     token: "0",
@@ -17,6 +18,7 @@ export const movies = [
     director: "Matt Reeves",
     actor: "Robert Pattinson",
     cover: "./images/film/film_cover_the-batman.webp",
+    minified: "./images/film/minified/film_cover_the-batman_300w.webp",
     fallbackCover: "./images/film/film_cover_the-batman.jpg",
     description:
       "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
@@ -29,6 +31,7 @@ export const movies = [
     director: "ichael Dougherty",
     actor: "Kyle Chandler",
     cover: "./images/film/film_cover_godzilla.webp",
+    minified: "./images/film/minified/film_cover_godzilla_300w.webp",
     fallbackCover: "./images/film/film_cover_godzilla.jpg",
     description:
       "The crypto-zoological agency Monarch faces off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah.",
@@ -41,6 +44,7 @@ export const movies = [
     director: "David Leitch",
     actor: "Dwayne Johnson, Jason Statham",
     cover: "./images/film/film_cover_hobbs-and-shaw.webp",
+    minified: "./images/film/minified/film_cover_hobbs-and-shaw_300w.webp",
     fallbackCover: "./images/film/film_cover_hobbs-and-shaw.jpg",
     description:
       "Lawman Luke Hobbs and outcast Deckard Shaw form an unlikely alliance when a cyber-genetically enhanced villain threatens the future of humanity.",
@@ -53,6 +57,7 @@ export const movies = [
     director: "Quentin Tarantino",
     actor: "Leonardo DiCaprio",
     cover: "./images/film/film_cover_once_upon_a_time.webp",
+    minified: "./images/film/minified/film_cover_once_upon_a_time_300w.webp",
     fallbackCover: "./images/film/film_cover_once_upon_a_time.jpg",
     description:
       "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.",
@@ -65,6 +70,7 @@ export const movies = [
     director: "Matt bettinelli-Olpin",
     actor: "Neve Campbell",
     cover: "./images/film/film_cover_scream.webp",
+    minified: "./images/film/minified/film_cover_scream_300w.webp",
     fallbackCover: "./images/film/film_cover_scream.jpg",
     description:
       "25 years after a streak of brutal murders shocked the quiet town of Woodsboro, Calif., a new killer dons the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town's deadly past.",
@@ -77,6 +83,7 @@ export const movies = [
     director: "J.D. Dillard",
     actor: "Kiersey Clemons",
     cover: "./images/film/film_cover_sweetheart.webp",
+    minified: "./images/film/minified/film_cover_sweetheart_300w.webp",
     fallbackCover: "./images/film/film_cover_sweetheart.jpg",
     description:
       "Jenn has washed ashore a small tropical island and it doesn't take her long to realize she's completely alone. She must spend her days not only surviving the elements, but must also fend off the malevolent force that comes out each night.",
@@ -89,6 +96,7 @@ export const movies = [
     director: "Josh Cooley",
     actor: "Tom Hanks",
     cover: "./images/film/film_cover_toy-story-4.webp",
+    minified: "./images/film/minified/film_cover_toy-story-4_300w.webp",
     fallbackCover: "./images/film/film_cover_toy-story-4.jpg",
     description:
       "When a new toy called Forky joins Woody and the gang, a road trip alongside old and new friends reveals how big the world can be for a toy.",
