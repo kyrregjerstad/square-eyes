@@ -7,16 +7,16 @@ templateSidebar();
 navigation();
 templateMovieTile();
 carouselHandler();
-checkoutTransfer();
+// checkoutTransfer();
 
-const qualitySelectorButtons = document.querySelectorAll(
-  ".quality-selector-button"
-);
+// const qualitySelectorButtons = document.querySelectorAll(
+//   ".quality-selector-button"
+// );
 
-qualitySelectorButtons?.forEach((button) => {
-  button.addEventListener("click", () => {
-    qualitySelectorButtons.forEach((button) => {
-      button.classList.toggle("none");
-    });
-  });
-});
+// qualitySelectorButtons?.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     qualitySelectorButtons.forEach((button) => {
+//       button.classList.toggle("none");
+//     });
+//   });
+// });

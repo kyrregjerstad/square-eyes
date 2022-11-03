@@ -150,6 +150,17 @@ export const templateMovieTile = () => {
       tiles.forEach((tile) => {
         tile.addEventListener("click", onTileClick);
       });
+
+      const buyNowButtons = this.shadowRoot.querySelectorAll(".buy-now-button");
+      let token;
+      buyNowButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          console.log("click");
+          token = event.target.getAttribute("data-token");
+          sessionStorage.setItem("token", token);
+          window.location = "/checkout.html";
+        });
+      });
     }
   }
 
