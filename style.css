@@ -285,15 +285,11 @@ main::before {
   z-index: 1;
 }
 
-template-movie-tile {
-  height: 100%;
-}
-
 .tile {
   position: relative;
 
   height: clamp(100px, 12vw, 250px);
-  /* width: clamp(162px, 19.44vw, 405px); */
+  width: clamp(162px, 19.44vw, 405px);
 
   display: flex;
 
@@ -1018,10 +1014,12 @@ template-movie-tile {
 
   template-movie-tile {
     width: 50%;
+    height: 100%;
   }
 
   .tile {
     height: 100%;
+    width: unset;
   }
 
   .movie-row-text {
