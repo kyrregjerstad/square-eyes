@@ -19,11 +19,15 @@ export const navigation = () => {
     }
 
     header {
-      position: relative;
+      /* 
+      ! header is set to position absolute to reduce page jump on initial load
+      */
+      position: absolute;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      top: 0;
       background-color: var(--default-white);
       z-index: 2000;
     }
@@ -210,8 +214,6 @@ export const navigation = () => {
               class="header-logo"
               src="/images/logo/SquareEyes_Logo_no_text.webp"
               alt="Square Eyes logo"
-              width="18vw"
-              height="120vw"
             />
           </div>
           <div class="navbar-right">
