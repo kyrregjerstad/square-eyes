@@ -1,26 +1,8 @@
+import { sidebarHTML } from "../html_CSS_templates.js";
 export const templateSidebar = () => {
   const template = document.createElement("template");
 
-  template.innerHTML = `
-  <link rel="stylesheet" href="style.css" />
-
-  <div class="background-blur hidden"></div>
-
-  <section class="sidebar hidden">
-    <img 
-      class="close-button-arrow"
-      src="/images/icons/icon_menu_arrow-back.svg"
-      alt="menu arrow pointing back"
-    />
-    <ul>
-      <li><a href="#">Setting</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-      <li><a href="/about.html">About</a></li>
-    </ul>
-    <div class="sidebar-logo">
-      <img src="/images/logo/SquareEyes_Logo.webp" alt="The Square Eyes logo" />
-    </div>
-  </section>`;
+  template.innerHTML = sidebarHTML;
 
   class Sidebar extends HTMLElement {
     constructor() {
