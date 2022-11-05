@@ -40,7 +40,7 @@ export const templateMovieTile = () => {
               ${movies[index].description.substring(0, 90) + `...`}
             </p>
           </div>
-          <button class="buy-now-button"
+          <button class="buy-now-button default-button"
           data-token="${movies[index].token}">Buy Now</button>
           <div class="tile-fade"></div>
           <img loading="lazy" class="tile-image" src="${

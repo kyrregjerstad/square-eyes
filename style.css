@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+/*  */
 
 :root {
   /* --------- Font size --------------- */
@@ -83,6 +84,32 @@ main::before {
   background: var(--default-gradient);
   z-index: -1;
 }
+/* --------------------- Flex columns ---------------------*/
+.hero-text,
+.grid,
+.tile-text,
+.contact-page,
+.about-page,
+.mockup-right,
+.search-results,
+.right-checkout,
+.checkout-top,
+.checkout-middle,
+.checkout-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------- default button ---------------------*/
+
+.default-button {
+  background-color: var(--button-main-color);
+  font-size: var(--font-medium);
+  font-weight: bold;
+  border-radius: var(--button-radius);
+  border: none;
+  cursor: pointer;
+}
 
 /* --------------------- Hero section ---------------------*/
 
@@ -139,8 +166,6 @@ main::before {
 }
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   top: 2vw;
   left: 10vw;
@@ -151,8 +176,6 @@ main::before {
   color: var(--default-white);
   font-size: var(--font-Xlarge);
 }
-
-/* TODO set H sizes as vars */
 
 .hero-text h3 {
   font-size: var(--font-medium);
@@ -178,12 +201,6 @@ main::before {
   height: clamp(30px, 4vw, 100px);
   width: clamp(133px, 17vw, 423px);
   transform: translateY(-50%);
-  background-color: var(--button-main-color);
-  font-size: var(--font-medium);
-  font-weight: bold;
-  border-radius: var(--button-radius);
-  border: none;
-  cursor: pointer;
 }
 
 .hero-button:hover {
@@ -211,7 +228,6 @@ main::before {
 
 .vignette-right {
   right: 0;
-
   background: linear-gradient(-90deg, #0000007c 0%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -219,11 +235,8 @@ main::before {
 /* --------------------- Video grid ---------------------*/
 
 .grid {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 80%;
-  /* overflow-x: auto; */
   scrollbar-width: none;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
@@ -236,10 +249,6 @@ main::before {
   position: relative;
   display: flex;
   align-items: center;
-  /*   
- ? to make row expand in both directions
- justify-content: center;
- */
   gap: 1vw;
   height: clamp(200px, 24vw, 800px);
   margin-bottom: clamp(-50px, -2vw, -60px);
@@ -275,8 +284,6 @@ main::before {
 
 .tile-text {
   position: absolute;
-  display: flex;
-  flex-direction: column;
   bottom: 0;
   height: 5%;
   width: 100%;
@@ -344,15 +351,10 @@ main::before {
   bottom: 5%;
   left: 5%;
   font-size: var(--font-small);
-  font-weight: bold;
   background-color: var(--default-white);
   opacity: 0;
-  border-radius: 5vw;
-  border: none;
   transition: var(--default-transition-opacity);
   z-index: 5;
-
-  cursor: pointer;
 }
 
 .tile-fade {
@@ -490,8 +492,6 @@ main::before {
 
 .contact-page,
 .about-page {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
@@ -562,18 +562,6 @@ main::before {
   border-radius: 5vw;
   font-size: var(--font-medium);
 }
-
-/* .social-links {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  bottom: 50px;
-}
-
-.social-links img {
-  padding: 1em;
-} */
 /* --------------------- Contact.html --------------------- */
 /* --------------------- About.html --------------------- */
 
@@ -601,8 +589,6 @@ main::before {
 }
 
 .image-container .mockup-right {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   margin-left: 1em;
 }
@@ -641,8 +627,6 @@ main::before {
 }
 
 .search-results {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 80%;
   overflow-x: auto;
@@ -666,11 +650,8 @@ main::before {
   display: flex;
   width: 80%;
   height: 80%;
-
   background-color: var(--default-white);
-
   border-radius: 2vw;
-
   box-shadow: var(--default-box-shadow);
 }
 
@@ -692,24 +673,18 @@ main::before {
   object-position: 50% 20%;
 }
 .right-checkout {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   width: 50%;
   padding: 2vw;
 }
 
 .checkout-top {
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   line-height: 5vw;
   height: 100%;
 }
 
 .checkout-middle {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   justify-content: center;
 }
@@ -720,8 +695,6 @@ main::before {
 }
 
 .checkout-bottom {
-  display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   height: 100%;
 
@@ -735,7 +708,6 @@ main::before {
   color: var(--default-white);
   background-color: var(--default-black);
   border-radius: 10vw;
-  border: none;
   font-size: var(--font-medium);
 }
 
@@ -773,7 +745,6 @@ main::before {
   .sidebar ul {
     margin: 3vw;
     padding: 0;
-
     font-size: var(--font-Xlarge);
   }
   /* ----------hero------- */
@@ -784,7 +755,6 @@ main::before {
     justify-content: center;
     transition: var(--default-tile-transition);
     z-index: 5;
-
     width: clamp(210px, 100%, 800px);
     height: clamp(160px, 19vh, 500px);
   }
@@ -854,7 +824,6 @@ main::before {
     font-size: 2em;
     color: var(--default-white);
     background-color: var(--default-black);
-
     z-index: 3001;
   }
 
@@ -883,27 +852,6 @@ main::before {
     transform: translateX(-25%);
     filter: blur(2px) brightness(60%);
   }
-  /* 
-  .mobile-background-blur {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    background-color: #00000043;
-    backdrop-filter: blur(1px);
-
-    opacity: 0;
-
-
-
-    z-index: 2999;
-  }
-
-  .mobile-background-blur-active {
-    opacity: 1;
-  } */
 
   /* ----------/hero------- */
   /* ----------grid------- */
@@ -929,22 +877,12 @@ main::before {
     top: 5px;
   }
 
-  /* .tile:hover {
-    transition: unset;
-    height: 100%;
-    width: unset;
-  } */
-
   .tile-image {
-    /* position: absolute; */
     object-fit: contain;
     position: relative;
     object-position: unset;
     border-radius: var(--default-border-radius);
     aspect-ratio: unset;
-    /* width: 100%; */
-    /* max-width: 100%; */
-    /* max-width: 250px; */
   }
 
   .movie-title {
@@ -957,10 +895,6 @@ main::before {
   }
 
   #tile-selected {
-    /* backdrop-filter: blur(5px); */
-
-    /* background-color: #000000; */
-
     z-index: 5000;
     width: 100%;
   }
@@ -974,7 +908,6 @@ main::before {
   #tile-selected .movie-title {
     font-size: 1.5em;
     text-align: left;
-
     transform: translateY(0%);
   }
 
@@ -989,7 +922,6 @@ main::before {
     font-size: 1.5em;
     height: unset;
     padding: 1em;
-
     border-radius: 2em;
     transition: all 500ms;
     opacity: 1;
@@ -1009,7 +941,6 @@ main::before {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.688);
-
     backdrop-filter: blur(2px);
   }
 

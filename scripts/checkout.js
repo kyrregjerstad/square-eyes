@@ -4,7 +4,9 @@ let token = sessionStorage.getItem("token");
 
 const checkoutContainer = document.querySelector(".checkout-container");
 
-checkoutContainer.innerHTML = `
+checkoutContainer.innerHTML =
+  /* html */
+  `
   <div class="left-checkout">
     <img src="${movies[token].cover}" alt="movie cover" />
   </div>
@@ -48,6 +50,6 @@ checkoutContainer.innerHTML = `
     <a href="#">Manage Payments</a>
     <p>Default payment method: PayPal</p>
     <p>Total: $3.99</p>
-    <button class="buy-now">Buy and Watch Now</button>
+    <button class="buy-now default-button">Buy and Watch Now</button>
   </div>
     `;
