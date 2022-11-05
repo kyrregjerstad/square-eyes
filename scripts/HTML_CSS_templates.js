@@ -277,17 +277,19 @@ export const navbarHTML =
         <input type="search" class="mobile-searchbar" />
       </div>
       <nav class="mobile-navbar">
-        <div class="mobile-nav-icon pages">
+        <div class="mobile-nav-icon pages ">
           <a href="index.html" class="films">
             <img
-              src="/images/icons/icon_mobile_nav_films-active.svg"
-              alt="flims navigation"
+              class="films"
+              src="/images/icons/icon_mobile_nav_films.svg"
+              alt="films navigation"
             />
           </a>
         </div>
         <div class="mobile-nav-icon pages">
           <a href="browse.html" class="browse">
             <img
+              class="browse"
               src="/images/icons/icon_mobile_nav_browse.svg"
               alt="browse navigation"
             />
@@ -296,7 +298,8 @@ export const navbarHTML =
         <div class="mobile-nav-icon pages">
           <a href="collections.html" class="collections">
             <img
-              src="/images/icons/icon_mobile_nav_collection.svg"
+              class="collections"
+              src="/images/icons/icon_mobile_nav_collections.svg"
               alt="collections navigation"
             />
           </a>
@@ -304,6 +307,7 @@ export const navbarHTML =
         <div class="mobile-nav-icon pages">
           <a href="library.html" class="library">
             <img
+              class="library"
               src="/images/icons/icon_mobile_nav_library.svg"
               alt="library navigation"
             />

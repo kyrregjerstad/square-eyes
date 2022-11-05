@@ -41,6 +41,8 @@ export const navigation = () => {
       };
 
       const navbarPages = this.shadowRoot.querySelectorAll(".pages a");
+      const navbarIcons =
+        this.shadowRoot.querySelectorAll(".mobile-navbar img");
       const hamburgerMenu = this.shadowRoot.querySelectorAll(".hamburger-menu");
       const page = this.getAttribute("id");
 
@@ -49,6 +51,13 @@ export const navigation = () => {
 
         if (isActivePage) {
           item.classList.add("active");
+        }
+      });
+
+      navbarIcons.forEach((icon) => {
+        const isActivePage = icon.classList.contains(page);
+        if (isActivePage) {
+          icon.src = `/images/icons/icon_mobile_nav_${page}-active.svg`;
         }
       });
 
