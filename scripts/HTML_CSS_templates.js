@@ -17,6 +17,12 @@ const navbarStyle =
     color: var(--default-black);
     cursor: pointer;
     text-decoration: none;
+    transition: all 300ms ease-in-out;
+  }
+
+  a:hover {
+    transform: scale(1.02);
+    text-shadow: 1px 1px 6px #00000020;
   }
 
   header {
