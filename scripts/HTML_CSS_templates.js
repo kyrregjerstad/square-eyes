@@ -17,12 +17,18 @@ const navbarStyle =
     color: var(--default-black);
     cursor: pointer;
     text-decoration: none;
-    transition: all 300ms ease-in-out;
+
+    background: linear-gradient(45deg, #9e9e9e 0%, #868686 100%);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: -100%;
+    background-repeat: no-repeat;
+    transition: all 150ms ease-in-out;
   }
 
-  a:hover {
-    transform: scale(1.02);
-    text-shadow: 1px 1px 6px #00000020;
+  .pages a:hover {
+    background-size: 100% 0.1em;
+    background-position-x: 0%;
   }
 
   header {
