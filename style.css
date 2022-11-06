@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
-
 *,
 *::before,
 *::after {
@@ -338,7 +336,6 @@ main::before {
   font-size: var(--font-small);
   transition: var(--default-tile-transition);
   pointer-events: none;
-  overflow-wrap: none;
   z-index: 3;
   overflow-y: hidden;
 }
