@@ -474,9 +474,125 @@ main::before {
 /* --------------------- sidebar ---------------------*/
 
 /* --------------------- index.html ---------------------*/
-/* --------------------- collections.html ---------------------*/
+/* --------------------- browse.html ---------------------*/
 
-/* --------------------- collections.html ---------------------*/
+.browse-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 22%;
+
+  margin-top: 250px;
+
+  position: relative;
+}
+
+.filter-button,
+.checkbox-button {
+  background-color: var(--default-white);
+  width: 150px;
+  height: 65px;
+  padding-block: 0.4em;
+  text-align: center;
+  position: absolute;
+  top: 0;
+
+  z-index: 2;
+}
+
+.checkbox-button {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.filters-window {
+  width: 0;
+  overflow: hidden;
+
+  background-color: var(--default-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all 350ms ease-in-out;
+
+  position: absolute;
+}
+
+.selected-filter {
+  font-weight: bold;
+}
+
+.filter-lists {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2em;
+}
+
+.filter-lists li {
+  cursor: pointer;
+  line-height: 1.5em;
+}
+
+.filter-lists li:nth-child(1) {
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.filter-list-button {
+  border: none;
+  /* background: none; */
+}
+
+.filter-list-button:focus {
+  border: none;
+  font-weight: bold;
+  /* background: none; */
+}
+
+.year-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.year-selector-input input {
+  height: 2em;
+  width: 5em;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.browse-filters input:checked ~ .filters-window {
+  width: 50%;
+  height: 100%;
+
+  padding: 2em;
+
+  border-radius: 1em;
+
+  box-shadow: var(--default-box-shadow);
+}
+
+.reset-confirm-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.reset-confirm-buttons button {
+  font-weight: 300;
+  font-size: var(--font-small);
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 0.5em;
+}
+
+/* --------------------- browse.html ---------------------*/
 /* --------------------- Contact.html --------------------- */
 .contact-page::before {
   content: "";

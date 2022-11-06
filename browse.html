@@ -17,6 +17,91 @@
     <template-navigation id="browse"></template-navigation>
     <template-sidebar class="shadow-sidebar"></template-sidebar>
 
-    <main></main>
+    <main>
+      <section class="browse-filters">
+        <div class="filter-button default-button">Filters</div>
+        <input type="checkbox" class="checkbox-button" />
+        <div class="filters-window">
+          <div class="filter-lists">
+            <ul>
+              <li>Genres</li>
+              <li>Action</li>
+              <li>Adventure</li>
+              <li>Animation</li>
+              <li>Comedy</li>
+              <li>Crime</li>
+              <li>Documentary</li>
+              <li>Drama</li>
+            </ul>
+            <ul>
+              <li>&nbsp</li>
+              <li>Historical</li>
+              <li>Horror</li>
+              <li>Musical</li>
+              <li class="selected-filter">Sci-Fi</li>
+              <li>Thriller</li>
+              <li>Romance</li>
+              <li>Western</li>
+            </ul>
+            <div class="year-selector">
+              <ul>
+                <li>Year</li>
+              </ul>
+              <div class="year-selector-input">
+                <input
+                  id="from-year"
+                  type="number"
+                  min="1900"
+                  max="2099"
+                  step="1"
+                  value="1990"
+                />
+                to
+                <input
+                  id="to-year"
+                  type="number"
+                  min="1900"
+                  max="2099"
+                  step="1"
+                  value="2010"
+                />
+              </div>
+            </div>
+            <ul>
+              <li>Language</li>
+              <li>English</li>
+              <li>Spanish</li>
+              <li>Italian</li>
+              <li>Norwegian</li>
+              <li>German</li>
+              <li>French</li>
+              <li>Other</li>
+            </ul>
+            <div class="star-rating">
+              <ul>
+                <li>Rating</li>
+              </ul>
+              <img src="/images/icons/icon_star-rating_3.svg" alt="" />
+            </div>
+          </div>
+          <div class="reset-confirm-buttons">
+            <button class="default-button">Reset</button>
+            <button class="default-button">Confirm</button>
+          </div>
+          <div class="found-items">
+            <p class="filter-results">3 results...</p>
+          </div>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="row">
+          <template-movie-tile> </template-movie-tile>
+          <template-movie-tile> </template-movie-tile>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+      </section>
+    </main>
   </body>
 </html>
