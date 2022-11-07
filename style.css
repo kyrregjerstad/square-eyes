@@ -254,6 +254,10 @@ main::before {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.row-wrapper {
+  position: relative;
+}
+
 .row::-webkit-scrollbar {
   display: none;
 }
