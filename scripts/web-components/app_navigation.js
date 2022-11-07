@@ -1,4 +1,4 @@
-import { navbarHTML } from "../html-CSS_templates.js";
+import { navbarHTML } from "../HTML-CSS_templates.js";
 
 export const navigation = () => {
   const template = document.createElement("template");
