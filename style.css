@@ -874,7 +874,9 @@ main::before {
     transition: var(--default-tile-transition);
     z-index: 5;
     width: clamp(210px, 100%, 800px);
-    height: clamp(160px, 19vh, 500px);
+    height: 193px;
+
+    margin-bottom: 30px;
   }
 
   .mobile-banner-active {
