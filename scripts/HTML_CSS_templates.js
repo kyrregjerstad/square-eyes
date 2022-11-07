@@ -327,9 +327,7 @@ export const sidebarHTML =
   /* HTML */
   `
     <link rel="stylesheet" href="style.css" />
-
     <div class="background-blur hidden"></div>
-
     <section class="sidebar hidden">
       <img
         class="close-button-arrow"
