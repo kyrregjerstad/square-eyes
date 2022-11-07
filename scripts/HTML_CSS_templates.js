@@ -259,7 +259,6 @@ export const navbarHTML =
         </div>
       </div>
     </header>
-
     <div class="mobile">
       <div class="mobile-header">
         <div class="hamburger-menu">
