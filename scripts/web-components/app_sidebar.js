@@ -1,4 +1,4 @@
-import { sidebarHTML } from "../html_CSS_templates.js";
+import { sidebarHTML } from "../html-CSS_templates.js";
 export const templateSidebar = () => {
   const template = document.createElement("template");
 
