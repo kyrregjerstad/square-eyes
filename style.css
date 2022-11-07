@@ -482,27 +482,31 @@ main::before {
 .browse-filters {
   display: flex;
   justify-content: center;
-  align-items: center;
 
   width: 100%;
-  height: 22%;
+  /* height: 15%; */
 
-  margin-top: 250px;
+  margin-top: clamp(90px, 15vw, 250px);
 
   position: relative;
+
+  z-index: 4;
 }
 
 .filter-button,
 .checkbox-button {
   background-color: var(--default-white);
-  width: 150px;
-  height: 65px;
-  padding-block: 0.4em;
+  width: clamp(100px, 15vw, 190px);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-block: 0.4em; */
   text-align: center;
   position: absolute;
   top: 0;
 
-  z-index: 2;
+  z-index: 4;
 }
 
 .checkbox-button {
@@ -524,6 +528,8 @@ main::before {
   transition: all 350ms ease-in-out;
 
   position: absolute;
+
+  z-index: 3;
 }
 
 .selected-filter {
@@ -571,8 +577,8 @@ main::before {
 }
 
 .browse-filters input:checked ~ .filters-window {
-  width: 50%;
-  height: 100%;
+  width: 800px;
+  height: 400px;
 
   padding: 2em;
 
@@ -875,7 +881,6 @@ main::before {
     z-index: 5;
     width: clamp(210px, 100%, 800px);
     height: 193px;
-
     margin-bottom: 30px;
   }
 
