@@ -23,7 +23,7 @@ const navbarStyle =
     background-position-y: 100%;
     background-position-x: -100%;
     background-repeat: no-repeat;
-    transition: all 150ms ease-in-out;
+    transition: background-size 150ms ease-in-out;
   }
 
   .pages a:hover {
