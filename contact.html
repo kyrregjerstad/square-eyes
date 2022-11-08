@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Streaming, Movies" />
+    <meta
+      name="description"
+      content="The video streaming website where you can purchase interesting high quality films. No ads, no monthly fees and no subscription. Once you buy a film you own it."
+    />
+    <title>Square Eyes | Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/scripts/script.js" type="module"></script>
+  </head>
+  <body>
+    <section class="contact-page">
+      <div class="about-contact-top">
+        <a href="/index.html">
+          <img
+            class="close-button"
+            src="/images/icons/icon_menu_close.svg"
+            alt="a button in the shape on an X"
+          />
+        </a>
+        <div class="logo-container">
+          <img
+            class="full-logo"
+            src="/images/logo/SquareEyes_Logo.webp"
+            alt="Square Eyes logo, connecting film-lovers"
+          />
+        </div>
+      </div>
+      <section class="center-content">
+        <div class="left-text">
+          <h2>
+            Something to say? <br />
+            We would love to hear from you!
+          </h2>
+          <p>
+            Experiencing technical difficulties? <br />
+            Should your film be on Square Eyes?<br />
+            Do you have a great idea for a feature?<br />
+            Should pineapples on pizza be illegal?<br />
+            <br />
+            We would love to hear from you, so get in touch!
+          </p>
+        </div>
+        <section class="contact-form">
+          <form action="">
+            <label for="input-name"> Name:</label>
+            <input
+              class="name"
+              name="name"
+              id="input-name"
+              type="text"
+              placeholder="Kyrre Gjerstad"
+              required
+            />
+            <label for="input-email"> Email: </label>
+            <input
+              class="email"
+              id="input-email"
+              type="email"
+              placeholder="contact@kyrregjerstad.com"
+              required
+            />
+            <label for="input-subject"> Subject: </label>
+            <input
+              class="subject"
+              id="input-subject"
+              type="text"
+              placeholder="I love pineapples"
+              required
+            />
+            <label for="input-category"> Category: </label>
+            <input
+              class="category"
+              id="input-category"
+              list="contact-category"
+              type="text"
+              required
+            />
+            <datalist id="contact-category">
+              <option value="Technical Difficulties"></option>
+              <option value="Payment Issues"></option>
+              <option value="General Feedback"></option>
+              <option value="Feature Request"></option>
+              <option value="I am a film producer"></option>
+              <option value="Other"></option>
+            </datalist>
+            <label for="input-message"> Message: </label>
+            <textarea class="message" id="input-message" required></textarea>
+            <button class="send" type="submit">Send</button>
+          </form>
+        </section>
+      </section>
+      <div class="social-links">
+        <img src="/images/icons/icon_social-media_facebook.svg" alt="circular
+        Facebook logo"" /> <img
+        src="/images/icons/icon_social-media_instagram.svg" alt="Instagram
+        squircle icon"" />
+        <img
+          src="/images/icons/icon_social-media_web.svg"
+          alt="General web link icon depicting a globe"
+        />
+      </div>
+    </section>
+  </body>
+</html>

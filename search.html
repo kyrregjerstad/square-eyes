@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Streaming, Movies" />
+    <meta
+      name="description"
+      content="The video streaming website where you can purchase interesting high quality films. No ads, no monthly fees and no subscription. Once you buy a film you own it."
+    />
+    <title>Square Eyes | Search</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/scripts/script.js" type="module"></script>
+    <script src="/scripts/search.js" type="module"></script>
+  </head>
+  <body>
+    <template-navbar-desktop id="search"></template-navbar-desktop>
+    <template-navbar-mobile
+      id="library"
+      class="mobile-navbar"
+    ></template-navbar-mobile>
+    <template-sidebar class="shadow-sidebar"></template-sidebar>
+    <main>
+      <div class="vignette-left"></div>
+      <div class="vignette-right"></div>
+
+      <section class="searchbar">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search"
+          autocomplete="off"
+        />
+      </section>
+      <section class="grid">
+        <div class="row" id="search-results">
+          <!-- <div class="search-results"></div> -->
+          <!-- <div class="tile"></div> -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

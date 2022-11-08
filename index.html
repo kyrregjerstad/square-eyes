@@ -4,85 +4,200 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Square Eyes</title>
+    <meta name="keywords" content="Streaming, Movies" />
+    <meta
+      name="description"
+      content="The video streaming website where you can purchase interesting high quality films. No ads, no monthly fees and no subscription. Once you buy a film you own it."
+    />
+
+    <title>Square Eyes | Films</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-      </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/scripts/script.js" type="module"></script>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <div class="top">
-          <div class="left">
-            <img src="/icons/icon_menu_hamburger.svg" alt="navigation menu">
-          </div>
-          <div class="middle">
+    <template-navigation id="films"></template-navigation>
+    <template-sidebar class="shadow-sidebar"></template-sidebar>
+    <main>
+      <section class="heroes" data-carousel>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <div class="hero-text">
+              <h1 class="hero-heading">SWEETHEART</h1>
+              <p class="hero-description">
+                Jenn has washed ashore a small tropical island and it doesn't
+                take her long to realize she's completely alone. She must spend
+                her days not only surviving the elements, but must also fend off
+                the malevolent force that comes out each night.
+              </p>
+              <button class="hero-button default-button">Watch now</button>
+            </div>
             <img
-              class="header-logo"
-              src="/assets/logo/SquareEyes_Logo_no_text.png"
-              alt=""
+              class="hero-img"
+              src="/images/hero/film_hero_sweetheart.webp"
+              alt="cover of the movie Sweetheart, woman in ocean looking behind her shoulder"
             />
-          </div>
-          <div class="right">
-            <img src="/icons/icon_menu_user.svg" alt="user menu">
-          </div>
+          </li>
+          <li class="slide">
+            <div class="hero-text">
+              <h1 class="hero-heading">GODZILLA</h1>
+              <p class="hero-description">
+                The crypto-zoological agency Monarch faces off against the
+                mighty Godzilla, who collides with Mothra, Rodan, and his
+                ultimate nemesis, the three-headed King Ghidorah.
+              </p>
+              <button class="hero-button default-button">Watch now</button>
+            </div>
+            <img
+              class="hero-img"
+              src="/images/hero/film_hero_godzilla.webp"
+              alt="cover of the movie Godzilla, godzilla shooting a ray of light into the sky"
+              loading="lazy"
+            />
+          </li>
+          <li class="slide">
+            <div class="hero-text">
+              <h1 class="hero-heading">THE BATMAN</h1>
+              <p class="hero-description">
+                When a sadistic serial killer begins murdering several key
+                political figures in Gotham City, Batman is forced to
+                investigate the city's hidden corruption and question his own
+                family's involvement in it all. Are they really who he thought
+                they were?
+              </p>
+              <button class="hero-button default-button">Watch now</button>
+            </div>
+            <img
+              class="hero-img"
+              src="/images/hero/film_hero_batman.webp"
+              alt="cover of the movie The Batman, with Batman, Catwoman, The Riddler and Oz"
+              loading="lazy"
+            />
+          </li>
+        </ul>
+        <img
+          class="arrow-left"
+          src="images/icons/icon_arrow-left.svg"
+          data-carousel-button="prev"
+          alt="hero section menu arrow pointing left"
+        />
+        <img
+          class="arrow-right"
+          src="images/icons/icon_arrow-right.svg"
+          data-carousel-button="next"
+          alt="hero section menu arrow pointing right"
+        />
+      </section>
+      <section class="mobile-banner">
+        <div class="hero-title">GODZILLA</div>
+        <div class="mobile-hero-description">
+          <p>
+            A legendary monster named King Ghidorah awakens Rodan, as well as
+            other titans, to destroy the world. To defeat them, the
+            crypto-zoological organisation Monarch must rely on the almighty
+            Godzilla.
+          </p>
         </div>
-      </div>
-    </header>
-    <div class="bottom">
-      <div class="pages">
-        <a class="films">FILMS</a>
-        <a class="browse">BROWSE</a>
-        <a class="collections">COLLECTIONS</a>
-        <a class="home">LIBRARY</a>
-      </div>
-    </div>
-      <div class="main">
-        <div class="hero">
-          <div class="hero-text">
-          <h2 class="hero-heading">SWEETHEART</h2>
-          <p class="hero-description">Jenn has washed ashore a small tropical island and it doesn't take her long to realize she's completely alone. She must spend her days not only surviving the elements, but must also fend off the malevolent force that comes out each night.</p>
-          <button class="hero-button">Watch now</button>
+        <div class="button">
+          <button class="buy-now">Buy Now</button>
         </div>
+        <div class="frame">
           <img
-            class="hero-img"
-            src="/assets/sweetheart-2019-banner-noise.jpg"
-            alt="woman in ocean looking back at camera"
+            class="background-image"
+            src="/images/hero/mobile_film_hero_godzilla.webp"
+            alt="hero section movie cover"
           />
         </div>
-        <div class="vignette-left"></div>
-        <div class="vignette-right"></div>
-        <div class="grid">
-          <div class="line-1">
-            <div class="tile">
-              <p class="movie-title">Hobbs & Shaw</p>
-              <p class="movie-description">US agent Luke Hobbs and British mercenary Deckard Shaw are forced to put their rivalry side and work together to stop a genetically enhanced supervillain.</p>
-              <button class="buy-now-button">Buy now</button>
-              <img class="tile-image" src="/assets/Square_Eyes_Cover1.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover2.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover3.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover4.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover5.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover5.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover5.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover5.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover5.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover5.jpeg" alt=""></div>
-            <div class="tile">
-            <img class="tile-image" src="/assets/Square_Eyes_Cover5.jpeg" alt=""></div>
-        </div>
+      </section>
+      <div class="vignette-left"></div>
+      <div class="vignette-right"></div>
+      <section class="grid">
+        <div class="row-wrapper">
+          <p class="movie-row-text">Continue Watching</p>
+          <div class="row">
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
           </div>
         </div>
-      </div>
+        <div class="row-wrapper">
+          <p class="movie-row-text">Recommended for you</p>
+          <div class="row">
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+          </div>
+        </div>
+        <div class="row-wrapper">
+          <p class="movie-row-text">New Releases</p>
+          <div class="row">
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+          </div>
+        </div>
+        <div class="row-wrapper">
+          <p class="movie-row-text">Popular on Square Eyes</p>
+          <div class="row">
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+          </div>
+        </div>
+        <div class="row-wrapper">
+          <p class="movie-row-text">Action movies</p>
+          <div class="row">
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+            <template-movie-tile> </template-movie-tile>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
