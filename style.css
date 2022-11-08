@@ -754,6 +754,7 @@ main::before {
 
 .searchbar input::-webkit-search-cancel-button {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .searchbar input:focus {
