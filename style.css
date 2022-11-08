@@ -251,6 +251,7 @@ main::before {
   margin-bottom: clamp(-50px, -2vw, -60px);
   overflow-y: hidden;
   scrollbar-width: none;
+  padding-left: 2vw;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
@@ -268,7 +269,7 @@ main::before {
   color: var(--default-white);
   position: absolute;
   top: 3vw;
-  left: 0.5em;
+  left: 2vw;
   z-index: 1;
 }
 
@@ -675,6 +676,7 @@ main::before {
   height: clamp(30px, 4vw, 80px);
   margin-bottom: 1vw;
   width: 100%;
+  padding: 1em;
 }
 
 .contact-form .message {
