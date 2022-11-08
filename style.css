@@ -482,14 +482,9 @@ main::before {
 .browse-filters {
   display: flex;
   justify-content: center;
-
   width: 100%;
-  /* height: 15%; */
-
   margin-top: clamp(90px, 15vw, 250px);
-
   position: relative;
-
   z-index: 4;
 }
 
@@ -501,11 +496,9 @@ main::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-block: 0.4em; */
   text-align: center;
   position: absolute;
   top: 0;
-
   z-index: 4;
 }
 
@@ -564,6 +557,21 @@ main::before {
   /* background: none; */
 }
 
+.genres-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  column-gap: 20%;
+}
+
+.year-rating-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
 .year-selector {
   display: flex;
   flex-direction: column;
@@ -577,7 +585,7 @@ main::before {
 }
 
 .browse-filters input:checked ~ .filters-window {
-  width: 800px;
+  width: clamp(640px, 80%, 800px);
   height: 400px;
 
   padding: 2em;
@@ -596,7 +604,7 @@ main::before {
 
 .reset-confirm-buttons button {
   font-weight: 300;
-  font-size: var(--font-small);
+  font-size: var(--font-xSmall);
   padding: 0.5em 1em 0.5em 1em;
   margin: 0.5em;
 }
@@ -979,6 +987,90 @@ main::before {
   }
 
   /* ----------/hero------- */
+
+  /* ----------browse------- */
+
+  .browse-filters input:checked ~ .filters-window {
+    width: 90%;
+    height: clamp(520px, 90vh, 750px);
+    position: fixed;
+    top: 50px;
+  }
+
+  .filter-lists {
+    flex-direction: column;
+    height: 100%;
+    max-height: 500px;
+    padding-top: 0;
+  }
+  .genres-list {
+    column-gap: 0;
+  }
+
+  .filters-window li {
+    line-height: 2em;
+  }
+
+  .year-selector-input input {
+    width: 4em;
+  }
+
+  .year-rating-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    /* column-gap: 10%; */
+  }
+
+  .languages-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .languages-list li:nth-child(1) {
+    font-weight: bold;
+    position: absolute;
+    transform: translateY(-1.5em);
+  }
+
+  .reset-confirm-buttons button {
+    font-size: var(--font-large);
+  }
+
+  /* .mobile-filters-wrapper {
+    display: flex;
+    width: 200%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .genres-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    order: 1;
+  }
+
+  .year-selector {
+    order: 1;
+    width: 50%;
+  }
+
+  .languages-list {
+    order: 3;
+  }
+
+  .star-rating {
+    order: 2;
+    width: 50%;
+  } */
+
+  /* ----------/browse------- */
+
   /* ----------grid------- */
 
   .row {

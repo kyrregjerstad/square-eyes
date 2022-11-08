@@ -29,67 +29,74 @@
         <input type="checkbox" class="checkbox-button" />
         <div class="filters-window">
           <div class="filter-lists">
-            <ul>
-              <li>Genres</li>
-              <li>Action</li>
-              <li>Adventure</li>
-              <li>Animation</li>
-              <li>Comedy</li>
-              <li>Crime</li>
-              <li>Documentary</li>
-              <li>Drama</li>
-            </ul>
-            <ul>
-              <li>&nbsp</li>
-              <li>Historical</li>
-              <li>Horror</li>
-              <li>Musical</li>
-              <li class="selected-filter">Sci-Fi</li>
-              <li>Thriller</li>
-              <li>Romance</li>
-              <li>Western</li>
-            </ul>
-            <div class="year-selector">
+            <div class="genres-list">
               <ul>
-                <li>Year</li>
+                <li>Genre</li>
+                <li>Action</li>
+                <li>Adventure</li>
+                <li>Animation</li>
+                <li>Comedy</li>
+                <li>Crime</li>
+                <li>Documentary</li>
+                <li>Drama</li>
               </ul>
-              <div class="year-selector-input">
-                <input
-                  id="from-year"
-                  type="number"
-                  min="1900"
-                  max="2099"
-                  step="1"
-                  value="1990"
-                />
-                to
-                <input
-                  id="to-year"
-                  type="number"
-                  min="1900"
-                  max="2099"
-                  step="1"
-                  value="2010"
-                />
+              <ul>
+                <li>&nbsp</li>
+                <li>Historical</li>
+                <li>Horror</li>
+                <li>Musical</li>
+                <li class="selected-filter">Sci-Fi</li>
+                <li>Thriller</li>
+                <li>Romance</li>
+                <li>Western</li>
+              </ul>
+            </div>
+            <div class="year-rating-wrapper">
+              <div class="year-selector">
+                <div class="year-selector-input">
+                  <ul>
+                    <li>Year</li>
+                  </ul>
+                  <input
+                    id="from-year"
+                    type="number"
+                    min="1900"
+                    max="2099"
+                    step="1"
+                    value="1990"
+                  />
+                  to
+                  <input
+                    id="to-year"
+                    type="number"
+                    min="1900"
+                    max="2099"
+                    step="1"
+                    value="2010"
+                  />
+                </div>
+              </div>
+              <div class="star-rating">
+                <ul>
+                  <li>Rating</li>
+                </ul>
+                <img src="/images/icons/icon_star-rating_3.svg" alt="" />
               </div>
             </div>
-            <ul>
+            <ul class="languages-list">
               <li>Language</li>
               <li>English</li>
               <li>Spanish</li>
               <li>Italian</li>
               <li>Norwegian</li>
-              <li>German</li>
               <li>French</li>
+              <li>German</li>
+              <li>Janapese</li>
+              <li>Korean</li>
               <li>Other</li>
             </ul>
-            <div class="star-rating">
-              <ul>
-                <li>Rating</li>
-              </ul>
-              <img src="/images/icons/icon_star-rating_3.svg" alt="" />
-            </div>
           </div>
+
           <div class="reset-confirm-buttons">
             <button class="default-button">Reset</button>
             <button class="default-button">Confirm</button>
