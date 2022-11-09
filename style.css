@@ -735,7 +735,7 @@ main::before {
 /* --------------------- search.html --------------------- */
 
 .searchbar {
-  width: 99vw;
+  /* width: 99vw; */
   padding-top: 5vw;
   padding-bottom: 5vw;
   display: flex;
