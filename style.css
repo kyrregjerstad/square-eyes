@@ -642,12 +642,6 @@ main::before {
   height: auto;
 }
 
-.about-contact-top {
-  position: absolute;
-  display: flex;
-  top: 0;
-}
-
 .center-content {
   display: flex;
   max-width: 1200px;
@@ -1043,34 +1037,6 @@ main::before {
   .reset-confirm-buttons button {
     font-size: var(--font-large);
   }
-
-  /* .mobile-filters-wrapper {
-    display: flex;
-    width: 200%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .genres-list {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    order: 1;
-  }
-
-  .year-selector {
-    order: 1;
-    width: 50%;
-  }
-
-  .languages-list {
-    order: 3;
-  }
-
-  .star-rating {
-    order: 2;
-    width: 50%;
-  } */
 
   /* ----------/browse------- */
 
