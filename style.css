@@ -839,6 +839,138 @@ main::before {
   border-radius: 10vw;
   font-size: var(--font-medium);
 }
+/* ------------------- Log in ------------------- */
+
+#login-page::before {
+  background-image: url("/images/hero/login_background.webp"),
+    linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(29, 29, 29) 100%);
+  background-size: 100%;
+  background-size: cover;
+  animation: transform-background 5s ease alternate infinite;
+}
+
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.login-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffffd9;
+  position: absolute;
+  top: 0;
+  padding-block: 1em;
+  box-shadow: var(--default-box-shadow-down);
+}
+
+.login-logo img {
+  max-width: 200px;
+}
+
+#login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 450px;
+  min-width: 380px;
+  padding: 4em;
+  background-color: #000000cd;
+  backdrop-filter: blur(10px);
+  color: var(--default-white);
+  border-radius: 2em;
+  position: relative;
+  transition: all 0;
+}
+
+#login-box:hover {
+  background-color: #000000;
+  backdrop-filter: none;
+}
+
+#login-box:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2em;
+  z-index: -1;
+  transform: scale(1.01);
+  background: linear-gradient(75deg, #ffffff9e, #0000009d);
+  opacity: 0.2;
+  /* animation: border-gradient 1s alternate; */
+  animation: border-gradient 1.5s ease-in-out forwards;
+  background-size: 300% 300%;
+  /* background-position: 100% 50%; */
+}
+
+@keyframes border-gradient {
+  0% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  50% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 100%;
+    opacity: 0.5;
+  }
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+}
+
+.login-input h1 {
+  font-size: 2em;
+  color: var(--default-white);
+}
+
+.login-input > input {
+  height: 4em;
+  border-radius: 0.5em;
+  padding-inline: 1em;
+}
+
+.login-button {
+  height: 3em;
+  font-size: 1em;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-me a {
+  color: white;
+}
+
+#remember-me-checkbox {
+  transform: scale(1.5) translateX(10%);
+  margin-right: 0.5em;
+}
+
+#sign-up-link {
+  font-weight: bold;
+  color: var(--default-white);
+}
+
+/* ------------------- Log in ------------------- */
 
 /* ------------------- Mobile ------------------- */
 
