@@ -50,6 +50,6 @@ checkoutContainer.innerHTML =
     <a href="#">Manage Payments</a>
     <p>Default payment method: PayPal</p>
     <p>Total: $3.99</p>
-    <button class="buy-now default-button">Buy and Watch Now</button>
+    <button class="buy-now default-button" type="submit" aria-label="Buy movie"></button>
   </div>
     `;

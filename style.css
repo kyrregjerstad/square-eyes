@@ -779,6 +779,7 @@ main::before {
   display: flex;
   width: 80%;
   height: 80%;
+  min-height: 630px;
   background-color: var(--default-white);
   border-radius: 2vw;
   box-shadow: var(--default-box-shadow);
@@ -838,6 +839,36 @@ main::before {
   background-color: var(--default-black);
   border-radius: 10vw;
   font-size: var(--font-medium);
+}
+
+.right-checkout button::after {
+  content: "Buy and watch now";
+}
+
+.right-checkout button:focus::after {
+  content: "Please wait.";
+  animation: buy-now-button 7s forwards;
+}
+
+@keyframes buy-now-button {
+  0% {
+    content: "Please wait.";
+  }
+  10% {
+    content: "Please wait..";
+  }
+  20% {
+    content: "Please wait...";
+  }
+  35% {
+    content: "";
+  }
+  40% {
+    content: "Success! 🎉";
+  }
+  100% {
+    content: "Watch Now";
+  }
 }
 /* ------------------- Log in ------------------- */
 
