@@ -23,32 +23,40 @@
         <img src="/images/logo/SquareEyes_Logo.webp" alt="" />
       </div>
       <section id="login-box">
+        <form action="index.html">
         <div class="login-input">
-          <h1>Log In</h1>
-          <input
-            type="email"
-            placeholder="iLove@squareEyes.com"
-            aria-label="your email"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            aria-label="your password"
-          />
-          <button aria-label="log in" class="login-button default-button">
-            Log In
-          </button>
-          <div class="remember-me">
-            <div>
-              <input
-                id="remember-me-checkbox"
-                type="checkbox"
-                aria-label="remember me"
-              />
-              <label for="remember-me-checkbox">Remember me</label>
+            <h1>Log In</h1>
+            <input
+              type="email"
+              required
+              placeholder="iLove@squareEyes.com"
+              aria-label="your email"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              aria-label="your password"
+            />
+            <button
+              aria-label="log in"
+              type="submit"
+              class="login-button default-button"
+            >
+              Log In
+            </button>
+            <div class="remember-me">
+              <div>
+                <input
+                  id="remember-me-checkbox"
+                  type="checkbox"
+                  aria-label="remember me"
+                />
+                <label for="remember-me-checkbox">Remember me</label>
+              </div>
+              <a href="#" aria-label="Need help logging in?">Need help?</a>
             </div>
-            <a href="#" aria-label="Need help logging in?">Need help?</a>
-          </div>
+          </form>
           <div class="sign-up">
             Don't have a Square Eyes account yet?
             <a id="sign-up-link" href="#" aria-label="Sign up now"

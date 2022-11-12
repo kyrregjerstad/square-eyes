@@ -853,8 +853,8 @@ main::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 99vh;
+  width: 99vw;
   margin: 0;
 }
 
@@ -928,6 +928,16 @@ main::before {
   }
 }
 
+.login-input input:invalid {
+  border-color: rgb(252, 52, 52);
+  border-width: 3px;
+}
+
+.login-input input:valid {
+  border-color: rgb(14, 159, 1);
+  border-width: 3px;
+}
+
 .login-input {
   display: flex;
   flex-direction: column;
@@ -949,6 +959,7 @@ main::before {
 .login-button {
   height: 3em;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .remember-me {
