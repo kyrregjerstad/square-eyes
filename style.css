@@ -907,10 +907,8 @@ main::before {
   transform: scale(1.01);
   background: linear-gradient(75deg, #ffffff9e, #0000009d);
   opacity: 0.2;
-  /* animation: border-gradient 1s alternate; */
   animation: border-gradient 1.5s ease-in-out forwards;
   background-size: 300% 300%;
-  /* background-position: 100% 50%; */
 }
 
 @keyframes border-gradient {
