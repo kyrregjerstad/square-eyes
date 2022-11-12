@@ -981,6 +981,23 @@ main::before {
   color: var(--default-white);
 }
 
+#login-footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 101vw;
+  height: 50px;
+  bottom: 0;
+  background-color: #000000c1;
+  color: white;
+}
+
+#login-footer a {
+  color: white;
+}
+
 /* ------------------- Log in ------------------- */
 
 /* ------------------- Mobile ------------------- */
