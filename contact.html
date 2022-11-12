@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Streaming, Movies" />
-    <meta
-      name="description"
-      content="The video streaming website where you can purchase interesting high quality films. No ads, no monthly fees and no subscription. Once you buy a film you own it."
-    />
+    <meta name="description" content="Contact Square Eyes" />
     <title>Square Eyes | Contact</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +23,7 @@
           <img
             class="close-button"
             src="/images/icons/icon_menu_close.svg"
-            alt="a button in the shape on an X"
+            alt="Close page button"
           />
         </a>
         <div class="logo-container">
@@ -62,6 +59,7 @@
               type="text"
               placeholder="Kyrre Gjerstad"
               required
+              aria-label="Name"
             />
             <label for="input-email"> Email: </label>
             <input
@@ -70,6 +68,7 @@
               type="email"
               placeholder="contact@kyrregjerstad.com"
               required
+              aria-label="Email"
             />
             <label for="input-subject"> Subject: </label>
             <input
@@ -78,6 +77,7 @@
               type="text"
               placeholder="I love pineapples"
               required
+              aria-label="Subject"
             />
             <label for="input-category"> Category: </label>
             <input
@@ -86,6 +86,7 @@
               list="contact-category"
               type="text"
               required
+              aria-label="Contact category"
             />
             <datalist id="contact-category">
               <option value="Technical Difficulties"></option>
@@ -96,19 +97,33 @@
               <option value="Other"></option>
             </datalist>
             <label for="input-message"> Message: </label>
-            <textarea class="message" id="input-message" required></textarea>
-            <button class="send" type="submit">Send</button>
+            <textarea
+              class="message"
+              id="input-message"
+              required
+              aria-label="message"
+            ></textarea>
+            <button class="send" type="submit" aria-label="send">Send</button>
           </form>
         </section>
       </section>
       <div class="social-links">
-        <img src="/images/icons/icon_social-media_facebook.svg" alt="circular
-        Facebook logo"" /> <img
-        src="/images/icons/icon_social-media_instagram.svg" alt="Instagram
-        squircle icon"" />
+        <img
+          src="/images/icons/icon_social-media_facebook.svg"
+          alt="circular
+        Facebook logo"
+          aria-label="link to Square Eyes Facebook page"
+        />
+        <img
+          src="/images/icons/icon_social-media_instagram.svg"
+          alt="Instagram
+        squircle icon"
+          aria-label="link to Square Eyes Instagram page"
+        />
         <img
           src="/images/icons/icon_social-media_web.svg"
           alt="General web link icon depicting a globe"
+          aria-label="link to Square Eyes Web page"
         />
       </div>
     </section>

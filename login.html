@@ -25,19 +25,35 @@
       <section id="login-box">
         <div class="login-input">
           <h1>Log In</h1>
-          <input type="email" placeholder="iLove@squareEyes.com" />
-          <input type="password" placeholder="Password" />
-          <button class="login-button default-button">Log in</button>
+          <input
+            type="email"
+            placeholder="iLove@squareEyes.com"
+            aria-label="your email"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            aria-label="your password"
+          />
+          <button aria-label="log in" class="login-button default-button">
+            Log In
+          </button>
           <div class="remember-me">
             <div>
-              <input id="remember-me-checkbox" type="checkbox" />
+              <input
+                id="remember-me-checkbox"
+                type="checkbox"
+                aria-label="remember me"
+              />
               <label for="remember-me-checkbox">Remember me</label>
             </div>
-            <a href="#">Need help?</a>
+            <a href="#" aria-label="Need help logging in?">Need help?</a>
           </div>
           <div class="sign-up">
             Don't have a Square Eyes account yet?
-            <a id="sign-up-link" href="#">Sign up now!</a>
+            <a id="sign-up-link" href="#" aria-label="Sign up now"
+              >Sign up now!</a
+            >
           </div>
         </div>
       </section>

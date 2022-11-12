@@ -247,8 +247,8 @@ main::before {
   display: flex;
   align-items: center;
   gap: 1vw;
-  height: clamp(200px, 24vw, 800px);
-  margin-bottom: clamp(-50px, -2vw, -60px);
+  height: clamp(200px, 24vw, 600px);
+  margin-bottom: clamp(-191px, -4vw, -59px);
   overflow-y: hidden;
   scrollbar-width: none;
   padding-left: 2vw;

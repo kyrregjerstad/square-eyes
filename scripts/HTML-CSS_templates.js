@@ -217,8 +217,9 @@ export const navbarHTML =
             class="hamburger-menu"
             src="images/icons/icon_menu_hamburger.svg"
             alt="navigation menu"
+            aria-label="sidebar menu"
           />
-          <a href="/search.html">
+          <a href="/search.html" aria-label="search icon">
             <img src="images/icons/icon_menu_search.svg" alt="search icon"
           /></a>
         </div>
@@ -243,6 +244,7 @@ export const navbarHTML =
             class="hamburger-menu"
             src="images/icons/icon_menu_hamburger.svg"
             alt="navigation menu"
+            aria-label="sidebar menu"
           />
           <a href="/search.html">
             <img src="images/icons/icon_menu_search.svg" alt="search icon"
@@ -337,6 +339,7 @@ export const sidebarHTML =
         <li><a href="#">Setting</a></li>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="/about.html">About</a></li>
+        <li><a href="/login.html">Sign Out</a></li>
       </ul>
       <div class="sidebar-logo">
         <img
